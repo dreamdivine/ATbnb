@@ -1,4 +1,8 @@
-
+<!doctype html>
+<html lang ="en">
+<head>
+<title>AT bnb</title>
+</head>
 <% if logged_in? %>
   <script id="bootstrap-current-user" type="text/javascript">
   	window.currentUser = <%= render("api/users/user.json.jbuilder",
@@ -7,3 +11,4 @@
 <% end %>
 
 <main id="root"></main>
+</html>

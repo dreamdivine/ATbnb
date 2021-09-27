@@ -1,82 +1,62 @@
-import React from "react";
+import React, { useState} from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 
-class NavBar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
-  render() {
+const Nav = () => {
+      const [click, setClick] = useState(false);
+      const [dropdown, setDropdown] = useState(false);
+
+        const goToPages = () => setClick(false);
+
+      const onMouseEnter = () => {
+          setDropdown(true)
+      }
+
+      const onMouseLeave = () => {
+          setDropdown(false)
+      };
+
     return (
-      <div className="navbar">
-        <nav className="login-signup">
-          <div className="home-link">
-            <Link to="/" className="title">
-              AT bnb
-            </Link>
-          </div>
-          <div className="header">
-            <div className="icon-button">
-              <div className="icon1">
-                <i className="fas fa-grip-lines icon-large"></i>
-              </div>
-              <div className="icon2">
-                <i className="far fa-user-circle"></i>
-              </div>
-              <div className="dropdown">
-                {this.props.currentUser ? (
-                  <div className="dropdown-content">
-                    <ul className="drop-down-inside">
-                      Welcome {this.props.currentUser.username}
-                    </ul>
-                    <Link className="drop-down-inside" to="/listing/new">
-                      Host
-                    </Link>
-                    <Link className="drop-down-inside" to="/reservations">
-                      Reservations
-                    </Link>
-                    <ul
-                      className="drop-down-inside"
-                      onClick={() => this.props.logout()}
-                    >
-                      Log Out
-                    </ul>
-                  </div>
-                ) : (
-                  <div className="dropdown-content">
-                    <ul className="drop-down-inside">Welcome to HotelBnB</ul>
-                    <ul
-                      className="drop-down-inside"
-                      onClick={() => this.props.openModal("login")}
-                    >
-                      Log In
-                    </ul>
-                    <ul
-                      className="drop-down-inside"
-                      onClick={() => this.props.openModal("signup")}
-                    >
-                      Sign Up
-                    </ul>
-                    <ul
-                      className="drop-down-inside"
-                      onClick={() =>
-                        this.props.login({
-                          username: "DemoUser",
-                          password: "DemoUser",
-                        })
-                      }
-                    >
-                      Demo User
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </nav>
+      <div>
+        <div className="left-items">
+          <Link to="/" className="nav-links" onClick={goToPages}>
+            AT bnb
+            <i className="fab fa-airbnb"></i>
+          </Link>
+        </div>
+        <div className="middle-items">
+          <ul>
+            <li className="places_to_stay">
+              <Link to="/places_to_stay" className="nav-links">
+                Places to stay
+              </Link>
+            </li>
+            <li className="experiences">
+              <Link to="/experiences" className="nav-links">
+                Experiences
+              </Link>
+            </li>
+            <li className="online_experiences">
+              <Link to="/online_experiences" className="nav-links">
+                Online Experiences
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="right-items">
+          <ul onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          <li className="bar-icon">
+            <i className="fas fa-bars"></i>
+          </li>
+          <li className="person-circle">
+            <i className="far fa-user-circle"></i>
+          </li>
+          {dropdown && <Dropdown />}
+          </ul>
+        </div>
       </div>
     );
   }
-}
 
-export default NavBar;
+export default Nav;
