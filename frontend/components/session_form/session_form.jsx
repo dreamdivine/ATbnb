@@ -37,12 +37,11 @@ class SessionForm extends React.Component {
   }
   render() {
     return (
-      <div className="modal-bg">
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             Welcome to AT BnB!
             <br />
-            Please {this.props.formType} or {this.props.navLink}
+            Please signup or login
             {this.renderErrors()}
             <div className="login-form">
               <br />
@@ -84,7 +83,6 @@ class SessionForm extends React.Component {
             </div>
           </form>
         </div>
-      </div>
     );
   }
 }

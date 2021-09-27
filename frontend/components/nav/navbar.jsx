@@ -18,7 +18,7 @@ const Nav = () => {
       };
 
     return (
-      <div>
+      <div className="top-portion">
         <div className="left-items">
           <Link to="/" className="nav-links" onClick={goToPages}>
             AT bnb
