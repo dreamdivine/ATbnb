@@ -51,7 +51,15 @@
     padding: 16px;
 }
 
- 
+ .login-form-container{
+     display: flex;
+     border-width: 4px;
+     background-color: white;
+     color:black;
+     width: 15%;
+     height: 200px;
+
+ }
 
 
  
