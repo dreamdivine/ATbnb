@@ -46,14 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
-  // window.login = login;
-  // window.logout = logout;
-  // // window.signup = signup
-
-  // window.store = store;
-  // window.dispatch = store.dispatch;
-  // window.getState = store.dispatch;
-  
 
   ReactDOM.render(<Root store={store} />, root);
 });
