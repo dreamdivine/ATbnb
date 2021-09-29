@@ -5,19 +5,23 @@ import GreetingContainer from "./greeting/greeting_container";
 import Splash from "./splash/splash";
 import { ProtectedRoute } from "../util/route_util";
 import RoutingError from "./errors/routing_errors";
+import Navbar from "./greeting/greeting";
 
 const App = () => (
   <div>
     <Modal />
     <GreetingContainer />
+    {/* <Navbar /> */}
     <header>
       <Link to="/" className="header-link">
-        <h1>AT bnb</h1>
+        {/* <h1>AT bnb</h1> */}
       </Link>
     </header>
     <Switch>
-      <ProtectedRoute path="/" component={Splash} />
-      <Redirect component={RoutingError} />
+      <Route exact path="/" component={Splash} />
+      {/* <ProtectedRoute path="/" component={Splash} /> */}
+      <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+      {/* <Redirect component={RoutingError} /> */}
     </Switch>
   </div>
 );

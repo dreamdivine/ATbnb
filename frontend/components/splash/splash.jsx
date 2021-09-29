@@ -6,7 +6,7 @@ class Splash extends React.Component{
     }
     render(){
         return(
-            <h1>My super awesome splash page!!</h1>
+            <h1>Home page!!</h1>
         )
     }
 }
