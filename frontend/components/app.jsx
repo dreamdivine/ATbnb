@@ -1,12 +1,10 @@
 import React from "react";
-import { Provider } from "react-redux";
 import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
-import SignUpFormContainer from "./session_form/signup_form_container";
-import LogInFormContainer from "./session_form/login_form_container";
 import Modal from "./modal/modal";
 import GreetingContainer from "./greeting/greeting_container";
-import { AuthRoute } from "../util/route_util";
 import Splash from "./splash/splash";
+import { ProtectedRoute } from "../util/route_util";
+import RoutingError from "./errors/routing_errors";
 
 const App = () => (
   <div>
@@ -18,8 +16,8 @@ const App = () => (
       </Link>
     </header>
     <Switch>
-    <Route extact path="/" component={Splash}/>
-    <Redirect to="/"/>
+      <ProtectedRoute path="/" component={Splash} />
+      <Redirect component={RoutingError} />
     </Switch>
   </div>
 );

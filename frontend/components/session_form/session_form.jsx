@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   update(field) {
@@ -25,99 +26,128 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal)
+    this.props
+      .processForm(user)
+      .then(() => this.props.closeModal())
+      .then(() => this.props.history.push("/splash"));
   }
 
-  demoLogin(e){
+  demoLogin(e) {
     e.preventDefault();
-    this.props.loginDemoUser()
-    .then(() => this.props.closeModal())
-    .then(() => this.props.history.push("/"));
+    this.props
+      .loginDemoUser()
+      .then(() => this.props.closeModal())
+      .then(() => this.props.history.push("/splash"));
   }
 
   renderErrors() {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
+          <li key={`error ${i}`}>{error}</li>
         ))}
       </ul>
     );
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
+    let field;
+    if (this.props.formType === "signup") {
+      field = (
+        <div className="formToFill">
+          <input
+            id="username"
+            type="text"
+            value={this.state.username}
+            onChange={this.update("username")}
+            placeholder="username"
+            className="login-input"
+          />
+          <br />
+          <input
+            id="password"
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            placeholder="password"
+            className="login-input"
+          />
+          <br />
+          <input
+            id="email"
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
+            placeholder="email"
+            className="login-input"
+          />
+          <br />
+          <input
+            id="firstName"
+            type="text"
+            value={this.state.first_name}
+            onChange={this.update("first_name")}
+            placeholder="first name"
+            className="login-input"
+          />
+          <br />
+          <input
+            id="lastName"
+            type="text"
+            value={this.state.last_name}
+            placeholder="last name"
+            onChange={this.update("last_name")}
+            className="login-input"
+          />
+          <br />
+        </div>
+      );
+    } else {
+      field = (
+        <div>
+          <input
+            id="username"
+            type="text"
+            value={this.state.username}
+            onChange={this.update("username")}
+            className="login-input"
+            placeholder="username"
+          />
+          <br />
+          <input
+            id="password"
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            className="login-input"
+            placeholder="password"
+          />
+        </div>
+      );
+    }
+
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to AT bnb!
           <br />
-          Please {this.props.formType} or {this.props.otherForm}
           <div onClick={this.props.closeModal} className="close-x">
             X
           </div>
           {this.renderErrors()}
           <div className="login-form">
-            <br />
-            <label>
-              Username:
-              <input
-                type="text"
-                value={this.state.username}
-                onChange={this.update("username")}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>
-              Password:
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>
-              Email:
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <br />
-            <label>
-              First Name:
-              <input
-                type="text"
-                value={this.state.first_name}
-                onChange={this.update("first_name")}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>
-              Last Name:
-              <input
-                type="text"
-                value={this.state.last_name}
-                onChange={this.update("last_name")}
-                className="login-input"
-              />
-            </label>
+            {field}
             <input
               className="session-submit"
               type="submit"
               value={this.props.formType}
             />
           </div>
-          <div
-            className="login-demo"
-            onClick={this.demoLogin}
-          >
+          <div className="login-demo" onClick={this.demoLogin}>
             Demo Login
           </div>
         </form>
@@ -125,6 +155,7 @@ class SessionForm extends React.Component {
     );
   }
 }
+
 
 
 export default withRouter(SessionForm);
