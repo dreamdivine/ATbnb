@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
       last_name: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   update(field) {
@@ -25,6 +26,13 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal)
+  }
+
+  demoLogin(e){
+    e.preventDefault();
+    this.props.loginDemoUser()
+    .then(() => this.props.closeModal())
+    .then(() => this.props.history.push("/"));
   }
 
   renderErrors() {
@@ -44,7 +52,9 @@ class SessionForm extends React.Component {
           Welcome to AT bnb!
           <br />
           Please {this.props.formType} or {this.props.otherForm}
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+          <div onClick={this.props.closeModal} className="close-x">
+            X
+          </div>
           {this.renderErrors()}
           <div className="login-form">
             <br />
@@ -103,6 +113,12 @@ class SessionForm extends React.Component {
               type="submit"
               value={this.props.formType}
             />
+          </div>
+          <div
+            className="login-demo"
+            onClick={this.demoLogin}
+          >
+            Demo Login
           </div>
         </form>
       </div>

@@ -17,8 +17,10 @@ const mapDispatchToProps = (dispatch) => {
     otherForm: (
       <button onClick={() => dispatch(openModal("signup"))}>Signup</button>
     ),
+    loginDemoUser: () => dispatch(login({username: "demoUser", password: "demoUser"})),
     closeModal: () => dispatch(closeModal()),
   };
 };
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
