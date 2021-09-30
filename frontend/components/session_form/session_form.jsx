@@ -104,6 +104,10 @@ class SessionForm extends React.Component {
             className="login-input"
           />
           <br />
+          <div className="confirmAccount">
+            <p>We’ll email you to confirm or verify your account.</p> 
+            <a href="#" className="policy">Privacy Policy</a>
+          </div>
         </div>
       );
     } else {
@@ -126,6 +130,12 @@ class SessionForm extends React.Component {
             className="login-input"
             placeholder="password"
           />
+          <div className="confirmAccount">
+            <p>We’ll email you to confirm or verify your account.</p>
+            <a href="#" className="policy">
+              Privacy Policy
+            </a>
+          </div>
         </div>
       );
     }
@@ -133,11 +143,14 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to AT bnb!
-          <br />
-          <div onClick={this.props.closeModal} className="close-x">
-            X
+          <div className="intro-form">
+            <div onClick={this.props.closeModal} className="close-x">
+              X
+            </div>
+            <h3 className="loginSignUp">Login or signup</h3>
           </div>
+          <div className="welcome">Welcome to AT bnb!</div>
+          <br />
           {this.renderErrors()}
           <div className="login-form">
             {field}

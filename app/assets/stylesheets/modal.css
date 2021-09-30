@@ -1,0 +1,107 @@
+.content {
+   height: 100%;
+ }
+
+
+.login-form-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+ }
+
+ .login-form {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .login-input {
+   width: 518px;
+   font-size: 18px;
+   padding: 6px;
+   position: relative;
+   left: 20px;
+   top: 40px;
+ }
+
+ .login-form-box {
+   border: 1px solid black;
+   width: 570px;
+   height: 700px;
+   background-color: white;
+   position: relative;
+   top: -33px;
+   border-radius: 18px;
+   
+ }
+
+ .session-submit {
+   text-transform: capitalize;
+   background-color: #ff385C;
+   position: relative;
+   top: 20px;
+   font-size: 18px;
+   color: white;
+   border-radius: 10px;
+   width: 93%;
+   height: 45px;
+   left: 25px;
+   border: 1px solid #ff385C;
+ }
+
+ .confirmAccount{
+     display: flex;
+     position: relative;
+     padding: 25px;
+
+ }
+
+ .modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-demo{
+    position: relative;
+    top: 100px;
+}
+
+.close-x{
+    position: relative;
+    left: 50px;
+    top: 22px;
+    font-weight: bold;
+    
+
+}
+
+.welcome{
+    position: relative;
+    right: 10px;
+    top: 20px
+
+}
+
+.intro-form{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.loginSignUp{
+    position: relative;
+    left: 200px;
+    top: 20px;
+
+}

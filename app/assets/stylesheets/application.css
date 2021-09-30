@@ -90,62 +90,9 @@
    background-repeat: no-repeat;
    background-size: cover;
  }
- .content {
-   height: 100%;
- }
+ 
 
- header {
-   margin-left: 5%;
- }
-
- h1, h5 {
-   margin-bottom: 0px;
- }
-
- .login-form-container {
-   display: flex;
-   justify-content: center;
-   margin-top: 100px;
- }
-
- .login-form {
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
- }
-
- .login-input {
-   margin-left: 20px;
- }
-
- .login-form-box {
-   outline: 1px solid black;
-   padding: 20px;
- }
-
-
- .session-submit {
-   text-transform: capitalize;
- }
-
- .modal-background {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
-}
-
-.modal-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
+ 
 
 
 
