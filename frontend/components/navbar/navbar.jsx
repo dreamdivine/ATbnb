@@ -49,17 +49,26 @@ const NavBar = () => {
             <li className="detail">Where are you going?</li>
           </ul>
         </div>
+        <div className="line">
+          <span className="divider"></span>
+        </div>
         <div className="check-in">
           <ul>
             <li className="header">Check in</li>
             <li className="detail">Add dates</li>
           </ul>
         </div>
+        <div className="line">
+          <span className="divider"></span>
+        </div>
         <div className="check-out">
           <ul>
             <li className="header">Check out</li>
             <li className="detail">Add dates</li>
           </ul>
+        </div>
+        <div className="line">
+          <span className="divider"></span>
         </div>
         <div className="guests">
           <ul>
