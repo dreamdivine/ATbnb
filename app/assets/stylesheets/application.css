@@ -79,10 +79,17 @@
      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
  } */
 
-  body {
-    font-family: 'Abel', sans-serif;
-  }
+ *{
+     margin: 0;
+     padding: 0;
+     font-family: 'Times New Roman', Times, serif;
+ }
 
+ body {
+   background-image: url("final-background.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
  .content {
    height: 100%;
  }
@@ -138,21 +145,9 @@
   transform: translate(-50%, -50%);
 }
 
-li {
-  list-style-type: none;
-  
-}
 
-.navbar{
-  background-color: pink;
-  display: flex;
-  justify-content: space-between;
-}
 
-.middle-items{
-  display: flex;
-  justify-content: space-between;
-}
+
 
 
 

@@ -5,13 +5,15 @@ import GreetingContainer from "./greeting/greeting_container";
 import Splash from "./splash/splash";
 import { ProtectedRoute } from "../util/route_util";
 import RoutingError from "./errors/routing_errors";
-import Navbar from "./greeting/greeting";
+import NavBar from "./navbar/navbar";
+
 
 const App = () => (
   <div>
+    <NavBar />
     <Modal />
     <GreetingContainer />
-    {/* <Navbar /> */}
+
     <header>
       <Link to="/" className="header-link">
         {/* <h1>AT bnb</h1> */}

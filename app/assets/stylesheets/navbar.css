@@ -1,0 +1,165 @@
+.Nav-Bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 20px;
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 130px;
+   font-size: 25px;
+   color: white;
+   font-weight: bold;
+   width: 120px;
+   justify-content: space-around;
+   height: 50px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.right-icon{
+    display: flex;
+    color: grey;
+    font-size: 20px;
+    background-color: white;
+    border: solid white 1px;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70px;
+    height: 40px;
+}
+
+.middle-items{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  font-size: 17px;
+}
+
+.right-side{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    position: relative;
+    left: 100px;
+}
+
+#globe{
+    color:white;
+    font-size: 20px;
+}
+
+.host{
+    color: white;
+}
+
+.nav-links{
+    color: white;
+    text-decoration: none;
+}
+
+#airbnb{
+    color: white;
+    font-size: 35px;
+}
+
+.places_to_stay{
+    position: relative;
+    display: inline-block;
+}
+
+.places_to_stay:after{
+    content: "";
+    height:2px;
+    width:20%;
+    position:absolute;
+    background:white;
+    left:50%;
+    top:25px;
+}
+
+.experiences, .online_experiences{
+    position: relative;
+    padding: 0, 10px;
+    display: inline-block;
+}
+
+.experiences:after, .online_experiences:after{
+   
+    transform: scale(0, 1);
+    /* transition: 0.3s ease; */
+    content: "";
+    height:2px;
+    position:absolute;
+    background:white;
+    left:2px;
+    top:25px;
+}
+
+.experiences:hover:after, .online_experiences:hover:after{
+    transform: scale(1, 1);
+    width: 8%;
+    left: 40%;
+    color: lightgrey;
+}
+
+#circle-person{
+    font-size: 30px;
+}
+
+#bars{
+    font-size: 15px;
+}
+
+.guest-booking{
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 44%;
+    height: 60px;
+    align-items: center;
+    position: relative;
+    left: 490px;
+    top: 40px;
+    border-radius: 50px;
+}
+
+.detail{
+    color:gray;
+}
+
+.search{
+    background-color: #ff385C;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#search-icon{
+    position: relative;
+    left: 12px;
+    top: 12px;
+}
+
+.location, .check-in, .check-out{
+    text-underline-position: right;
+}
+
+.header{
+    font-size: 12px;
+}
+
+.detail{
+    font-size: 14px;
+
+}
