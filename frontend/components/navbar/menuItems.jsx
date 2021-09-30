@@ -1,12 +1,12 @@
 import { signup } from "../../util/session_api_util"
 
 export const MenuItems = [
-    {title: "sign up",
-    path: "/signup",
-    cName: "dropdown-link"
-    },
     {title: "log in",
     path: "/login",
+    cName: "dropdown-link"
+    },
+    {title: "sign up",
+    path: "/signup",
     cName: "dropdown-link"
     },
     {title: "Host your home",

@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "./dropdown";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const goToPages = () => setClick(false);
 
+  const onMouseEnter = () => {
+    setDropdown(true);
+  };
+
+  const onMouseLeave = () => {
+    setDropdown(false);
+  };
 
   return (
     <div className="top">
@@ -36,9 +45,14 @@ const NavBar = () => {
         <div className="right-side">
           <li className="host">Become a Host</li>
           <i className="fas fa-globe" id="globe"></i>
-          <div className="right-icon">
+          <div
+            className="right-icon"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
             <i className="fas fa-bars" id="bars"></i>
             <i className="far fa-user-circle" id="circle-person"></i>
+            {dropdown && <Dropdown />}
           </div>
         </div>
       </div>
