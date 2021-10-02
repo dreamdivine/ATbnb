@@ -1,4 +1,4 @@
-import { signup } from "../../util/session_api_util"
+
 
 export const MenuItems = [
     {title: "log in",

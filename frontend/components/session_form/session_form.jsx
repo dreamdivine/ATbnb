@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    console.log("constructor")
   }
 
   update(field) {
@@ -29,7 +30,7 @@ class SessionForm extends React.Component {
     this.props
       .processForm(user)
       .then(() => this.props.closeModal())
-      .then(() => this.props.history.push("/splash"));
+      .then(() => this.props.history.push("/"));
   }
 
   demoLogin(e) {
@@ -37,7 +38,7 @@ class SessionForm extends React.Component {
     this.props
       .loginDemoUser()
       .then(() => this.props.closeModal())
-      .then(() => this.props.history.push("/splash"));
+      .then(() => this.props.history.push("/"));
   }
 
   renderErrors() {
@@ -139,7 +140,7 @@ class SessionForm extends React.Component {
         </div>
       );
     }
-
+    console.log("render")
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">

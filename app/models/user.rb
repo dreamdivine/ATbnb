@@ -7,6 +7,19 @@ class User < ApplicationRecord
   attr_reader :password
   after_initialize :ensure_session_token
 
+  has_many :listings,
+    foreign_key: :owner_Id,
+    class_name: :Listing
+  
+  # has_many :reviews,
+  #   foreign_key: :author_id
+
+  # has_many :favorites
+  # has_many :favorite_listings,
+  #   through: :favorites,
+  #   source: :listing
+
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user
