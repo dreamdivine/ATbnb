@@ -39,11 +39,7 @@ export const fetchListings = () => (dispatch) =>(
   ));
 
 export const fetchListing = (listingId) => (dispatch) =>{
-  console.log("fetchListingId")
-  console.log(listingId)
   return APIUtil.fetchListing(listingId).then((listing) => {
-    console.log("listing")
-    console.log(listing)
     return dispatch(receiveListing(listing))
   })};
 

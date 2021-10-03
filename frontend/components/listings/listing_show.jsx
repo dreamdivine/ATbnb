@@ -9,8 +9,6 @@ class ListingShow extends React.Component {
   render() {
     return (
       <div>
-        console.log("title"); 
-        console.log({this.props.listing.title})
         <h1>{this.props.listing.title}</h1>
         <p>{this.props.listing.bedroom}</p>
         <p>{this.props.listing.bathroom}</p>
