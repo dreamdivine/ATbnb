@@ -38,8 +38,14 @@ export const fetchListings = () => (dispatch) =>(
     dispatch(receiveListings(listings))
   ));
 
-export const fetchListing = (listingId) => (dispatch) =>(
-  APIUtil.fetchListing(listingId).then((listing) => dispatch(receiveListing(listing))));
+export const fetchListing = (listingId) => (dispatch) =>{
+  console.log("fetchListingId")
+  console.log(listingId)
+  return APIUtil.fetchListing(listingId).then((listing) => {
+    console.log("listing")
+    console.log(listing)
+    return dispatch(receiveListing(listing))
+  })};
 
 export const createListing = (listing) => (dispatch) =>(
   APIUtil.createListing(listing).then((listing) => dispatch(receiveListing(listing))));

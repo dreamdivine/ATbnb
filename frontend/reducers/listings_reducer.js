@@ -13,7 +13,7 @@ const listingsReducer = (oldState = {}, action) => {
     case RECEIVE_LISTINGS:
      return {...oldState, ...action.listings}
     case RECEIVE_LISTING:
-    nextState[action.listing.id] = action.listing;
+       nextState[action.listing.id] = action.listing;
     return nextState;
     case REMOVE_LISTING:
       delete nextState[action.listingId];

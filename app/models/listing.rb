@@ -1,5 +1,5 @@
 class Listing < ApplicationRecord
-    validates :description, :latitude, :longitude, :bedroom, :bathroom, :location, :price, :title, presence: true
+    validates :description, :latitude, :longitude, :bedroom, :bathroom, :location, :owner_Id, :price, :title, presence: true
 
     # has_many :reviews
     # has_many :favorites
@@ -12,6 +12,6 @@ class Listing < ApplicationRecord
     class_name: :User
 
 
-  # has_one_attached :photo
+   has_one_attached :photo
 
 end

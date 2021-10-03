@@ -1,5 +1,5 @@
 class Api::ListingsController < ApplicationController
-    before_action :require_logged_in, only: [:create, :destroy, :update]
+     before_action :require_logged_in, only: [:create, :destroy, :update]
 
   def index
     # listings = bounds ? Listing.in_bounds(bounds) : Listing.all
@@ -18,8 +18,7 @@ class Api::ListingsController < ApplicationController
 
   def create
    @listing = Listing.new(listing_params)
-
-    if @listing.save
+    if @listing.save!
       render :show
     else
       render json: @listing.errors.full_messages, status: 422
@@ -47,9 +46,9 @@ class Api::ListingsController < ApplicationController
 
   private
 
-  def guests_range
-    (params[:minGuests]..params[:maxGuests])
-  end
+  #def guests_range
+    #(params[:minGuests]..params[:maxGuests])
+  #end
 
   def listing_params
     params.require(:listing).permit(
@@ -61,7 +60,9 @@ class Api::ListingsController < ApplicationController
       :bedroom,
       :bathroom,
       :title,
-      :owner_Id
+      :owner_Id,
+      :guests,
+      :picture_url
     )
   end
 
