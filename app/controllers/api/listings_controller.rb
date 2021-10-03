@@ -10,6 +10,7 @@ class Api::ListingsController < ApplicationController
 
     # @listings = listings.includes(:reviews, :favorite_users)
     @listings = Listing.all
+     render :index
   end
 
   def show
@@ -18,11 +19,13 @@ class Api::ListingsController < ApplicationController
 
   def create
    @listing = Listing.new(listing_params)
+  
     if @listing.save!
       render :show
     else
       render json: @listing.errors.full_messages, status: 422
     end
+   
   end
 
   def destroy
@@ -55,14 +58,14 @@ class Api::ListingsController < ApplicationController
       :description,
       :location,
       :price,
-      :latitude,
-      :longitude,
       :bedroom,
       :bathroom,
       :title,
       :owner_Id,
       :guests,
-      :picture_url
+      :picture_url,
+      :latitude,
+      :longitude
     )
   end
 

@@ -25,21 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
 
-  // window.fetchListings = APIUtil.fetchListings;
-  // window.fetchListing = APIUtil.fetchListing;
-  // window.updateListing = APIUtil.updateListing;
-  // window.createListing = APIUtil.createListing;
-  // window.deleteListing = APIUtil.deleteListing;
+  window.fetchListings = APIUtil.fetchListings;
+  window.fetchListing = APIUtil.fetchListing;
+  window.updateListing = APIUtil.updateListing;
+  window.createListing = APIUtil.createListing;
+  window.deleteListing = APIUtil.deleteListing;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
 
-  window.createListing = ListingAction.createListing;
-  window.fetchListing = ListingAction.fetchListing;
-  window.fetchListings = ListingAction.fetchListings;
-  window.updateListing = ListingAction.updateListing;
-  window.deleteListing = ListingAction.deleteListing;
+  // window.createListing = ListingAction.createListing;
+  // window.fetchListing = ListingAction.fetchListing;
+  // window.fetchListings = ListingAction.fetchListings;
+  // window.updateListing = ListingAction.updateListing;
+  // window.deleteListing = ListingAction.deleteListing;
 
   ReactDOM.render(<Root store={store} />, root);
 

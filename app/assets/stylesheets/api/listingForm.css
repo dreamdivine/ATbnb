@@ -1,0 +1,13 @@
+.listingForm{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+  left: 40px;
+  top: 80px
+
+}

@@ -15,7 +15,7 @@ const mSTP = (state) => {
       title: "",
       latitude: "",
       longitude: "",
-      owner_Id: state.session.id
+      owner_Id: state.session.id,
     },
     listingFormType: "Create Listing",
   };
