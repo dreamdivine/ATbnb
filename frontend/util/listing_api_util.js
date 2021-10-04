@@ -17,17 +17,16 @@ export const fetchListing = (listingId) =>(
 //     data: { review },
 //   });
 
-export const createListing = (listing) =>{
+export const createListing = (listingForm) =>{
   
   return (
-     $.ajax({
-      url: "/api/listings",
-      method: "POST",
-      data: {listing},
-      // contentType: false,
-      // processData: false
-    })
-  )};
+      $.ajax({
+        url: 'api/listings',
+        method: 'POST',
+        data: listingForm,
+        contentType: false,
+        processData: false
+  }))};
 
 export const updateListing = (listing) =>(
   $.ajax({

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class ListingForm extends React.Component {
   constructor(props) {
     super(props);
@@ -12,18 +13,36 @@ class ListingForm extends React.Component {
     this.setState({ [field]: e.target.value });
   }
   handleFile(e){
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('listing[title]', this.state.title);
-    formData.append('listing[photo]', this.state.photoFile);
+    // this.setState({photoFile: e.currentTarget.files[0]});
 
+    const file = e.currentTarget.files[0];
+    
+    this.setState({photoFile: file});
+    
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props
-      .action(this.state)
+    // this.props
+    //   .action(this.state)
       // .then(() => this.props.history.push("/"));
+      const formData = new FormData();
+      formData.append("listing[title]", this.state.title);
+      formData.append('listing[photo]', this.state.photo);
+      formData.append("listing[guests]", this.state.guests);
+      formData.append("listing[bedroom]", this.state.bedroom);
+      formData.append("listing[bathroom]", this.state.bathroom);
+      formData.append("listing[latitude]", this.state.latitude);
+      formData.append("listing[longitude]", this.state.longitude);
+      formData.append("listing[price]", this.state.price);
+      formData.append("listing[owner_Id]", this.state.owner_Id);
+      formData.append("listing[location]", this.state.location);
+      formData.append("listing[description]", this.state.description);
+
+      if(this.state.photoFile){
+        formData.append('listing[photo]', this.state.photoFile);
+      }
+      this.props.action(formData);
   }
 
   render() {
