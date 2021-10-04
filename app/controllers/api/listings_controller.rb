@@ -70,7 +70,7 @@ class Api::ListingsController < ApplicationController
     )
   end
 
-  def bounds
-    params[:bounds]
-  end
+  # def bounds
+  #   params[:bounds]
+  # end
 end
