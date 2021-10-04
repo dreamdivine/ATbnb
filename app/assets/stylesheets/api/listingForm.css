@@ -11,3 +11,10 @@
   top: 80px
 
 }
+
+.ListingUpdateDelete{
+  display: flex;
+  position: relative;
+  left:50px
+}
+

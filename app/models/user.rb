@@ -11,8 +11,8 @@ class User < ApplicationRecord
     foreign_key: :owner_Id,
     class_name: :Listing
   
-  # has_many :reviews,
-  #   foreign_key: :author_id
+  has_many :reviews,
+    foreign_key: :author_id
 
   # has_many :favorites
   # has_many :favorite_listings,

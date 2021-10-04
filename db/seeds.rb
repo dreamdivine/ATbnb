@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
 Review.destroy_all
 Favorite.destroy_all
 Listing.delete_all
@@ -121,8 +123,9 @@ l1 = Listing.create!(
   bathroom: 1,
   price: 100,
   longitude: -122.442517,
-  location: "1234 webster st, alameda, ca",
-  picture_url: 'https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg'
+  location: "1 webster st, alameda, ca"
+  # ,
+  # picture_url: 'https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg'
 )
 
 l2 = Listing.create!(
@@ -135,8 +138,9 @@ l2 = Listing.create!(
   bathroom: 2,
   price: 200,
   longitude: -122.457967,
-  location: "1234 webster st, alameda, ca",
-  picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
+  location: "2 webster st, alameda, ca"
+  # ,
+  # picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
 )
 
 
@@ -150,12 +154,29 @@ l3 = Listing.create!(
   bathroom: 2,
   price: 200,
   longitude: -122.457967,
-  location: "1234 webster st, alameda, ca",
-  picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
+  location: "3 webster st, alameda, ca",
+  # picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
 )
+
+
+
+l1photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list1.jpeg")
+l1.photo.attach(io: l1photo, filename: "list1")
+
+
+l2photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list2.jpeg")
+l2.photo.attach(io: l2photo, filename: "list2")
+
+
+l3photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list4.jpeg")
+l3.photo.attach(io: l3photo, filename: "list3")
+
+# l4photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list5.jpeg")
+# l4.photo.attach(io: l4photo, filename: "list4")
+
 
 # Favorite.create(user_id: u2.id, listing_id:  l1.id)
 # Favorite.create(user_id: u3.id, listing_id:  l2.id)
 
-# Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
-# Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
+r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
+r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)

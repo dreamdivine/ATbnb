@@ -63,9 +63,10 @@ class Api::ListingsController < ApplicationController
       :title,
       :owner_Id,
       :guests,
-      :picture_url,
+       #:picture_url,
       :latitude,
-      :longitude
+      :longitude,
+      :photo
     )
   end
 

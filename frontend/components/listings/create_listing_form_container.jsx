@@ -5,19 +5,19 @@ import { createListing } from "../../actions/listing_actions";
 const mSTP = (state) => {
   return {
     listing: {
-      description: "",
-      guests: "",
-      picture_url: "",
-      bedroom: "",
-      bathroom: "",
-      location: "",
-      price: "",
-      title: "",
-      latitude: "",
-      longitude: "",
+      // description: "",
+      // guests: "",
+      // bedroom: "",
+      // bathroom: "",
+      // location: "",
+      // price: "",
+      // title: "",
+      // latitude: "",
+      // longitude: "",
       owner_Id: state.session.id,
+      photoFile: null
     },
-    listingFormType: "Create Listing",
+    listingFormType: "Create Listing"
   };
 };
 

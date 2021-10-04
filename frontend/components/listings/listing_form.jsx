@@ -12,6 +12,10 @@ class ListingForm extends React.Component {
     this.setState({ [field]: e.target.value });
   }
   handleFile(e){
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('listing[title]', this.state.title);
+    formData.append('listing[photo]', this.state.photoFile);
 
   }
 
@@ -19,7 +23,7 @@ class ListingForm extends React.Component {
     e.preventDefault();
     this.props
       .action(this.state)
-      // .then(() => this.props.history.push("/Homepage"));
+      // .then(() => this.props.history.push("/"));
   }
 
   render() {
@@ -116,14 +120,14 @@ class ListingForm extends React.Component {
             </label>
           </div>
           <div>
-            <label>
+            {/* <label>
               Picture Url
               <input
                 type="text"
                 value={this.state.picture_url}
                 onChange={(e) => this.update(e, "picture_url")}
               />
-            </label>
+            </label> */}
           </div>
           <div>
             <input type="file" onChange={this.handleFile.bind(this)} />

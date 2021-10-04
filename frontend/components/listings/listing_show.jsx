@@ -7,7 +7,8 @@ class ListingShow extends React.Component {
   }
   render() {
     if(!this.props.listing) return null;
-    console.log(this.props.listing)
+        console.log(this.props.listing.photoUrl);
+
     return (
       <div>
         <h1>{this.props.listing.title}</h1>
@@ -19,7 +20,8 @@ class ListingShow extends React.Component {
         <p>{this.props.listing.description}</p>
         <p>{this.props.listing.latitude}</p>
         <p>{this.props.listing.longitude}</p>
-        {/* <img src={this.props.listing.photoUrl}/> */}
+    
+        <img src={this.props.listing.photoUrl}/>
         <Link to="/"></Link>
       </div>
     );

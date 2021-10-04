@@ -18,29 +18,15 @@ export const fetchListing = (listingId) =>(
 //   });
 
 export const createListing = (listing) =>{
-  // console.log(listing)
-//   let payload = {bathroom: "12",
-// bedroom: "3",
-// description: "asdfsd",
-// guests: "3",
-// latitude: "1234",
-// location: "adsjf;lsdfj",
-// longitude: "121",
-// owner_Id: 1,
-// picture_url: "jf;asdfjlsdfkj",
-// price: "1234",
-// title: "sadfds"}
-
+  
   return (
-  $.ajax({
-    method: "POST",
-    url: "/api/listings",
-    data: {listing},
-    // contentType: false,
-    // processData: false
-  })
-  // .then((response) => console.log(response.message),
-  // (response) => console.log(response.responseJSON)
+     $.ajax({
+      url: "/api/listings",
+      method: "POST",
+      data: {listing},
+      // contentType: false,
+      // processData: false
+    })
   )};
 
 export const updateListing = (listing) =>(
