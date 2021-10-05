@@ -28,11 +28,13 @@ export const createListing = (listingForm) =>{
         processData: false
   }))};
 
-export const updateListing = (listing) =>(
+export const updateListing = (listingForm, listing) =>(
   $.ajax({
     method: "PATCH",
     url: `/api/listings/${listing.id}`,
-    data: {listing}
+    data: listingForm,
+    contentType: false,
+    processData: false
   }));
 
 export const deleteListing = (listingId) =>(

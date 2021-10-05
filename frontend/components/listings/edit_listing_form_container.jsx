@@ -29,7 +29,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = (dispatch) => {
   return {
     fetchListing: (listingId) => dispatch(fetchListing(listingId)),
-    action: (listing) => dispatch(updateListing(listing)),
+    action: (listingFormData, listing) => dispatch(updateListing(listingFormData, listing)),
   };
 };
 

@@ -42,7 +42,7 @@ class ListingForm extends React.Component {
       if(this.state.photoFile){
         formData.append('listing[photo]', this.state.photoFile);
       }
-      this.props.action(formData);
+      this.props.action(formData, this.props.listing);
   }
 
   render() {

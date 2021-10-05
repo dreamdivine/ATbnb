@@ -47,8 +47,16 @@ export const fetchListing = (listingId) => (dispatch) =>{
 export const createListing = (listing) => (dispatch) =>(
   APIUtil.createListing(listing).then((listing) => dispatch(receiveListing(listing))));
 
-export const updateListing = (listing) => (dispatch) =>(
-  APIUtil.updateListing(listing).then((listing) => dispatch(receiveListing(listing))));
+export const updateListing = (listingFormData, listing) => (dispatch) =>{
+  // console.log("call with listingFormData")
+  // console.log(listingFormData)
+  // console.log(listing)
+  return APIUtil.updateListing(listingFormData, listing)
+  .then((listing) => {
+    // console.log("return listing")
+    // console.log(listing)
+    return dispatch(receiveListing(listing))
+  })}
 
 export const deleteListing = (listingId) => (dispatch) =>(
   APIUtil.deleteListing(listingId).then(() => dispatch(removeListing(listingId))));
