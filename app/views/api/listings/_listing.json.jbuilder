@@ -6,3 +6,4 @@ if listing.photo.attachment == nil
 else
    json.photoUrl url_for(listing.photo)
 end
+

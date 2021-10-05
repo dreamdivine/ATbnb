@@ -1,3 +1,4 @@
+
 import {
   RECEIVE_LISTINGS,
   RECEIVE_LISTING,
@@ -18,6 +19,7 @@ const listingsReducer = (oldState = {}, action) => {
     case REMOVE_LISTING:
       delete nextState[action.listingId];
       return nextState;
+
     // case RECEIVE_REVIEW:
     //   const { review, average_rating } = action;
     //   const newState = Object.assign({}, state);

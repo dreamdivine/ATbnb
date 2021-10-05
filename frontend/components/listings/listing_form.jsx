@@ -12,37 +12,37 @@ class ListingForm extends React.Component {
   update(e, field) {
     this.setState({ [field]: e.target.value });
   }
-  handleFile(e){
+
+  handleFile(e) {
     // this.setState({photoFile: e.currentTarget.files[0]});
 
     const file = e.currentTarget.files[0];
-    
-    this.setState({photoFile: file});
-    
+
+    this.setState({ photoFile: file });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     // this.props
     //   .action(this.state)
-      // .then(() => this.props.history.push("/"));
-      const formData = new FormData();
-      formData.append("listing[title]", this.state.title);
-      formData.append('listing[photo]', this.state.photo);
-      formData.append("listing[guests]", this.state.guests);
-      formData.append("listing[bedroom]", this.state.bedroom);
-      formData.append("listing[bathroom]", this.state.bathroom);
-      formData.append("listing[latitude]", this.state.latitude);
-      formData.append("listing[longitude]", this.state.longitude);
-      formData.append("listing[price]", this.state.price);
-      formData.append("listing[owner_Id]", this.state.owner_Id);
-      formData.append("listing[location]", this.state.location);
-      formData.append("listing[description]", this.state.description);
+    // .then(() => this.props.history.push("/"));
+    const formData = new FormData();
+    formData.append("listing[title]", this.state.title);
+    formData.append("listing[photo]", this.state.photo);
+    formData.append("listing[guests]", this.state.guests);
+    formData.append("listing[bedroom]", this.state.bedroom);
+    formData.append("listing[bathroom]", this.state.bathroom);
+    formData.append("listing[latitude]", this.state.latitude);
+    formData.append("listing[longitude]", this.state.longitude);
+    formData.append("listing[price]", this.state.price);
+    formData.append("listing[owner_Id]", this.state.owner_Id);
+    formData.append("listing[location]", this.state.location);
+    formData.append("listing[description]", this.state.description);
 
-      if(this.state.photoFile){
-        formData.append('listing[photo]', this.state.photoFile);
-      }
-      this.props.action(formData, this.props.listing);
+    if (this.state.photoFile) {
+      formData.append("listing[photo]", this.state.photoFile);
+    }
+    this.props.action(formData, this.props.listing);
   }
 
   render() {
@@ -53,6 +53,7 @@ class ListingForm extends React.Component {
             <label>
               Title
               <input
+                required
                 type="text"
                 value={this.state.title}
                 onChange={(e) => this.update(e, "title")}
@@ -63,6 +64,7 @@ class ListingForm extends React.Component {
             <label>
               Description
               <textarea
+                required
                 value={this.state.description}
                 onChange={(e) => this.update(e, "description")}
               />
@@ -72,7 +74,8 @@ class ListingForm extends React.Component {
             <label>
               Guests
               <input
-                type="text"
+                required
+                type="number"
                 value={this.state.guests}
                 onChange={(e) => this.update(e, "guests")}
               />
@@ -82,7 +85,8 @@ class ListingForm extends React.Component {
             <label>
               Bedroom
               <input
-                type="text"
+                required
+                type="number"
                 value={this.state.bedroom}
                 onChange={(e) => this.update(e, "bedroom")}
               />
@@ -92,7 +96,8 @@ class ListingForm extends React.Component {
             <label>
               Bathroom
               <input
-                type="text"
+                required
+                type="number"
                 value={this.state.bathroom}
                 onChange={(e) => this.update(e, "bathroom")}
               />
@@ -102,7 +107,8 @@ class ListingForm extends React.Component {
             <label>
               Price
               <input
-                type="text"
+                required
+                type="number"
                 value={this.state.price}
                 onChange={(e) => this.update(e, "price")}
               />
@@ -111,7 +117,7 @@ class ListingForm extends React.Component {
           <div>
             <label>
               Location
-              <input
+              <input required
                 type="text"
                 value={this.state.location}
                 onChange={(e) => this.update(e, "location")}
@@ -121,8 +127,8 @@ class ListingForm extends React.Component {
           <div>
             <label>
               Latitude
-              <input
-                type="text"
+              <input required
+                type="number"
                 value={this.state.latitude}
                 onChange={(e) => this.update(e, "latitude")}
               />
@@ -131,8 +137,8 @@ class ListingForm extends React.Component {
           <div>
             <label>
               Longitude
-              <input
-                type="text"
+              <input required
+                type="number"
                 value={this.state.longitude}
                 onChange={(e) => this.update(e, "longitude")}
               />

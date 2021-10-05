@@ -21,6 +21,8 @@ export const removeListing = (listingId) => ({
   listingId,
 });
 
+
+
 // export const receiveReview = ({ review, average_rating, author }) => ({
 //   type: RECEIVE_REVIEW,
 //   review,
@@ -35,28 +37,28 @@ export const removeListing = (listingId) => ({
 
 export const fetchListings = () => (dispatch) =>(
   APIUtil.fetchListings().then((listings) =>
-    dispatch(receiveListings(listings))
-  ));
+    dispatch(receiveListings(listings))));
 
-export const fetchListing = (listingId) => (dispatch) =>{
-  return APIUtil.fetchListing(listingId).then((listing) => {
-
-    return dispatch(receiveListing(listing))
-  })};
+export const fetchListing = (listingId) => (dispatch) =>(
+  APIUtil.fetchListing(listingId).then((listing) => 
+  dispatch(receiveListing(listing))));
 
 export const createListing = (listing) => (dispatch) =>(
   APIUtil.createListing(listing).then((listing) => dispatch(receiveListing(listing))));
 
-export const updateListing = (listingFormData, listing) => (dispatch) =>{
+export const updateListing = (listingFormData, listing) => (dispatch) =>(
   // console.log("call with listingFormData")
   // console.log(listingFormData)
   // console.log(listing)
-  return APIUtil.updateListing(listingFormData, listing)
-  .then((listing) => {
+  APIUtil.updateListing(listingFormData, listing)
+  .then((listing) => 
     // console.log("return listing")
     // console.log(listing)
-    return dispatch(receiveListing(listing))
-  })}
+    dispatch(receiveListing(listing)))
+    );
 
-export const deleteListing = (listingId) => (dispatch) =>(
-  APIUtil.deleteListing(listingId).then(() => dispatch(removeListing(listingId))));
+export const deleteListing = (listingId) => (dispatch) =>
+  (APIUtil.deleteListing(listingId)
+  .then(() => dispatch(removeListing(listingId))));
+
+  
