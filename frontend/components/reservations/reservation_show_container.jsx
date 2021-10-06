@@ -4,8 +4,8 @@ import {
   deleteReservation,
   fetchReservation,
   fetchReservations,
-} from "../../actions/reservation_action";
-import { fetchListings} from "../../actions/listing_action";
+} from "../../actions/reservation_actions";
+import { fetchListings} from "../../actions/listing_actions";
 
 const mSTP = (state) => ({
   reservations: Object.values(state.entities.reservations),

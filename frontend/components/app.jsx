@@ -7,6 +7,8 @@ import SignupFormContainer from "./session_form/signup_form_container";
 import ListingIndexContainer from "./listings/listing_index_container";
 import ListingShowContainer from "./listings/listing_show_container";
 import EditListingFormContainer from "./listings/edit_listing_form_container";
+import ReservationShowContainer from "./reservations/reservation_show_container";
+import ReservationCreateContainer from "./reservations/reservation_create_container";
 
 // import RoutingError from "./errors/routing_errors";
 
@@ -22,7 +24,8 @@ const App = () => (
       path="/listings/:listingId/edit"
       component={EditListingFormContainer}
     />
-    <Route />
+    <Route path="/" component={ReservationShowContainer} />
+    <Route path="/" component={ReservationCreateContainer}/>
     <Route render={() => <Redirect to={{ pathname: "/" }} />} />
     <Route exact path="/" component={Homepage} />
     <Switch>

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ReservationForm from "./reservation_form";
-import { createReservation } from "../../actions/reservation_action";
+import { createReservation } from "../../actions/reservation_actions"
 import {openModal} from "../../actions/modal_actions";
 import {login} from "../../actions/session_actions"
 

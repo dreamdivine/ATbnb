@@ -34,12 +34,12 @@ class ReservationForm extends React.Component {
               value={this.state.check_out_date}
             />
             </label>
-            <label> Price:
+            {/* <label> Price:
             <input 
             type="number"
             value={this.props.listing.price}
             />
-            </label>
+            </label> */}
             <button type="submit">Reserve</button>
         </form>
     )
