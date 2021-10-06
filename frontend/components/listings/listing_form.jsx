@@ -17,10 +17,17 @@ class ListingForm extends React.Component {
 
   handleFile(e) {
     // this.setState({photoFile: e.currentTarget.files[0]});
-
+    
     const file = e.currentTarget.files[0];
-
-    this.setState({ photoFile: file });
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ photoFile: file, photoUrl: fileReader.result });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    } else {
+      this.setState({ photoUrl: "", photoFile: null });
+    }
   }
 
   handleSubmit(e) {
@@ -40,7 +47,6 @@ class ListingForm extends React.Component {
     formData.append("listing[owner_Id]", this.state.owner_Id);
     formData.append("listing[location]", this.state.location);
     formData.append("listing[description]", this.state.description);
-
     if (this.state.photoFile) {
       formData.append("listing[photo]", this.state.photoFile);
     }

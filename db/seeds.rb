@@ -159,7 +159,6 @@ l3 = Listing.create!(
 )
 
 
-
 l1photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list1.jpeg")
 l1.photo.attach(io: l1photo, filename: "list1")
 

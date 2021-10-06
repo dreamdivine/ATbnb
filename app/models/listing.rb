@@ -1,12 +1,12 @@
 class Listing < ApplicationRecord
     validates :description, :bedroom, :bathroom, :location, :owner_Id, :price, :guests, :title, :latitude, :longitude, presence: true
-    
+    validate :ensure_photo
 
     has_many :reviews,
     foreign_key: :listing_id,
     class_name: :Listing
 
-     has_many :reservee,
+     has_many :reserve,
      foreign_key: :listing_id,
      class_name: :Reservation  
   
@@ -21,8 +21,11 @@ class Listing < ApplicationRecord
 
     has_one_attached :photo
 
-    #  def average_rating
-    #    reviews.average(:rating)
-    #  end
+    def ensure_photo
+        unless self.photo.attached? 
+         errors[:photo] << "must be attached"   
+        end
+    end
+
 
 end
