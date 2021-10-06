@@ -3,7 +3,7 @@ import ListingForm from "./listing_form";
 import { createListing } from "../../actions/listing_actions";
 
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
   return {
     listing: {
       description: "",
@@ -17,9 +17,8 @@ const mSTP = (state) => {
       longitude: "",
       owner_Id: state.session.id,
       photoFile: null,
-      photoUrl: null
     },
-    listingFormType: "Create Listing"
+    listingFormType: "Create Listing",
   };
 };
 

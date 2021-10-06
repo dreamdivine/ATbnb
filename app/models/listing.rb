@@ -1,9 +1,14 @@
 class Listing < ApplicationRecord
     validates :description, :bedroom, :bathroom, :location, :owner_Id, :price, :guests, :title, :latitude, :longitude, presence: true
+    
 
     has_many :reviews,
     foreign_key: :listing_id,
     class_name: :Listing
+
+     has_many :reservee,
+     foreign_key: :listing_id,
+     class_name: :Reservation  
   
     # has_many :favorites
     # has_many :favorite_users,
@@ -19,6 +24,5 @@ class Listing < ApplicationRecord
     #  def average_rating
     #    reviews.average(:rating)
     #  end
-
 
 end

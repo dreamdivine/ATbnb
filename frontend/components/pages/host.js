@@ -1,10 +1,15 @@
 import React from 'react';
-import ListingForm from '../listings/listing_form';
+import ListingIndexContainer from "../listings/listing_index_container";
+import ListingShowContainer from "../listings/listing_show_container";
+import EditListingFormContainer from "../listings/edit_listing_form_container";
 
 const Host = () => {
     return(
         <div className="hostFormPage">
-            Hello!!
+            <ListingIndexContainer />
+            <ListingShowContainer />
+            <EditListingFormContainer />
+        
         </div>
     )
 }

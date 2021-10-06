@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import Modal from '../modal/modal';
 import NavBar from '../navbar/navbar';
-import ListingIndexContainer from '../listings/listing_index_container';
+import ListingShow from '../listings/listing_show';
+import ListingShowContainer from '../listings/listing_show_container';
 
 
 class Homepage extends React.Component{

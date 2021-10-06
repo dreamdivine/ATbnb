@@ -43,7 +43,9 @@ const NavBar = () => {
           </li>
         </div>
         <div className="right-side">
-          <li className="host">Become a Host</li>
+          <li className="host">
+            <Link to="/become_host" className="become_host">Become a Host</Link>
+            </li>
           <i className="fas fa-globe" id="globe"></i>
           <div
             className="right-icon"

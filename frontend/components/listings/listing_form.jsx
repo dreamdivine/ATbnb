@@ -1,14 +1,16 @@
 import React from "react";
+import {withRouter} from "react-router"
 
 
 class ListingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.listing;
+    console.log("listing")
+    console.log(this.props.listing)
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
-
   update(e, field) {
     this.setState({ [field]: e.target.value });
   }
@@ -28,7 +30,7 @@ class ListingForm extends React.Component {
     // .then(() => this.props.history.push("/"));
     const formData = new FormData();
     formData.append("listing[title]", this.state.title);
-    formData.append("listing[photo]", this.state.photo);
+    // formData.append("listing[photo]", this.state.photoUrl);
     formData.append("listing[guests]", this.state.guests);
     formData.append("listing[bedroom]", this.state.bedroom);
     formData.append("listing[bathroom]", this.state.bathroom);
@@ -117,7 +119,8 @@ class ListingForm extends React.Component {
           <div>
             <label>
               Location
-              <input required
+              <input
+                required
                 type="text"
                 value={this.state.location}
                 onChange={(e) => this.update(e, "location")}
@@ -127,7 +130,8 @@ class ListingForm extends React.Component {
           <div>
             <label>
               Latitude
-              <input required
+              <input
+                required
                 type="number"
                 value={this.state.latitude}
                 onChange={(e) => this.update(e, "latitude")}
@@ -137,7 +141,8 @@ class ListingForm extends React.Component {
           <div>
             <label>
               Longitude
-              <input required
+              <input
+                required
                 type="number"
                 value={this.state.longitude}
                 onChange={(e) => this.update(e, "longitude")}
@@ -166,5 +171,5 @@ class ListingForm extends React.Component {
   }
 }
 
-export default ListingForm;
+export default withRouter(ListingForm);
 

@@ -10,9 +10,14 @@ class User < ApplicationRecord
   has_many :listings,
     foreign_key: :owner_Id,
     class_name: :Listing
-  
+
+  has_many :reservations,
+    foreign_key: :guest_id,
+    class_name: :Reservation
+
   has_many :reviews,
-    foreign_key: :author_id
+  foreign_key: :author_id,
+  class_name: :Reviews
 
   # has_many :favorites
   # has_many :favorite_listings,

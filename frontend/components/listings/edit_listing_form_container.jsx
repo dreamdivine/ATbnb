@@ -22,7 +22,8 @@ class EditListingForm extends React.Component {
 const mSTP = (state, ownProps) => {
   return {
     listing: state.entities.listings[ownProps.match.params.listingId],
-    listingFormType: "update Listing"
+    listingFormType: "update Listing",
+    // photoUrl: state.entities.listing[ownProps.match.params.listingId].photoUrl
   };
 };
 

@@ -180,3 +180,8 @@ l3.photo.attach(io: l3photo, filename: "list3")
 
 r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
 r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
+
+rs1 = Reservation.create(guest_id: u2.id, listing_id: l1.id, check_in_date: "10-10-2021", check_out_date: "12-10-2021", number_of_guest: 1)
+
+rs2 = Reservation.create(guest_id: u3.id, listing_id: l2.id, check_in_date: "10-12-2021", check_out_date: "13-10-2021", number_of_guest: 2)
+rs3 = Reservation.create(guest_id: u2.id, listing_id: l3.id, check_in_date: "10-13-2021", check_out_date: "13-10-2021", number_of_guest: 3)
