@@ -113,7 +113,7 @@ u12 = User.create!(
 )
 
 
-l1 = Listing.create!(
+l1 = Listing.new(
   description: 'my awesome home',
   title: "Welcome to my home",
   guests: 4,
@@ -128,7 +128,12 @@ l1 = Listing.create!(
   # picture_url: 'https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg'
 )
 
-l2 = Listing.create!(
+l1photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list1.jpeg")
+l1.photo.attach(io: l1photo, filename: "list1")
+
+l1.save
+
+l2 = Listing.new(
   description: 'my awesome home for you to stay',
   title: "welcome to my home",
   owner_Id: u2.id,
@@ -143,8 +148,13 @@ l2 = Listing.create!(
   # picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
 )
 
+l2photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list2.jpeg")
+l2.photo.attach(io: l2photo, filename: "list2")
 
-l3 = Listing.create!(
+l2.save
+
+
+l3 = Listing.new(
   description: 'my awesome home for you to stay',
   title: "welcome to my home",
   owner_Id: u3.id,
@@ -158,17 +168,11 @@ l3 = Listing.create!(
   # picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
 )
 
-
-l1photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list1.jpeg")
-l1.photo.attach(io: l1photo, filename: "list1")
-
-
-l2photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list2.jpeg")
-l2.photo.attach(io: l2photo, filename: "list2")
-
-
 l3photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list4.jpeg")
 l3.photo.attach(io: l3photo, filename: "list3")
+
+l3.save
+
 
 # l4photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list5.jpeg")
 # l4.photo.attach(io: l4photo, filename: "list4")

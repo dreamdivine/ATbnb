@@ -12,7 +12,7 @@ json.extract! listing, :id, :description, :guests, :bedroom, :bathroom, :owner_I
 # raise errorMessage
 
 if listing.photo.attachment == nil
-   json.photoUrl = "dummy"
+   json.photoUrl = ""
 else
    json.photoUrl url_for(listing.photo)
 end
