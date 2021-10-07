@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 
 class ReservationShow extends React.Component {
@@ -17,6 +17,7 @@ class ReservationShow extends React.Component {
               <h1>Reservation: {reservation.check_in_date}</h1>
               <h1>Reservation: {reservation.check_out_date}</h1>
               <h2>Number of Guest: {reservation.number_of_guest}</h2>
+              <h2>Price: {this.props.listings[listing_id].price}</h2>
               <button onClick={() => this.props.deleteReservation(reservation.id)}Cancel Reservation></button>
             </div>
           ))}
@@ -26,4 +27,5 @@ class ReservationShow extends React.Component {
   }
 }
 
-export default ReservationShow;
+export default withRouter(ReservationShow);
+

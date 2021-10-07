@@ -24,8 +24,8 @@ const App = () => (
       path="/listings/:listingId/edit"
       component={EditListingFormContainer}
     />
-    <Route path="/" component={ReservationShowContainer} />
-    <Route path="/" component={ReservationCreateContainer}/>
+    <Route path="/reservations" component={ReservationShowContainer} />
+    <Route path="/listings/:listingId" component={ReservationCreateContainer} />
     <Route render={() => <Redirect to={{ pathname: "/" }} />} />
     <Route exact path="/" component={Homepage} />
     <Switch>
