@@ -162,7 +162,7 @@ class SessionForm extends React.Component {
           </div>
           <div className="welcome">Welcome to AT bnb!</div>
           <br />
-          {this.renderErrors()}
+          <div className="session-errors">{this.renderErrors()}</div>
           <div className="login-form">
             {field}
             <input
@@ -176,12 +176,21 @@ class SessionForm extends React.Component {
             <div className="or">or</div>
             <div className="separator"></div>
           </div>
-          <div className="contact-info">
+          <div className="contact-demo">
             <div className="login-demo" onClick={this.demoLogin}>
-              Demo Login
+              <i class="fas fa-user" id="users-icon"></i>
+              <p>Continue with Demo Login</p>
             </div>
-            <div>Github</div>
-            <div>LinkedIn</div>
+            <div className="github">
+              <i class="fab fa-github" id="github-icon"></i>
+              <a href="https://github.com/dreamdivine">Continue with Github</a>
+            </div>
+            <div className="linkedIn">
+              <i class="fab fa-linkedin" id="linkedIn-icon"></i>
+              <a href="https://github.com/dreamdivine">
+                Continue with LinkedIn
+              </a>
+            </div>
           </div>
         </form>
       </div>
