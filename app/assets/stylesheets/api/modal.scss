@@ -7,25 +7,29 @@
    display: flex;
    justify-content: center;
    margin-top: 100px;
+   position: relative;
  }
 
  .login-form {
    display: flex;
    justify-content: center;
    flex-direction: column;
+   position: relative;
  }
 
  .login-input {
-   width: 518px;
+   width: 510px;
    font-size: 18px;
-   padding: 6px;
+   padding: 8px;
    position: relative;
    left: 20px;
    top: 40px;
+   border: 0.25px solid lightgray;
+   border-bottom: none;
  }
 
  .login-form-box {
-   border: 1px solid black;
+   border: 1px solid gray;
    width: 570px;
    height: 700px;
    background-color: white;
@@ -39,22 +43,23 @@
    text-transform: capitalize;
    background-color: #ff385C;
    position: relative;
-   top: 20px;
+   top: 60px;
    font-size: 18px;
    color: white;
    border-radius: 10px;
    width: 93%;
    height: 45px;
-   left: 25px;
+   left: 20px;
    border: 1px solid #ff385C;
  }
 
  .confirmAccount{
      display: flex;
      position: relative;
-     padding: 25px;
-
+     left: 20px;
+     top: 50px;
  }
+
 
  .modal-background {
   position: fixed;
@@ -74,34 +79,81 @@
 }
 
 .login-demo{
-    position: relative;
-    top: 100px;
+  position: relative;
+  top: 100px;
+  border: 1px solid gray;
 }
 
 .close-x{
-    position: relative;
-    left: 50px;
-    top: 22px;
-    font-weight: bold;
-    z-index: 1;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  font-weight: bold;
+  z-index: 1;
 
 }
 
 .welcome{
-    position: relative;
-    right: 10px;
-    top: 20px
-
+  position: relative;
+  top: 35px;
+  left: 20px;
+  font-size: 20px;
 }
 
 .intro-form{
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid lightgray;
+  height: 55px;
+}
+
+.signupToFill{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.loginToFill{
+  display: flex;
+  flex-direction: column;
+
 }
 
 .loginSignUp{
-    position: relative;
-    left: 200px;
-    top: 20px;
+  position: relative;
+  top: 20px;
+  left: 240px;
+}
 
+.bottom-border{
+  position: relative;
+  border: 0.25px solid lightgray;
+  top: 40px;
+  left: 20px;
+  width: 528px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.or-Line{
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  top: 80px;
+}
+
+.separator{
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  top: 7px;
+  left: 0px;
+
+  width: 225px;
+  height: 1px;
+}
+
+.or{
+  color:gray;
+  font-size: 15px;
 }

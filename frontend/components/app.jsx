@@ -18,8 +18,6 @@ const App = () => (
       <Link to="/" className="header-link"></Link>
     </header>
 
-    <Route exact path="/login" component={LoginFormContainer} />
-    <Route exact path="/signup" component={SignupFormContainer} />
     <Route
       path="/listings/:listingId/edit"
       component={EditListingFormContainer}
