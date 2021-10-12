@@ -115,15 +115,11 @@
   height: 55px;
 }
 
-.signupToFill {
+.signupToFill, .loginToFill {
   display: flex;
   flex-direction: column;
 }
 
-.loginToFill {
-  display: flex;
-  flex-direction: column;
-}
 
 .loginSignUp {
   position: relative;
@@ -209,7 +205,9 @@ a {
 
 .session-errors{
   position: relative;
-  top: 20px;
-  left: 22px;
+  left: 230px;
   color: red;
+  top: -35px;
+  height: 22px;
 }
+
