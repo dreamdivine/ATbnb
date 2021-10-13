@@ -17,19 +17,17 @@ const Dropdown = () => {
         </div>
         <li className="dropdown-link">
           <div className="lineDropdown"></div>
-          <Link to="/host_your_home" onClick={() => setClick(false)}>
+          <Link to="/host_your_home">
             Host your home
           </Link>
         </li>
         <li className="dropdown-link">
-          <Link to="/host_an_experience" onClick={() => setClick(false)}>
+          <Link to="/host_an_experience" >
             Host an experience
           </Link>
         </li>
         <li className="dropdown-link">
-          <Link to="/help" onClick={() => setClick(false)}>
-            Help
-          </Link>
+          <Link to="/help">Help</Link>
         </li>
       </div>
     );

@@ -127,10 +127,10 @@ li {
 .guest-booking{
     background-color: white;
     display: flex;
-    justify-content: space-around;
     width: 46%;
     height: 65px;
     align-items: center;
+    justify-content: center;
     position: relative;
     left: 490px;
     top: 40px;
@@ -147,7 +147,8 @@ li {
     height: 50px;
     border-radius: 50%;
     position: relative;
-    left: 15px;
+    left: 150px;
+    top: 6px;
 }
 #search-icon{
     position: relative;
@@ -157,11 +158,12 @@ li {
 }
 
 .header{
-    font-size: 12px;
+    font-size: 14px;
+    color: black;
 }
 
 .detail{
-    font-size: 12px;
+    font-size: 15px;
 
 }
 
@@ -176,23 +178,45 @@ li {
     text-align: left;
 }
 
-.location, .check-in, .check-out, .guests{
-    padding: 12px;
-    width: 13%;
-    background-color: white;
-    border-radius: 25px;
-
+.location{
+    width: 260px;
+    height: 63px;
+    border-radius: 50px;
+    border: 1px solid white;
+    position: relative;
+    left: 0px;
 }
 
 .location:hover, .check-in:hover, .check-out:hover, .guests:hover{
-   background-color:lightgray;
-   border-radius: 25px;
-   padding: 10px;
+    border: 1px solid #F5F5F5;
+    background-color: #F5F5F5;
+    transition: all linear;
+
 }
+
+.check-in, .check-out{
+    border: 1px solid white;
+    height: 63px;
+    width: 170px;
+    border-radius: 50px;
+
+}
+
+.guests{
+    border-radius: 1px solid white;
+    height: 65px;
+    width: 274px;
+    border-radius: 50px;
+    display: flex;
+}
+
 
 .search:hover{
     background-color: #D70466;
 }
 
-
-
+.describe{
+    position: relative;
+    left: 30px;
+    top: 18px;
+}

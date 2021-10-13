@@ -14,10 +14,14 @@ const Greeting = ({ currentUser, logout, openModal }) => {
   );
   const personalGreeting = () => (
     <div className="header-group">
-      <div className="header-name">Hi, {currentUser.username}!</div>
-      <button className="header-button" onClick={logout}>
+      <li className="header-name">Hi, {currentUser.username}!</li>
+      <li className="header-button" onClick={logout}>
         Log Out
-      </button>
+        <div className="lineLogout"></div>
+      </li>
+      <li className="messages"><Link to="/messages">Messages</Link></li>
+      <li className="notification"><Link to="/notification">Notification</Link></li>
+      <li className="trips"><Link to="/trips">Trips</Link></li>
     </div>
   );
 

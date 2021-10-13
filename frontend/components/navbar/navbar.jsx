@@ -44,8 +44,10 @@ const NavBar = () => {
         </div>
         <div className="right-side">
           <li className="host">
-            <Link to="/become_host" className="become_host">Become a Host</Link>
-            </li>
+            <Link to="/become_host" className="become_host">
+              Become a Host
+            </Link>
+          </li>
           <i className="fas fa-globe" id="globe"></i>
           <div
             className="right-icon"
@@ -60,7 +62,7 @@ const NavBar = () => {
       </div>
       <div className="guest-booking">
         <div className="location">
-          <ul>
+          <ul className="describe">
             <li className="header">Location</li>
             <li className="detail">Where are you going?</li>
           </ul>
@@ -69,7 +71,7 @@ const NavBar = () => {
           <span className="divider"></span>
         </div>
         <div className="check-in">
-          <ul>
+          <ul className="describe">
             <li className="header">Check in</li>
             <li className="detail">Add dates</li>
           </ul>
@@ -78,7 +80,7 @@ const NavBar = () => {
           <span className="divider"></span>
         </div>
         <div className="check-out">
-          <ul>
+          <ul className="describe">
             <li className="header">Check out</li>
             <li className="detail">Add dates</li>
           </ul>
@@ -87,13 +89,13 @@ const NavBar = () => {
           <span className="divider"></span>
         </div>
         <div className="guests">
-          <ul>
+          <ul className="describe">
             <li className="header">Guests</li>
             <li className="detail">Add guests</li>
           </ul>
-        </div>
-        <div className="search">
-          <i className="fas fa-search" id="search-icon"></i>
+          <div className="search">
+            <i className="fas fa-search" id="search-icon"></i>
+          </div>
         </div>
       </div>
     </div>

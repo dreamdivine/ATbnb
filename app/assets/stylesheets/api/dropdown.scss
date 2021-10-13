@@ -56,3 +56,38 @@
     top: 10px;
 
 }
+
+.header-group{
+    background-color: lightblue;
+    height: 200px;
+    position: relative;
+    right: 125px;
+    width: 220px;
+
+}
+
+.header-group li{
+  position: relative;
+  left: 0px;
+  padding: 11px;
+  top: -1px;
+  color: black;
+}
+
+.lineDropdown{
+  width: 220px;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+
+.lineLogout{
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    width: 220px;
+    left: -11px;
+    top: 10px;
+
+}
+
