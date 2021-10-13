@@ -210,13 +210,12 @@ a {
   height: 22px;
 }
 
-.lineBelowSignIn{
-  height: 1px;
+.lineDropdown{
   width: 220px;
+  border-bottom: 1px solid lightgray;
   position: relative;
-  border-bottom: 2px solid lightgray;
-  top: 10px;
-  right: 125px;
+  left: -10px;
+  top: -10px;
 }
 
 

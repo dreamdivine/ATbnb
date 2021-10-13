@@ -15,8 +15,8 @@ const Dropdown = () => {
         <div className="login-sign-dropdown" id="logSign-btn">
           <GreetingContainer />
         </div>
-        <div className="lineBelowSignIn"></div>
         <li className="dropdown-link">
+          <div className="lineDropdown"></div>
           <Link to="/host_your_home" onClick={() => setClick(false)}>
             Host your home
           </Link>
