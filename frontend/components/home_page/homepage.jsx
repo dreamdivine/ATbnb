@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import GreetingContainer from '../greeting/greeting_container';
 import Modal from '../modal/modal';
 import NavBar from '../navbar/navbar';
-import ListingShow from '../listings/listing_show';
-import ListingShowContainer from '../listings/listing_show_container';
+import Explore from '../explore_nearby/explore'
+
 
 
 class Homepage extends React.Component{
@@ -15,6 +14,8 @@ class Homepage extends React.Component{
           <div className="homepage">
             <Modal />
             <NavBar />
+            <p className="nearby-explore">Explore nearby</p>
+            <Explore />
           </div>
         );
 }

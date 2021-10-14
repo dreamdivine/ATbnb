@@ -1,0 +1,54 @@
+
+
+.explore{
+    display: flex;
+    position: relative;
+    top: 757px;
+    left: 170px;
+    height: 250px;
+    width: 1500px;
+    flex-wrap: wrap;
+}
+
+
+.city-images{
+    width: 70px;
+    height: 70px;
+    border-radius: 25%;
+    object-fit: cover;
+}
+
+.image-detail{
+    display: flex;
+    width: 350px;
+    align-items: center;
+
+}
+
+.city-detail{
+    position: relative;
+    left: 15px;
+}
+
+h3{
+    font-size: 16px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color: #484848;
+}
+
+.detail-text{
+    color: black;
+    position: relative;
+    top: 5px;
+    font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+.nearby-explore{
+    position: relative;
+    top: 750px;
+    left: 176px;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
