@@ -5,10 +5,10 @@ const ListingIndexItem = ({ listing, deleteListing }) => {
   return (
     <div className="ListingUpdateDelete">
         <Link to={`/listings/${listing.id}`}>{listing.title}</Link>
-        <Link to={`/listings/${listing.id}/edit`}>Edit</Link>
+        {/* <Link to={`/listings/${listing.id}/edit`}>Edit</Link>
       <button onClick={() => deleteListing(listing.id)}>
         Delete
-      </button>
+      </button> */}
     </div>
   );
 };

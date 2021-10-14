@@ -1,6 +1,5 @@
 import React from 'react';
 import ListingIndexItem from "./listing_index_item";
-import CreateListingFormContainer from "./create_listing_form_container";
 
 class ListingIndex extends React.Component {
   constructor(props){
@@ -17,10 +16,13 @@ class ListingIndex extends React.Component {
       <div>
         <ul>
           {listings.map((listing, i) => (
-            <ListingIndexItem listing={listing} deleteListing={deleteListing} key={i} />
+            <ListingIndexItem
+              listing={listing}
+              // deleteListing={deleteListing}
+              key={i}
+            />
           ))}
         </ul>
-        <CreateListingFormContainer />
       </div>
     );
   }
