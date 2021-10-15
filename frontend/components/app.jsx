@@ -10,25 +10,26 @@ import EditListingFormContainer from "./listings/edit_listing_form_container";
 // import RoutingError from "./errors/routing_errors";
 
 const App = () => (
-  <Router>
-    <div>
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/sanfrancisco" component={SanFrancisco} />
-        <Route
-          path="/listings/:listingId/edit"
-          component={EditListingFormContainer}
-        />
-        <Route
-          exact
-          path="/listings/:listingId"
-          component={ListingShowContainer}
-        />
-        <Route exact path="/become_host" component={ListingIndexContainer} />
-        <Route render={() => <Redirect to={{ pathname: "/" }} />} />
-      </Switch>
-    </div>
-  </Router>
+  <div>
+    <header>
+      <Link to="/" className="header-link"></Link>
+    </header>
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route path="/sanfrancisco" component={SanFrancisco} />
+      <Route
+        path="/listings/:listingId/edit"
+        component={EditListingFormContainer}
+      />
+      <Route
+        exact
+        path="/listings/:listingId"
+        component={ListingShowContainer}
+      />
+      <Route exact path="/listings" component={ListingIndexContainer} />
+      <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+    </Switch>
+  </div>
 );
 
 export default App;

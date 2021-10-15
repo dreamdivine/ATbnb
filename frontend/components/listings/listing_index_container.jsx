@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import ListingIndex from "./listing_index";
-import {fetchListings, deleteListing} from "../../actions/listing_actions"
+import {fetchListing, fetchListings, deleteListing} from "../../actions/listing_actions"
 
 
 const mSTP = (state) => {
