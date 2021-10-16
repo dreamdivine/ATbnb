@@ -64,12 +64,13 @@ class Api::ListingsController < ApplicationController
       :title,
       :owner_Id,
       :guests,
-       #:picture_url,
       :latitude,
       :longitude,
-      :photo
+      :photo,
+      :city
     )
   end
+  
 
 
   # def bounds

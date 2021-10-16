@@ -1,4 +1,4 @@
-json.extract! listing, :id, :description, :guests, :bedroom, :bathroom, :owner_Id, :location, :price, :title, :latitude, :longitude
+json.extract! listing, :id, :description, :guests, :bedroom, :bathroom, :owner_Id, :location, :price, :title, :latitude, :longitude, :city
 # json.photoUrl url_for(listing.photo)
 # puts(listing.photoUrl)
 # puts ("hello" listing)

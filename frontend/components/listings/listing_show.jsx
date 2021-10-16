@@ -56,6 +56,7 @@ class ListingShow extends React.Component {
         <p>{this.props.listing.guests}</p>
         <p>{this.props.listing.price}</p>
         <p>{this.props.listing.location}</p>
+        <p>{this.props.listing.city}</p>
         <p>{this.props.listing.description}</p>
         <p>{this.props.listing.latitude}</p>
         <p>{this.props.listing.longitude}</p>

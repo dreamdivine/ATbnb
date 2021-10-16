@@ -1,5 +1,5 @@
 class Listing < ApplicationRecord
-    validates :description, :bedroom, :bathroom, :location, :owner_Id, :price, :guests, :title, :latitude, :longitude, presence: true
+    validates :description, :bedroom, :bathroom, :location, :owner_Id, :price, :guests, :title, :latitude, :longitude, :city, presence: true
     validate :ensure_photo
 
     has_many :reviews,

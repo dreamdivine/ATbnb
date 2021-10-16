@@ -6,13 +6,26 @@ class ListingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.listing;
-    console.log("listing")
-    console.log(this.props.listing)
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.renderListingErrors = this.renderListingErrors.bind(this);
   }
   update(e, field) {
     this.setState({ [field]: e.target.value });
+  }
+
+  componentWillUnmount(){
+    this.props.clearErrors()
+  }
+
+  renderListingErrors(){
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error ${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
   }
 
   handleFile(e) {
@@ -32,12 +45,8 @@ class ListingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // this.props
-    //   .action(this.state)
-    // .then(() => this.props.history.push("/"));
     const formData = new FormData();
     formData.append("listing[title]", this.state.title);
-    // formData.append("listing[photo]", this.state.photoUrl);
     formData.append("listing[guests]", this.state.guests);
     formData.append("listing[bedroom]", this.state.bedroom);
     formData.append("listing[bathroom]", this.state.bathroom);
@@ -47,10 +56,11 @@ class ListingForm extends React.Component {
     formData.append("listing[owner_Id]", this.state.owner_Id);
     formData.append("listing[location]", this.state.location);
     formData.append("listing[description]", this.state.description);
+    formData.append("listing[city]", this.state.city);
     if (this.state.photoFile) {
       formData.append("listing[photo]", this.state.photoFile);
     }
-    this.props.action(formData, this.props.listing);
+    this.props.action(formData, this.props.listing)
   }
 
   render() {
@@ -58,6 +68,7 @@ class ListingForm extends React.Component {
       <div className="listingForm">
         <form onSubmit={this.handleSubmit}>
           <div>
+            {this.renderListingErrors()}
             <label>
               Title
               <input
@@ -124,6 +135,17 @@ class ListingForm extends React.Component {
           </div>
           <div>
             <label>
+              City
+              <input
+                required
+                type="text"
+                value={this.state.city}
+                onChange={(e) => this.update(e, "city")}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
               Location
               <input
                 required
@@ -156,16 +178,6 @@ class ListingForm extends React.Component {
             </label>
           </div>
           <div>
-            {/* <label>
-              Picture Url
-              <input
-                type="text"
-                value={this.state.picture_url}
-                onChange={(e) => this.update(e, "picture_url")}
-              />
-            </label> */}
-          </div>
-          <div>
             <input type="file" onChange={this.handleFile.bind(this)} />
           </div>
           <div>
@@ -177,5 +189,5 @@ class ListingForm extends React.Component {
   }
 }
 
-export default withRouter(ListingForm);
+export default withRouter(ListingForm)
 

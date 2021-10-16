@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
 import Homepage from "./home_page/homepage";
 import SanFrancisco from "../components/sanfrancisco/sanfrancisco";
+import Host from "../components/host/host";
 
 import ListingIndexContainer from "./listings/listing_index_container";
 import ListingShowContainer from "./listings/listing_show_container";
@@ -14,21 +15,16 @@ const App = () => (
     <header>
       <Link to="/" className="header-link"></Link>
     </header>
-    <Switch>
-      <Route exact path="/" component={Homepage} />
-      <Route path="/sanfrancisco" component={SanFrancisco} />
-      <Route
-        path="/listings/:listingId/edit"
-        component={EditListingFormContainer}
-      />
-      <Route
-        exact
-        path="/listings/:listingId"
-        component={ListingShowContainer}
-      />
-      <Route exact path="/listings" component={ListingIndexContainer} />
-      <Route render={() => <Redirect to={{ pathname: "/" }} />} />
-    </Switch>
+    <Route exact path="/" component={Homepage} />
+    <Route path="/sanfrancisco" component={SanFrancisco} />
+    <Route
+      path="/listings/:listingId/edit"
+      component={EditListingFormContainer}
+    />
+    <Route exact path="/listings/:listingId" component={ListingShowContainer} />
+    <Route exact path="/host" component={Host} />
+    <Route exact path="/listings" component={ListingIndexContainer} />
+    <Route render={() => <Redirect to={{ pathname: "/" }} />} />
   </div>
 );
 

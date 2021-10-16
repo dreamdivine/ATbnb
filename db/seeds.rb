@@ -112,79 +112,329 @@ u12 = User.create!(
   last_name: 'u12'
 )
 
-
 l1 = Listing.new(
-  description: 'my awesome home',
-  title: "Welcome to my home",
-  guests: 4,
+  description: '',
+  title: "Civic Center Views from a Contemporary City Pad and Parking",
+  guests: 3,
   owner_Id: u1.id,
   latitude: 37.782415,
-  bedroom: 2,
+  bedroom: 1,
   bathroom: 1,
-  price: 100,
+  city: "San Francisco",
+  price: 76,
   longitude: -122.442517,
-  location: "1 webster st, alameda, ca"
-  # ,
-  # picture_url: 'https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg'
+  location: "310 Van Ness Ave, San Francisco, CA 94102"
 )
 
-l1photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list1.jpeg")
+l1photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj1.jpeg")
 l1.photo.attach(io: l1photo, filename: "list1")
 
 l1.save
 
 l2 = Listing.new(
-  description: 'my awesome home for you to stay',
-  title: "welcome to my home",
-  owner_Id: u2.id,
-  guests: 2,
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Beautiful Victorian 2Bed 1 Bath with deck",
+  owner_Id: u1.id,
+  guests: 4,
   latitude: 37.754500,
-  bedroom: 4,
-  bathroom: 2,
-  price: 200,
+  bedroom: 2,
+  bathroom: 1,
+  city: "San Francisco",
+  price: 160,
   longitude: -122.457967,
-  location: "2 webster st, alameda, ca"
-  # ,
-  # picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
+  location: "401 Harrison St, San Francisco, CA 94105"
 )
 
-l2photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list2.jpeg")
+l2photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sf2.jpeg")
 l2.photo.attach(io: l2photo, filename: "list2")
 
 l2.save
 
 
-l3 = Listing.new(
-  description: 'my awesome home for you to stay',
-  title: "welcome to my home",
+l9 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Brand New Guest Suite + Full Kitchen + Parking",
+  owner_Id: u2.id,
+  guests: 2,
+  latitude: 37.754500,
+  bedroom: 1,
+  bathroom: 1,
+  city: "San Jose",
+  price: 88,
+  longitude: -122.457967,
+  location: "1757 Miriam Ct, SAN JOSE, CA 95124"
+)
+
+l9photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj1.jpeg")
+l9.photo.attach(io: l9photo, filename: "list9")
+
+l9.save
+
+
+l10 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u2.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "San Jose",
+  price: 100,
+  longitude: -122.457967,
+  location: "5293 Roxanne Dr, SAN JOSE, CA 95124"
+)
+
+l10photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l10.photo.attach(io: l10photo, filename: "list10")
+
+l10.save
+
+
+l17 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Private Casita with Stunning View",
   owner_Id: u3.id,
   guests: 2,
   latitude: 37.754500,
-  bedroom: 4,
-  bathroom: 2,
-  price: 200,
+  bedroom: 1,
+  bathroom: 1,
+  city: "Oakland",
+  price: 79,
   longitude: -122.457967,
-  location: "3 webster st, alameda, ca",
-  # picture_url: 'https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/slideshow/NewHouse_SA_Photo_01.jpg?1578959519'
+  location: "3328 Over St, Oakland, CA 94619"
 )
 
-l3photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list4.jpeg")
-l3.photo.attach(io: l3photo, filename: "list3")
+l17photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/oakland1.jpeg")
+l17.photo.attach(io: l17photo, filename: "list17")
 
-l3.save
-
-
-# l4photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/list5.jpeg")
-# l4.photo.attach(io: l4photo, filename: "list4")
+l17.save
 
 
-# Favorite.create(user_id: u2.id, listing_id:  l1.id)
-# Favorite.create(user_id: u3.id, listing_id:  l2.id)
+l18 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Private, Detached, Urban Creekside Studio.",
+  owner_Id: u3.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Oakland",
+  price: 72,
+  longitude: -122.457967,
+  location: "236 Bergedo Dr, Oakland, CA 94603"
+)
 
-r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
-r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
+l18photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/oakland2.jpeg")
+l18.photo.attach(io: l18photo, filename: "list18")
 
-rs1 = Reservation.create(guest_id: u2.id, listing_id: l1.id, check_in_date: "10-10-2021", check_out_date: "12-10-2021", number_of_guest: 1)
+l18.save
 
-rs2 = Reservation.create(guest_id: u3.id, listing_id: l2.id, check_in_date: "10-12-2021", check_out_date: "13-10-2021", number_of_guest: 2)
-rs3 = Reservation.create(guest_id: u2.id, listing_id: l3.id, check_in_date: "10-13-2021", check_out_date: "13-10-2021", number_of_guest: 3)
+
+
+l25 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u4.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Santa Barbara",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l25photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l25.photo.attach(io: l25photo, filename: "list25")
+
+l25.save
+
+
+l26 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u4.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Santa Barbara",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l26photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l26.photo.attach(io: l26photo, filename: "list26")
+
+l26.save
+
+l33 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u5.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Sacramento",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l33photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l33.photo.attach(io: l33photo, filename: "list33")
+
+l33.save
+
+
+l34 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u5.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Sacramento",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l34photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l34.photo.attach(io: l34photo, filename: "list34")
+
+l34.save
+
+
+l41 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u6.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Mammoth Lakes",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l41photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l41.photo.attach(io: l41photo, filename: "list41")
+
+l41.save
+
+
+l42 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u6.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Mammoth Lakes",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l42photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l42.photo.attach(io: l42photo, filename: "list42")
+
+l42.save
+
+
+l49 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u7.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "South Lake Tahoe",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l49photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l49.photo.attach(io: l49photo, filename: "list49")
+
+l49.save
+
+
+l50 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u7.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "South Lake Tahoe",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l50photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l50.photo.attach(io: l50photo, filename: "list50")
+
+l50.save
+
+l57 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u8.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Berkeley",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l57photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l57.photo.attach(io: l57photo, filename: "list57")
+
+l57.save
+
+l58 = Listing.new(
+  description: 'Wifi . Kitchen . Washer . Dryer',
+  title: "Silicon Valley Studio Apartment",
+  owner_Id: u8.id,
+  guests: 3,
+  latitude: 37.754500,
+  bedroom: 2,
+  bathroom: 1,
+  city: "Berkeley",
+  price: 72,
+  longitude: -122.457967,
+  location: "6307 Laird Ave, Oakland, CA 94605"
+)
+
+l58photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
+l58.photo.attach(io: l58photo, filename: "list58")
+
+l58.save
+
+
+
+
+# r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
+# r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
+
+# rs1 = Reservation.create(guest_id: u2.id, listing_id: l1.id, check_in_date: "10-10-2021", check_out_date: "12-10-2021", number_of_guest: 1)
+
+# rs2 = Reservation.create(guest_id: u3.id, listing_id: l2.id, check_in_date: "10-12-2021", check_out_date: "13-10-2021", number_of_guest: 2)
+# rs3 = Reservation.create(guest_id: u2.id, listing_id: l3.id, check_in_date: "10-13-2021", check_out_date: "13-10-2021", number_of_guest: 3)

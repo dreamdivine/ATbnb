@@ -3,6 +3,7 @@ import * as APIUtil from "../util/listing_api_util";
 export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 export const RECEIVE_LISTING = "RECEIVE_LISTING";
 // export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
+export const RECEIVE_LISTING_ERRORS = "RECEIVE_LISTING_ERRORS"
 export const REMOVE_LISTING = "REMOVE_LISTING";
 
 export const receiveListings = (listings) => ({
@@ -21,7 +22,10 @@ export const removeListing = (listingId) => ({
   listingId,
 });
 
-
+export const receiveListingErrors = (errors) => {
+  return{ type: RECEIVE_LISTING_ERRORS,
+  errors,
+}};
 
 // export const receiveReview = ({ review, average_rating, author }) => ({
 //   type: RECEIVE_REVIEW,
@@ -43,19 +47,21 @@ export const fetchListing = (listingId) => (dispatch) =>(
   APIUtil.fetchListing(listingId).then((listing) => 
   dispatch(receiveListing(listing))));
 
-export const createListing = (listing) => (dispatch) =>(
-  APIUtil.createListing(listing).then((listing) => dispatch(receiveListing(listing))));
+export const createListing = (listing) => (dispatch) =>
+  APIUtil.createListing(listing).then(
+    (listing) => dispatch(receiveListing(listing)),
+    (errors) => dispatch(receiveListingErrors(errors.responseJSON))
+  );
 
-export const updateListing = (listingFormData, listing) => (dispatch) =>(
+
+export const updateListing = (listingFormData, listing) => (dispatch) =>
   // console.log("call with listingFormData")
   // console.log(listingFormData)
   // console.log(listing)
-  APIUtil.updateListing(listingFormData, listing)
-  .then((listing) => 
-    // console.log("return listing")
-    // console.log(listing)
-    dispatch(receiveListing(listing)))
-    );
+  APIUtil.updateListing(listingFormData, listing).then(
+    (listing) => dispatch(receiveListing(listing)),
+    (errors) => dispatch(receiveListingErrors(errors.responseJSON))
+  );
 
 export const deleteListing = (listingId) => (dispatch) =>
   (APIUtil.deleteListing(listingId)

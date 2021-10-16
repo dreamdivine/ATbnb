@@ -17,7 +17,7 @@ const Dropdown = () => {
         </div>
         <li className="dropdown-link">
           <div className="lineDropdown"></div>
-          <Link to="/host_your_home">
+          <Link to="/host">
             Host your home
           </Link>
         </li>

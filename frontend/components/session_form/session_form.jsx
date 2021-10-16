@@ -156,7 +156,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <div className="intro-form">
             <div onClick={this.props.closeModal} className="close-x">
-              <i class="fas fa-times" id="x-icon"></i>
+              <i className="fas fa-times" id="x-icon"></i>
             </div>
             <h3 className="loginSignUp">Log in or sign up</h3>
           </div>
@@ -178,15 +178,15 @@ class SessionForm extends React.Component {
           </div>
           <div className="contact-demo">
             <div className="login-demo" onClick={this.demoLogin}>
-              <i class="fas fa-user" id="users-icon"></i>
+              <i className="fas fa-user" id="users-icon"></i>
               <p>Continue with Demo Login</p>
             </div>
             <div className="github">
-              <i class="fab fa-github" id="github-icon"></i>
+              <i className="fab fa-github" id="github-icon"></i>
               <a href="https://github.com/dreamdivine">Continue with Github</a>
             </div>
             <div className="linkedIn">
-              <i class="fab fa-linkedin" id="linkedIn-icon"></i>
+              <i className="fab fa-linkedin" id="linkedIn-icon"></i>
               <a href="https://github.com/dreamdivine">
                 Continue with LinkedIn
               </a>

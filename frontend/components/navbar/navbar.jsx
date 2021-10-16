@@ -44,7 +44,7 @@ const NavBar = () => {
         </div>
         <div className="right-side">
           <li className="host">
-            <Link to="/become_host" className="become_host">
+            <Link to="/host" className="become_host">
               Become a Host
             </Link>
           </li>
