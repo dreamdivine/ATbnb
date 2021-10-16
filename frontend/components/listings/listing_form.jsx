@@ -14,9 +14,9 @@ class ListingForm extends React.Component {
     this.setState({ [field]: e.target.value });
   }
 
-  componentWillUnmount(){
-    this.props.clearErrors()
-  }
+  // componentWillUnmount(){
+  //   this.props.clearErrors()
+  // }
 
   renderListingErrors(){
     return (
@@ -60,7 +60,9 @@ class ListingForm extends React.Component {
     if (this.state.photoFile) {
       formData.append("listing[photo]", this.state.photoFile);
     }
-    this.props.action(formData, this.props.listing)
+    this.props
+      .action(formData, this.props.listing)
+      .then((list) => this.props.history.push(`/listings/${list.listing.id}`));
   }
 
   render() {
