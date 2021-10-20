@@ -117,12 +117,12 @@ l1 = Listing.new(
   title: "Civic Center Views from a Contemporary City Pad and Parking",
   guests: 3,
   owner_Id: u1.id,
-  latitude: 37.782415,
+  latitude: 37.7749,
   bedroom: 1,
   bathroom: 1,
   city: "San Francisco",
   price: 76,
-  longitude: -122.442517,
+  longitude: -122.4194,
   location: "310 Van Ness Ave, San Francisco, CA 94102"
 )
 
@@ -156,12 +156,12 @@ l9 = Listing.new(
   title: "Brand New Guest Suite + Full Kitchen + Parking",
   owner_Id: u2.id,
   guests: 2,
-  latitude: 37.754500,
+  latitude: 37.3382,
   bedroom: 1,
   bathroom: 1,
   city: "San Jose",
   price: 88,
-  longitude: -122.457967,
+  longitude: -121.8863,
   location: "1757 Miriam Ct, SAN JOSE, CA 95124"
 )
 
@@ -176,12 +176,12 @@ l10 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u2.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 37.3382,
   bedroom: 2,
   bathroom: 1,
   city: "San Jose",
   price: 100,
-  longitude: -122.457967,
+  longitude: -121.8863,
   location: "5293 Roxanne Dr, SAN JOSE, CA 95124"
 )
 
@@ -196,12 +196,12 @@ l17 = Listing.new(
   title: "Private Casita with Stunning View",
   owner_Id: u3.id,
   guests: 2,
-  latitude: 37.754500,
+  latitude: 37.8044,
   bedroom: 1,
   bathroom: 1,
   city: "Oakland",
   price: 79,
-  longitude: -122.457967,
+  longitude: -122.2712,
   location: "3328 Over St, Oakland, CA 94619"
 )
 
@@ -216,12 +216,12 @@ l18 = Listing.new(
   title: "Private, Detached, Urban Creekside Studio.",
   owner_Id: u3.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 37.8044,
   bedroom: 2,
   bathroom: 1,
   city: "Oakland",
   price: 72,
-  longitude: -122.457967,
+  longitude: -122.2712,
   location: "236 Bergedo Dr, Oakland, CA 94603"
 )
 
@@ -237,12 +237,12 @@ l25 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u4.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 34.4208,
   bedroom: 2,
   bathroom: 1,
   city: "Santa Barbara",
   price: 72,
-  longitude: -122.457967,
+  longitude: -119.6982,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -257,12 +257,12 @@ l26 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u4.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 34.4208,
   bedroom: 2,
   bathroom: 1,
   city: "Santa Barbara",
   price: 72,
-  longitude: -122.457967,
+  longitude: -119.6982,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -276,12 +276,12 @@ l33 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u5.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 38.5816,
   bedroom: 2,
   bathroom: 1,
   city: "Sacramento",
   price: 72,
-  longitude: -122.457967,
+  longitude: -121.4944,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -296,12 +296,12 @@ l34 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u5.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 38.5816,
   bedroom: 2,
   bathroom: 1,
   city: "Sacramento",
   price: 72,
-  longitude: -122.457967,
+  longitude: -121.4944,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -316,12 +316,12 @@ l41 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u6.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 37.6485,
   bedroom: 2,
   bathroom: 1,
   city: "Mammoth Lakes",
   price: 72,
-  longitude: -122.457967,
+  longitude: -118.9721,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -336,12 +336,12 @@ l42 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u6.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 37.6485,
   bedroom: 2,
   bathroom: 1,
   city: "Mammoth Lakes",
   price: 72,
-  longitude: -122.457967,
+  longitude: -118.9721,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -356,12 +356,12 @@ l49 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u7.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 39.0968,
   bedroom: 2,
   bathroom: 1,
   city: "South Lake Tahoe",
   price: 72,
-  longitude: -122.457967,
+  longitude: -120.0324,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -376,12 +376,12 @@ l50 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u7.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 39.0968,
   bedroom: 2,
   bathroom: 1,
   city: "South Lake Tahoe",
   price: 72,
-  longitude: -122.457967,
+  longitude: -120.0324,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -395,12 +395,12 @@ l57 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u8.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 37.8715,
   bedroom: 2,
   bathroom: 1,
   city: "Berkeley",
   price: 72,
-  longitude: -122.457967,
+  longitude: -122.2730,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -414,12 +414,12 @@ l58 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u8.id,
   guests: 3,
-  latitude: 37.754500,
+  latitude: 37.8715,
   bedroom: 2,
   bathroom: 1,
   city: "Berkeley",
   price: 72,
-  longitude: -122.457967,
+  longitude: -122.2730,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 

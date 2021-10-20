@@ -1,6 +1,7 @@
 import React from 'react';
 import ListingIndexItem from "./listing_index_item";
 
+
 class ListingIndex extends React.Component {
   constructor(props){
     super(props)
@@ -23,6 +24,7 @@ class ListingIndex extends React.Component {
             />
           ))}
         </ul>
+       
       </div>
     );
   }

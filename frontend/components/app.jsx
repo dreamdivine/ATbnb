@@ -7,6 +7,8 @@ import Host from "../components/host/host";
 import ListingIndexContainer from "./listings/listing_index_container";
 import ListingShowContainer from "./listings/listing_show_container";
 import EditListingFormContainer from "./listings/edit_listing_form_container";
+import SearchContainer from "./listings/search_container";
+
 
 // import RoutingError from "./errors/routing_errors";
 
@@ -16,6 +18,7 @@ const App = () => (
       <Link to="/" className="header-link"></Link>
     </header>
     <Route exact path="/" component={Homepage} />
+    <Route exact path="/" component={ListingIndexContainer} />
     <Route path="/sanfrancisco" component={SanFrancisco} />
     <Route
       path="/listings/:listingId/edit"
@@ -25,6 +28,7 @@ const App = () => (
     <Route exact path="/host" component={Host} />
     <Route exact path="/listings" component={ListingIndexContainer} />
     <Route render={() => <Redirect to={{ pathname: "/" }} />} />
+    <Route exact path="/" component={SearchContainer} />
   </div>
 );
 

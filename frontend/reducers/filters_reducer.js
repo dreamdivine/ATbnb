@@ -1,20 +1,24 @@
-import { UPDATE_FILTER } from "../actions/filter_actions";
+import { UPDATE_FILTER, CLEAR_FILTER } from "../actions/filter_actions";
 
 const defaultFilters = Object.freeze({
-  bounds: {},
-  minGuests: 1,
-  maxGuests: 15,
+  minGuest: 1,
+  maxGuest: 10,
+  city: "Oakland",
 });
 
-const filtersReducer = (state = defaultFilters, action) => {
-  Object.freeze(state);
-  if (action.type === UPDATE_FILTER) {
+const filtersReducer = (oldState = defaultFilters, action) => {
+  Object.freeze(oldState);
+
+  switch(action.type){
+    case UPDATE_FILTER:
     const newFilter = {
       [action.filter]: action.value,
-    };
-    return Object.assign({}, state, newFilter);
-  } else {
-    return state;
+    }
+    return Object.assign({}, oldState, newFilter);
+    case CLEAR_FILTER:
+      return {}
+    default:
+    return oldState;
   }
 };
 

@@ -2,11 +2,11 @@ class Api::ListingsController < ApplicationController
      before_action :require_logged_in, only: [:create, :destroy, :update]
 
   def index
-    # listings = bounds ? Listing.in_bounds(bounds) : Listing.all
+    #  listings = bounds ? Listing.in_bounds(bounds) : Listing.all
 
-    # if params[:minGuests] && params[:maxGuests]
-    #   listings = listings.where(guest: guest_range)
-    # end
+    #  if params[:minGuest] && params[:maxGuest]
+    #    listings = listings.where(guest: guest_range)
+    #  end
 
     # @listings = listings.includes(:reviews, :favorite_users)
     @listings = Listing.all
@@ -19,7 +19,6 @@ class Api::ListingsController < ApplicationController
 
   def create
    @listing = Listing.new(listing_params)
-   puts (params)
   
   if @listing.save!
     render :show
@@ -50,9 +49,9 @@ class Api::ListingsController < ApplicationController
 
   private
 
-  #def guests_range
-    #(params[:minGuests]..params[:maxGuests])
-  #end
+  # def guests_range
+  #   (params[:minGuest]..params[:maxGuest])
+  # end
 
   def listing_params
     params.require(:listing).permit(
@@ -72,8 +71,7 @@ class Api::ListingsController < ApplicationController
   end
   
 
-
-  # def bounds
-  #   params[:bounds]
-  # end
+  #  def bounds
+  #    params[:bounds]
+  #  end
 end

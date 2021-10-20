@@ -4,7 +4,6 @@ import NavBar from '../navbar/navbar';
 import Explore from '../explore_nearby/explore'
 
 
-
 class Homepage extends React.Component{
     constructor(props){
         super(props)
