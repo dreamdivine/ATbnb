@@ -45,7 +45,6 @@ class ListingShow extends React.Component {
 
   render() {
     if (!this.props.listing) return null;
-    console.log(this.props.listing.photoUrl);
     const { listing, currentUser, listingId } = this.props;
 
     return (
