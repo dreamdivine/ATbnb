@@ -117,12 +117,12 @@ l1 = Listing.new(
   title: "Civic Center Views from a Contemporary City Pad and Parking",
   guests: 3,
   owner_Id: u1.id,
-  latitude: 37.7749,
+  latitude: 37.778685,
   bedroom: 1,
   bathroom: 1,
   city: "San Francisco",
   price: 76,
-  longitude: -122.4194,
+  longitude: -122.419562,
   location: "310 Van Ness Ave, San Francisco, CA 94102"
 )
 
@@ -136,12 +136,12 @@ l2 = Listing.new(
   title: "Beautiful Victorian 2Bed 1 Bath with deck",
   owner_Id: u1.id,
   guests: 4,
-  latitude: 37.754500,
+  latitude: 37.786375,
   bedroom: 2,
   bathroom: 1,
   city: "San Francisco",
   price: 160,
-  longitude: -122.457967,
+  longitude: -122.391993,
   location: "401 Harrison St, San Francisco, CA 94105"
 )
 
@@ -156,12 +156,12 @@ l9 = Listing.new(
   title: "Brand New Guest Suite + Full Kitchen + Parking",
   owner_Id: u2.id,
   guests: 2,
-  latitude: 37.3382,
+  latitude: 37.283802,
   bedroom: 1,
   bathroom: 1,
   city: "San Jose",
   price: 88,
-  longitude: -121.8863,
+  longitude: -121.913776,
   location: "1757 Miriam Ct, SAN JOSE, CA 95124"
 )
 
@@ -176,12 +176,12 @@ l10 = Listing.new(
   title: "Silicon Valley Studio Apartment",
   owner_Id: u2.id,
   guests: 3,
-  latitude: 37.3382,
+  latitude: 37.242210,
   bedroom: 2,
   bathroom: 1,
   city: "San Jose",
   price: 100,
-  longitude: -121.8863,
+  longitude: -121.915243,
   location: "5293 Roxanne Dr, SAN JOSE, CA 95124"
 )
 
@@ -196,12 +196,12 @@ l17 = Listing.new(
   title: "Private Casita with Stunning View",
   owner_Id: u3.id,
   guests: 2,
-  latitude: 37.8044,
+  latitude: 37.789375,
   bedroom: 1,
   bathroom: 1,
   city: "Oakland",
   price: 79,
-  longitude: -122.2712,
+  longitude: -122.201409,
   location: "3328 Over St, Oakland, CA 94619"
 )
 
@@ -216,12 +216,12 @@ l18 = Listing.new(
   title: "Private, Detached, Urban Creekside Studio.",
   owner_Id: u3.id,
   guests: 3,
-  latitude: 37.8044,
+  latitude: 37.726721,
   bedroom: 2,
   bathroom: 1,
   city: "Oakland",
   price: 72,
-  longitude: -122.2712,
+  longitude: -122.175470,
   location: "236 Bergedo Dr, Oakland, CA 94603"
 )
 
@@ -234,15 +234,15 @@ l18.save
 
 l25 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Secluded Panoramic Coastal View",
   owner_Id: u4.id,
   guests: 3,
-  latitude: 34.4208,
+  latitude: 37.775416,
   bedroom: 2,
   bathroom: 1,
   city: "Santa Barbara",
   price: 72,
-  longitude: -119.6982,
+  longitude: -122.178652,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 
@@ -254,16 +254,16 @@ l25.save
 
 l26 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "West Beach Oasis",
   owner_Id: u4.id,
   guests: 3,
-  latitude: 34.4208,
+  latitude: 34.427979,
   bedroom: 2,
   bathroom: 1,
   city: "Santa Barbara",
   price: 72,
-  longitude: -119.6982,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -119.802877,
+  location: "5109 San Vicente Dr, Santa Barbara, CA 93111"
 )
 
 l26photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -273,16 +273,16 @@ l26.save
 
 l33 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Cozy 2bed in wooded area near beach!",
   owner_Id: u5.id,
   guests: 3,
-  latitude: 38.5816,
+  latitude: 38.698233,
   bedroom: 2,
   bathroom: 1,
   city: "Sacramento",
   price: 72,
-  longitude: -121.4944,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -121.348199,
+  location: "7232 Old Nave Ct, Sacramento, CA 95842"
 )
 
 l33photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -293,16 +293,16 @@ l33.save
 
 l34 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Arden Home with Spa and Lap Pool!",
   owner_Id: u5.id,
   guests: 3,
-  latitude: 38.5816,
+  latitude: 38.478721,
   bedroom: 2,
   bathroom: 1,
   city: "Sacramento",
   price: 72,
-  longitude: -121.4944,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -121.454925,
+  location: "7509 Sun Willow Ln, Sacramento, CA 95823"
 )
 
 l34photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -313,16 +313,16 @@ l34.save
 
 l41 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Mountain Shadows Home away from Home",
   owner_Id: u6.id,
   guests: 3,
-  latitude: 37.6485,
+  latitude: 37.641964,
   bedroom: 2,
   bathroom: 1,
   city: "Mammoth Lakes",
   price: 72,
-  longitude: -118.9721,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -118.976084,
+  location: "450 Lupin St, Mammoth Lakes, CA 93546"
 )
 
 l41photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -333,16 +333,16 @@ l41.save
 
 l42 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Charming Village Studio Loft",
   owner_Id: u6.id,
   guests: 3,
-  latitude: 37.6485,
+  latitude: 37.654594,
   bedroom: 2,
   bathroom: 1,
   city: "Mammoth Lakes",
   price: 72,
-  longitude: -118.9721,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -118.983042,
+  location: "246 Saint Anton Cir, Mammoth Lakes, CA 93546"
 )
 
 l42photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -353,16 +353,16 @@ l42.save
 
 l49 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Winterfell Tahoe",
   owner_Id: u7.id,
   guests: 3,
-  latitude: 39.0968,
+  latitude: 38.947305,
   bedroom: 2,
   bathroom: 1,
   city: "South Lake Tahoe",
   price: 72,
-  longitude: -120.0324,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -119.941100,
+  location: "3525 Rocky Point Rd, South Lake Tahoe, CA 96150"
 )
 
 l49photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -373,16 +373,16 @@ l49.save
 
 l50 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Nice house. 5 minutes walk to the beach.",
   owner_Id: u7.id,
   guests: 3,
-  latitude: 39.0968,
+  latitude: 38.922494,
   bedroom: 2,
   bathroom: 1,
   city: "South Lake Tahoe",
   price: 72,
-  longitude: -120.0324,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -119.984509,
+  location: "2525 Armstrong Ave, South Lake Tahoe, CA 96150"
 )
 
 l50photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -392,16 +392,16 @@ l50.save
 
 l57 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "Secluded luxury cottage & hot tub",
   owner_Id: u8.id,
   guests: 3,
-  latitude: 37.8715,
+  latitude: 37.888568,
   bedroom: 2,
   bathroom: 1,
   city: "Berkeley",
   price: 72,
-  longitude: -122.2730,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -122.265455,
+  location: "1127 Arch St, Berkeley, CA 94708"
 )
 
 l57photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -411,16 +411,16 @@ l57.save
 
 l58 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Silicon Valley Studio Apartment",
+  title: "North Berkeley Backyard Cottage",
   owner_Id: u8.id,
   guests: 3,
-  latitude: 37.8715,
+  latitude: 37.874549,
   bedroom: 2,
   bathroom: 1,
   city: "Berkeley",
   price: 72,
-  longitude: -122.2730,
-  location: "6307 Laird Ave, Oakland, CA 94605"
+  longitude: -122.289130,
+  location: "1633 Belvedere Ave, Berkeley, CA 94702"
 )
 
 l58photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")

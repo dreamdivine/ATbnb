@@ -18,7 +18,7 @@ const App = () => (
       <Link to="/" className="header-link"></Link>
     </header>
     <Route exact path="/" component={Homepage} />
-    <Route exact path="/" component={ListingIndexContainer} />
+    {/* <Route exact path="/" component={ListingIndexContainer} /> */}
     <Route path="/sanfrancisco" component={SanFrancisco} />
     <Route
       path="/listings/:listingId/edit"
@@ -28,7 +28,7 @@ const App = () => (
     <Route exact path="/host" component={Host} />
     <Route exact path="/listings" component={ListingIndexContainer} />
     <Route render={() => <Redirect to={{ pathname: "/" }} />} />
-    <Route exact path="/" component={SearchContainer} />
+    {/* <Route exact path="/" component={SearchContainer} /> */}
   </div>
 );
 

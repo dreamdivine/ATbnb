@@ -18,7 +18,6 @@ class ListingMap extends React.Component {
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.listings);
         this.initMap= this.initMap.bind(this);
-        
     }
 
     componentDidUpdate() {
@@ -32,7 +31,7 @@ class ListingMap extends React.Component {
                 position: { lat: listing.latitude, lng: listing.longitude },
                 map,
                 // title: `${listing.title}`,
-                label: {text: `${listing.title}`, className: "mapMarker"},
+                label: {text: "$" + `${listing.price}`, className: "mapMarker"},
             });
         })
     }

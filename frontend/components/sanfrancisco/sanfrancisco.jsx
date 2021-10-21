@@ -1,8 +1,7 @@
 import React from 'react';
 import ListingIndexContainer from "../listings/listing_index_container";
 import { Link } from 'react-router-dom';
-import ListingMap from '../listing_map/listing_map';
-
+import SearchContainer from '../listings/search_container';
 
 
 const SanFrancisco = () => {
@@ -12,7 +11,7 @@ const SanFrancisco = () => {
             <i className="fab fa-airbnb" id="airbnb"></i>
             <p>AT bnb</p>
           </Link> 
-          <ListingMap />
+          <SearchContainer />
         <ListingIndexContainer />
       </div>
     );
