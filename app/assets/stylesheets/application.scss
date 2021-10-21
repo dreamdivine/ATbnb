@@ -40,10 +40,6 @@
    max-width: 130px;
  }
 
- /* .user-pane {
-   display: flex;
-   justify-content: center;
- } */
 
  .right-half.listing-details {
    display: flex;
@@ -176,23 +172,7 @@ header {
    font-weight: bold;
  }
 
- #map-container{
-   width: 500px;
-   height: 500px;
-   border: 1px solid black;
- }
 
- .user-pane {
-   display: flex;
-   justify-content: center;
- }
 
- .right-half-search {
-   width: 400px;
-   margin-left: 50px;
-   margin-top: 40px;
-   height: 480px;
-   overflow-y: scroll;
-   padding: 0 20px 20px 20px;
- }
+
 

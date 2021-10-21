@@ -19,6 +19,7 @@ class ListingMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.listings);
     this.initMap = this.initMap.bind(this);
+    this.InfoObj = [];
   }
 
   componentDidUpdate() {
@@ -28,7 +29,13 @@ class ListingMap extends React.Component {
 
   initMap(map) {
     this.props.listings.forEach((listing) => {
-      const contentString = listing.title;
+      const contentString = `<div id="inside-info">
+      <div>
+        <img src=${listing.photoUrl} id="map-images">
+      </div>
+      <div id="marker-title">${listing.title}</div>
+      <div id="marker-price">$${listing.price}/night</div>
+      </div>`
       const marker = new google.maps.Marker({
         position: { lat: listing.latitude, lng: listing.longitude },
         map,
@@ -38,7 +45,7 @@ class ListingMap extends React.Component {
       const infowindow = new google.maps.InfoWindow({
         content: contentString,
       });
-      marker.addListener("click", function () {
+      google.maps.event.addListener(marker, "click", function () {
         infowindow.open(map, marker);
       });
     });
