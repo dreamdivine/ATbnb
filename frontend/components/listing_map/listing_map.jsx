@@ -19,7 +19,6 @@ class ListingMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.listings);
     this.initMap = this.initMap.bind(this);
-    this.InfoObj = [];
   }
 
   componentDidUpdate() {
@@ -39,6 +38,10 @@ class ListingMap extends React.Component {
       const marker = new google.maps.Marker({
         position: { lat: listing.latitude, lng: listing.longitude },
         map,
+        icon: {
+          url: "./images/oval.svg",
+          scaledSize: new google.maps.Size(60, 60)
+        },
         // title: `${listing.title}`,
         label: { text: "$" + `${listing.price}`, className: "mapMarker" },
       });
@@ -46,11 +49,23 @@ class ListingMap extends React.Component {
         content: contentString,
       });
       google.maps.event.addListener(marker, "click", function () {
-        infowindow.open(map, marker);
+        if(!marker.open){
+            infowindow.open(map, marker);
+            marker.open = true;
+          }
+        else{
+             infowindow.close();
+             marker.open = false;
+            }
+        google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+        marker.open = false;
       });
+        setTimeout(function () {
+          infowindow.close();
+        }, 5000);
     });
-  }
-
+  })}
   render() {
     return (
       <div id="map-container" ref={(map) => (this.mapNode = map)}>
