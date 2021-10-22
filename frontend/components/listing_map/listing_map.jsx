@@ -34,13 +34,13 @@ class ListingMap extends React.Component {
       </div>
       <div id="marker-title">${listing.title}</div>
       <div id="marker-price">$${listing.price}/night</div>
-      </div>`
+      </div>`;
       const marker = new google.maps.Marker({
         position: { lat: listing.latitude, lng: listing.longitude },
         map,
         icon: {
           url: "./images/oval.svg",
-          scaledSize: new google.maps.Size(60, 60)
+          scaledSize: new google.maps.Size(60, 60),
         },
         // title: `${listing.title}`,
         label: { text: "$" + `${listing.price}`, className: "mapMarker" },
@@ -49,23 +49,24 @@ class ListingMap extends React.Component {
         content: contentString,
       });
       google.maps.event.addListener(marker, "click", function () {
-        if(!marker.open){
-            infowindow.open(map, marker);
-            marker.open = true;
-          }
-        else{
-             infowindow.close();
-             marker.open = false;
-            }
-        google.maps.event.addListener(map, 'click', function() {
-        infowindow.close();
-        marker.open = false;
-      });
+        if (!marker.open) {
+          infowindow.open(map, marker);
+          marker.open = true;
+        } else {
+          infowindow.close();
+          marker.open = false;
+        }
+        google.maps.event.addListener(map, "click", function () {
+          infowindow.close();
+          marker.open = false;
+        });
         setTimeout(function () {
           infowindow.close();
         }, 5000);
+      });
     });
-  })}
+  }
+
   render() {
     return (
       <div id="map-container" ref={(map) => (this.mapNode = map)}>
