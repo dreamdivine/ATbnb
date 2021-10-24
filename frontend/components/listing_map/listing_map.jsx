@@ -1,7 +1,6 @@
-import React from 'react';
-import { withRouter } from 'react-router';
-import MarkerManager from '../../util/marker_manager';
-
+import React from "react";
+import { withRouter } from "react-router";
+import MarkerManager from "../../util/marker_manager";
 
 class ListingMap extends React.Component {
   constructor(props) {
@@ -76,4 +75,4 @@ class ListingMap extends React.Component {
   }
 }
 
-export default withRouter(ListingMap)
+export default withRouter(ListingMap);

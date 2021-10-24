@@ -34,5 +34,4 @@ class Listing < ApplicationRecord
     #         .where("lng < ?", bounds[:northEast][:longitude])
     # end
 
-
 end

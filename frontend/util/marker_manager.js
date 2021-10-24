@@ -7,15 +7,20 @@ export default class MarkerManager {
 
   updateMarkers(listings) {
     const listingsObj = {};
-    listings.forEach((listing) => listingsObj[listing.id] = listing);
+    listings.forEach((listing) => (listingsObj[listing.id] = listing));
 
     listings
-    .filter(listing => !this.markers[listing.id])
-    .forEach(newListing => this.createMarkerFromListing(newListing, this.handleClick))
+      .filter((listing) => !this.markers[listing.id])
+      .forEach((newListing) =>
+        this.createMarkerFromListing(newListing, this.handleClick)
+      );
   }
 
   createMarkerFromListing(listing) {
-    const position = new google.maps.LatLng(listing.latitude, listing.longitude);
+    const position = new google.maps.LatLng(
+      listing.latitude,
+      listing.longitude
+    );
     const marker = new google.maps.Marker({
       position,
       map: this.map,
@@ -24,9 +29,9 @@ export default class MarkerManager {
 
     marker.addListener("click", () => this.handleClick(listing));
     this.markers[marker.listingId] = marker;
-    };
+  }
 
-    removeMarker(marker) {
+  removeMarker(marker) {
     this.markers[marker.listingId].setMap(null);
     delete this.markers[marker.listingId];
   }

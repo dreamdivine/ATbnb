@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
     this.props
       .processForm(user)
       .then(() => this.props.closeModal())
-      .then(() => this.props.history.push("/"));
+      // .then(() => this.props.history.push("/"));
   }
 
   demoLogin(e) {
@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
     this.props
       .loginDemoUser()
       .then(() => this.props.closeModal())
-      .then(() => this.props.history.push("/"));
+      // .then(() => this.props.history.push("/"));
   }
 
   renderErrors() {

@@ -1,7 +1,9 @@
 body {
+   width: 100%;
    background-image: image-url("final-background.png");
    background-repeat: no-repeat;
    background-size: cover;
+   overflow-x: hidden;
   //  background-color: pink;
  }
 
