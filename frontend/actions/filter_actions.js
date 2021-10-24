@@ -15,7 +15,7 @@ export const clearFilter = () => {
   };
 }
 
-export const updateFilter = (filter, value) => (dispatch, getState) => {
+export const updateFilter = (filter, value) => (dispatch) => {
   dispatch(changeFilter(filter, value));
   return fetchListings(getState().ui.filters)(dispatch);
 };

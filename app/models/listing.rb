@@ -27,12 +27,12 @@ class Listing < ApplicationRecord
         end
     end
 
-    def self.in_bounds(bounds)
-        self.where("lat < ?", bounds[:northEast][:latitude])
-            .where("lat > ?", bounds[:southWest][:latitude])
-            .where("lng > ?", bounds[:southWest][:longitude])
-            .where("lng < ?", bounds[:northEast][:longitude])
-    end
+    # def self.in_bounds(bounds)
+    #     self.where("lat < ?", bounds[:northEast][:latitude])
+    #         .where("lat > ?", bounds[:southWest][:latitude])
+    #         .where("lng > ?", bounds[:southWest][:longitude])
+    #         .where("lng < ?", bounds[:northEast][:longitude])
+    # end
 
 
 end
