@@ -18,7 +18,7 @@ const NavBarCity = () => {
   };
 
   return (
-    <div className="top">
+    <div className="top-city">
       <Modal />
       <div className="Nav-Bar-City">
         <div className="logo-city">

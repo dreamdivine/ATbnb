@@ -1,11 +1,10 @@
 .Nav-Bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 20px;
 }
-
 
 .logo {
   display: flex;
@@ -13,212 +12,213 @@
   align-items: center;
   position: relative;
   right: 130px;
-   font-size: 25px;
-   color: white;
-   font-weight: bold;
-   width: 120px;
-   justify-content: space-around;
-   height: 50px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  justify-content: space-around;
+  height: 50px;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-.right-icon{
-    display: flex;
-    color: grey;
-    font-size: 20px;
-    background-color: white;
-    border: solid white 1px;
-    border-radius: 20px;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 70px;
-    height: 40px;
+.right-icon {
+  display: flex;
+  color: grey;
+  font-size: 20px;
+  background-color: white;
+  border: solid white 1px;
+  border-radius: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70px;
+  height: 40px;
 }
 
-.middle-items{
+.middle-items {
   display: flex;
   justify-content: space-between;
   width: 400px;
   font-size: 17px;
 }
 
-.right-side{
-    display: flex;
-    width: 300px;
-    justify-content: space-around;
-    height: 50px;
-    align-items: center;
-    position: relative;
-    left: 100px;
+.right-side {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  position: relative;
+  left: 100px;
 }
 
-#globe{
-    color:white;
-    font-size: 20px;
+#globe {
+  color: white;
+  font-size: 20px;
 }
 
-
-.become_host{
-    color:white;
-    text-decoration: none;
+.become_host {
+  color: white;
+  text-decoration: none;
 }
 
-.nav-links{
-    color: white;
-    text-decoration: none;
+.nav-links {
+  color: white;
+  text-decoration: none;
 }
 
-#airbnb{
-    color: white;
-    font-size: 35px;
+#airbnb {
+  color: white;
+  font-size: 35px;
 }
 
-.places_to_stay{
-    position: relative;
-    display: inline-block;
+.places_to_stay {
+  position: relative;
+  display: inline-block;
 }
 
-.places_to_stay:after{
-    content: "";
-    height:2px;
-    width:20%;
-    position:absolute;
-    background:white;
-    left:50%;
-    top:25px;
+.places_to_stay:after {
+  content: "";
+  height: 2px;
+  width: 20%;
+  position: absolute;
+  background: white;
+  left: 50%;
+  top: 25px;
 }
 
-.experiences, .online_experiences{
-    position: relative;
-    padding: 0, 10px;
-    display: inline-block;
+.experiences,
+.online_experiences {
+  position: relative;
+  padding: 0, 10px;
+  display: inline-block;
 }
 
-.experiences:after, .online_experiences:after{
-   
-    transform: scale(0, 1);
-    /* transition: 0.3s ease; */
-    content: "";
-    height:2px;
-    position:absolute;
-    background:white;
-    left:2px;
-    top:25px;
+.experiences:after,
+.online_experiences:after {
+  transform: scale(0, 1);
+  /* transition: 0.3s ease; */
+  content: "";
+  height: 2px;
+  position: absolute;
+  background: white;
+  left: 2px;
+  top: 25px;
 }
 
-.experiences:hover:after, .online_experiences:hover:after{
-    transform: scale(1, 1);
-    width: 8%;
-    left: 40%;
-    color: lightgrey;
+.experiences:hover:after,
+.online_experiences:hover:after {
+  transform: scale(1, 1);
+  width: 8%;
+  left: 40%;
+  color: lightgrey;
 }
 
-#circle-person{
-    font-size: 30px;
+#circle-person {
+  font-size: 30px;
 }
 
-#bars{
-    font-size: 15px;
+#bars {
+  font-size: 15px;
 }
 
-.guest-booking{
-    background-color: white;
-    display: flex;
-    width: 46%;
-    height: 65px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 490px;
-    top: 40px;
-    border-radius: 50px;
+.guest-booking {
+  background-color: white;
+  display: flex;
+  width: 46%;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 490px;
+  top: 40px;
+  border-radius: 50px;
 }
 
-.detail{
-    color:gray;
+.detail {
+  color: gray;
 }
 
-.search{
-    background-color: #ff385C;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: relative;
-    left: 135px;
-    top: 6px;
+.search {
+  background-color: #ff385c;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  left: 135px;
+  top: 6px;
 }
-#search-icon{
-    position: relative;
-    left: 16px;
-    top: 16px;
-    color: white;
-}
-
-.header{
-    font-size: 14px;
-    color: black;
+#search-icon {
+  position: relative;
+  left: 16px;
+  top: 16px;
+  color: white;
 }
 
-.detail{
-    font-size: 15px;
-
+.header {
+  font-size: 14px;
+  color: black;
 }
 
-.divider{
-    width: 1px;
-    height: 25px;
-    background-color: gray;
-    display: inline-block;
+.detail {
+  font-size: 15px;
 }
 
-.line{
-    text-align: left;
+.divider {
+  width: 1px;
+  height: 25px;
+  background-color: gray;
+  display: inline-block;
 }
 
-.location{
-    width: 260px;
-    height: 63px;
-    border-radius: 50px;
-    border: 1px solid white;
-    position: relative;
-    left: 0px;
+.line {
+  text-align: left;
 }
 
-.location:hover, .check-in:hover, .check-out:hover, .guests:hover{
-    border: 1px solid #F5F5F5;
-    background-color: #F5F5F5;
-    transition: all linear;
-
+.location {
+  width: 260px;
+  height: 63px;
+  border-radius: 50px;
+  border: 1px solid white;
+  position: relative;
+  left: 0px;
 }
 
-.check-in, .check-out{
-    border: 1px solid white;
-    height: 63px;
-    width: 170px;
-    border-radius: 50px;
-
+.location:hover,
+.check-in:hover,
+.check-out:hover,
+.guests:hover {
+  border: 1px solid #f5f5f5;
+  background-color: #f5f5f5;
+  transition: all linear;
 }
 
-.guests{
-    border-radius: 1px solid white;
-    height: 65px;
-    width: 274px;
-    border-radius: 50px;
-    display: flex;
+.check-in,
+.check-out {
+  border: 1px solid white;
+  height: 63px;
+  width: 170px;
+  border-radius: 50px;
 }
 
-
-.search:hover{
-    background-color: #D70466;
+.guests {
+  border-radius: 1px solid white;
+  height: 65px;
+  width: 274px;
+  border-radius: 50px;
+  display: flex;
 }
 
-.describe{
-    position: relative;
-    left: 30px;
-    top: 18px;
+.search:hover {
+  background-color: #d70466;
+}
+
+.describe {
+  position: relative;
+  left: 30px;
+  top: 18px;
 }
 
 .logo-city {
@@ -227,125 +227,125 @@ li {
   align-items: center;
   position: relative;
   right: 130px;
-   font-size: 25px;
-   color: white;
-   font-weight: bold;
-   width: 120px;
-   justify-content: space-around;
-   height: 50px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  justify-content: space-around;
+  height: 50px;
 }
 
-#airbnb-city{
-    color: #ff385C;
-    font-size: 35px;
+#airbnb-city {
+  color: #ff385c;
+  font-size: 35px;
 }
 
-.atbnb-city{
-    color: #ff385C;
+.atbnb-city {
+  color: #ff385c;
 }
 
-.right-icon-city{
-    display: flex;
-    color: grey;
-    font-size: 20px;
-    background-color: white;
-    border: solid #DDDDDD 1px;
-    border-radius: 20px;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 70px;
-    height: 40px;
+.right-icon-city {
+  display: flex;
+  color: grey;
+  font-size: 20px;
+  background-color: white;
+  border: solid #dddddd 1px;
+  border-radius: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70px;
+  height: 40px;
 }
 
-.guest-city-booking{
-    background-color: white;
-    border: 1px solid #DDDDDD;
-    display: flex;
-    width: 390px;
-    height: 45px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
+.guest-city-booking {
+  background-color: white;
+  border: 1px solid #dddddd;
+  display: flex;
+  width: 390px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
 }
 
-.add-guests{
-    height: 65px;
-    width: 274px;
-    // border-radius: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.add-guests {
+  height: 65px;
+  width: 274px;
+  // border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.search-city{
-    background-color: #ff385C;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    position: relative;
-    left: 17px;
-    top: 0px;
+.search-city {
+  background-color: #ff385c;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  left: 17px;
+  top: 0px;
 }
-#search-icon-city{
-    position: relative;
-    left: 10px;
-    top: 10px;
-    color: white;
-}
-
-
-.city-line-one{
-    position: relative;
-    left: 20px;
-
-}
-.city-line-two{
-    position: relative;
-    left: 55px;
+#search-icon-city {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  color: white;
 }
 
-.guest-addition{
-    position: relative;
-    left: 45px;
-    color:gray;
-    font-size: 14px;
+.city-line-one {
+  position: relative;
+  left: 20px;
+}
+.city-line-two {
+  position: relative;
+  left: 55px;
 }
 
-.dates-city{
-    color: gray;
-    position: relative;
-    left: 40px;
-    font-size: 14px;
+.guest-addition {
+  position: relative;
+  left: 45px;
+  color: gray;
+  font-size: 14px;
 }
 
-.add-dates{
-    width: 100px;
+.dates-city {
+  color: gray;
+  position: relative;
+  left: 40px;
+  font-size: 14px;
 }
 
-.location-city{
-    width: 160px;
+.add-dates {
+  width: 100px;
 }
 
-.city{
-    position: relative;
-    left:20px;
-    font-size: 14px;
+.location-city {
+  width: 160px;
+}
+
+.city {
+  position: relative;
+  left: 20px;
+  font-size: 14px;
 }
 
 .Nav-Bar-City {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  top: 20px;
 }
 
-.become_host_city{
-     color: #222222;
-    text-decoration: none;
+.become_host_city {
+  color: #222222;
+  text-decoration: none;
 }
 
-#globe-city{
-    color: #222222;
-    font-size: 20px;
+#globe-city {
+  color: #222222;
+  font-size: 20px;
 }
+
+

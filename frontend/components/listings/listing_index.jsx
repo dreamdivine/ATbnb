@@ -1,6 +1,7 @@
 import React from "react";
 import ListingIndexItem from "./listing_index_item";
 import ListingMap from "../listing_map/listing_map";
+import LeftDetails from "../listings/left_details_cities";
 
 class ListingIndex extends React.Component {
   constructor(props) {
@@ -15,14 +16,8 @@ class ListingIndex extends React.Component {
     if (!listings) return null;
     return (
       <div className="listing-plus-map">
-        <div className="listing-list">
-          <div>
-            <p>300+ stays in map area</p>
-            <p>
-              More than 290,000 guests have stayed in this city. On average they
-              rated their stays 4.8 out of 5 stars.
-            </p>
-          </div>
+        <div>
+          <LeftDetails className="left-details"/>
           <ul>
             {listings.map((listing, i) => (
               <ListingIndexItem

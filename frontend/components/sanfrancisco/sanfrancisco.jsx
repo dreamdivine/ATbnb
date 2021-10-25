@@ -7,10 +7,10 @@ import NavBarCity from '../navbar_city/navbar_city';
 const SanFrancisco = () => {
     return (
       <div className="bkg-SF">
-        <div>
+        <div className="nav-city">
           <NavBarCity />
         </div>
-        <div>
+        <div className="left-city-page">
           <ListingIndexContainer />
         </div>
       </div>
