@@ -92,10 +92,25 @@
 }
 
 .map-listing{
-  position: fixed;
-  left: 1000px;
-  width: 1000px;
-  height: 1000px;
+  position: sticky !important;
+  left: 900px !important;
+  width: 1000px !important;
+  height: 1000px !important;
+  bottom: 90px !important;
+
+}
+
+.random-text{
+  position: relative;
+  top: 2500px;
+}
+
+.map-listings-middle{
+  position: relative;
+  width: 2000px;
+  height: 4500px;
+  top: 20px;
+  
 
 }
 
