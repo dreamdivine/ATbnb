@@ -39,7 +39,6 @@ u3 = User.create!(
   last_name: 'u3'
 )
 
-
 u4 = User.create!(
   username: 'username4',
   password: 'password',
@@ -113,7 +112,7 @@ u12 = User.create!(
 )
 
 l1 = Listing.new(
-  description: '',
+  description: 'Wifi . Kitchen . Washer . Dryer',
   title: "Civic Center Views from a Contemporary City Pad and Parking",
   guests: 3,
   owner_Id: u1.id,
@@ -431,10 +430,10 @@ l58.save
 
 
 
-# r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
-# r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
+ r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
+ r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
 
-# rs1 = Reservation.create(guest_id: u2.id, listing_id: l1.id, check_in_date: "10-10-2021", check_out_date: "12-10-2021", number_of_guest: 1)
+ rs1 = Reservation.create(guest_id: u2.id, listing_id: l1.id, check_in_date: "30-10-2021", check_out_date: "12-01-2022", number_of_guest: 1)
 
-# rs2 = Reservation.create(guest_id: u3.id, listing_id: l2.id, check_in_date: "10-12-2021", check_out_date: "13-10-2021", number_of_guest: 2)
-# rs3 = Reservation.create(guest_id: u2.id, listing_id: l3.id, check_in_date: "10-13-2021", check_out_date: "13-10-2021", number_of_guest: 3)
+ rs2 = Reservation.create(guest_id: u3.id, listing_id: l2.id, check_in_date: "11-12-2021", check_out_date: "13-01-2022", number_of_guest: 2)
+ rs3 = Reservation.create(guest_id: u2.id, listing_id: l34.id, check_in_date: "27-10-2021", check_out_date: "30-12-2022", number_of_guest: 3)

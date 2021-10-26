@@ -1,11 +1,10 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-
 class ReservationShow extends React.Component {
   componentDidMount() {
     // this.props.fetchReservation(this.props.match.params.reservationId);
-    this.props.fetchListings()
+    this.props.fetchListings();
   }
   render() {
     return (
@@ -18,7 +17,11 @@ class ReservationShow extends React.Component {
               <h1>Reservation: {reservation.check_out_date}</h1>
               <h2>Number of Guest: {reservation.number_of_guest}</h2>
               <h2>Price: {this.props.listings[listing_id].price}</h2>
-              <button onClick={() => this.props.deleteReservation(reservation.id)}Cancel Reservation></button>
+              <button
+                onClick={() => this.props.deleteReservation(reservation.id)}
+                Cancel
+                Reservation
+              ></button>
             </div>
           ))}
         </div>
@@ -28,4 +31,3 @@ class ReservationShow extends React.Component {
 }
 
 export default withRouter(ReservationShow);
-

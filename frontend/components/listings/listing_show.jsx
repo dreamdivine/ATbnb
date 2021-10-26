@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavBarCity from "../navbar_city/navbar_city";
+import CreateReservationForm from "../reservations/create_reservation_container";
+
 
 class ListingShow extends React.Component {
   constructor(props) {
@@ -49,22 +52,26 @@ class ListingShow extends React.Component {
 
     return (
       <div className="show-page">
-        <h1>{this.props.listing.title}</h1>
-        <p>{this.props.listing.bedroom}</p>
-        <p>{this.props.listing.bathroom}</p>
-        <p>{this.props.listing.guests}</p>
-        <p>{this.props.listing.price}</p>
-        <p>{this.props.listing.location}</p>
-        <p>{this.props.listing.city}</p>
-        <p>{this.props.listing.description}</p>
-        <p>{this.props.listing.latitude}</p>
-        <p>{this.props.listing.longitude}</p>
-        <img src={this.props.listing.photoUrl} />
-        {this.props.currentUser
-          ? currentUser.id === listing.owner_Id
-            ? this.editDelete()
-            : ""
-          : ""}
+        <NavBarCity />
+        <div className="show-page-middle">
+          <h1>{this.props.listing.title}</h1>
+          <p>{this.props.listing.bedroom}</p>
+          <p>{this.props.listing.bathroom}</p>
+          <p>{this.props.listing.guests}</p>
+          <p>{this.props.listing.price}</p>
+          <p>{this.props.listing.location}</p>
+          <p>{this.props.listing.city}</p>
+          <p>{this.props.listing.description}</p>
+          <p>{this.props.listing.latitude}</p>
+          <p>{this.props.listing.longitude}</p>
+          <img src={this.props.listing.photoUrl} className="image-show" />
+          {this.props.currentUser
+            ? currentUser.id === listing.owner_Id
+              ? this.editDelete()
+              : ""
+            : ""}
+        </div>
+        <CreateReservationForm />
       </div>
     );
   }

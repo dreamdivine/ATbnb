@@ -8,18 +8,19 @@ import {
 import {fetchListings} from "../../actions/listing_actions";
 
 
-const mSTP = (state) => ({
-  reservations: Object.values(state.entities.reservations),
+const mSTP = (state, ownProps) => ({
   currentUser: state.entities.users[state.session.id],
-  listings: state.entities.listings,
-  listing: state.entities.listings
+  reservation: Object.values(state.entities.reservations),
+  listings: state.entities.listings
 });
 
 const mDTP = (dispatch) => ({
   deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId)),
   fetchReservations: () => dispatch(fetchReservations()),
-  fetchReservation: (user_id) => dispatch(fetchReservation(user_id)),
+  fetchReservation: (reservationId) => dispatch(fetchReservation(reservationId)),
   fetchListings: () => dispatch(fetchListings())
 });
 
 export default connect(mSTP, mDTP)(ReservationShow);
+
+

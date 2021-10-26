@@ -5,23 +5,23 @@ import {
 } from "../actions/reservation_actions";
 import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 
-const reservationsReducer = (state = {}, action) => {
-  Object.freeze(state);
-  let newState = Object.assign({}, state);
+const reservationsReducer = (oldState = {}, action) => {
+  Object.freeze(oldState);
+  let nextState = Object.assign({}, oldState);
+
   switch (action.type) {
     case RECEIVE_RESERVATIONS:
       return {...oldState, ...action.reservations};
     case RECEIVE_RESERVATION:
-      newState[action.reservation.id] = action.reservation;
-      return newState;
+      nextState[action.reservation.id] = action.reservation;
+      return nextState;
     case REMOVE_RESERVATION:
-      delete newState[action.reservationId];
-      return newState;
+      delete nextState[action.reservationId];
+      return nextState;
     case RECEIVE_CURRENT_USER:
       return action.currentUser.reservations || {};
     default:
-      return state;
+      return oldState;
   }
 };
-
 export default reservationsReducer;

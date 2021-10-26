@@ -55,9 +55,6 @@ export const createListing = (listing) => (dispatch) =>
 
 
 export const updateListing = (listingFormData, listing) => (dispatch) =>
-  // console.log("call with listingFormData")
-  // console.log(listingFormData)
-  // console.log(listing)
   APIUtil.updateListing(listingFormData, listing).then(
     (listing) => dispatch(receiveListing(listing)),
     (errors) => dispatch(receiveListingErrors(errors.responseJSON))

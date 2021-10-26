@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-// import * as APIUtil from "./util/reservation_api_util";
+import * as ReservationAPIUtil from "./util/reservation_api_util";
 import * as APIUtil from "./util/listing_api_util";
 
 
@@ -25,19 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
 
-  // window.fetchReservations = APIUtil.fetchReservations;
-  // window.fetchReservation = APIUtil.fetchReservation;
-  // window.updateReservation = APIUtil.updateReservation;
-  // window.createReservation = APIUtil.createReservation;
-  // window.deleteReservation = APIUtil.deleteReservation;
+  window.fetchReservations = ReservationAPIUtil.fetchReservations;
+  window.fetchReservation = ReservationAPIUtil.fetchReservation;
+  window.updateReservation = ReservationAPIUtil.updateReservation;
+  window.createReservation = ReservationAPIUtil.createReservation;
+  window.deleteReservation = ReservationAPIUtil.deleteReservation;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
 
   // window.createListing = ListingAction.createListing;
-  window.fetchListing = APIUtil.fetchListing;
-  window.fetchListings = APIUtil.fetchListings;
+  // window.fetchListing = APIUtil.fetchListing;
+  // window.fetchListings = APIUtil.fetchListings;
   // window.updateListing = ListingAction.updateListing;
   // window.deleteListing = ListingAction.deleteListing;
 

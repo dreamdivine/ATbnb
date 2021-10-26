@@ -7,6 +7,7 @@ import Host from "../components/host/host";
 import ListingIndexContainer from "./listings/listing_index_container";
 import ListingShowContainer from "./listings/listing_show_container";
 import EditListingFormContainer from "./listings/edit_listing_form_container";
+import Trips from "./trips/trips";
 
 // import RoutingError from "./errors/routing_errors";
 
@@ -17,6 +18,7 @@ const App = () => (
     </header>
     <Route exact path="/" component={Homepage} />
     {/* <Route exact path="/" component={ListingIndexContainer} /> */}
+    <Route path="/trips" component={Trips} />
     <Route path="/sanfrancisco" component={SanFrancisco} />
     <Route
       path="/listings/:listingId/edit"

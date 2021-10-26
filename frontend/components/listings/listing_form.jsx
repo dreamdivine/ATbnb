@@ -1,5 +1,6 @@
 import React from "react";
-import {withRouter} from "react-router"
+import {withRouter} from "react-router";
+import ReservationForm from "../reservations/reservation_form";
 
 
 class ListingForm extends React.Component {
@@ -186,6 +187,7 @@ class ListingForm extends React.Component {
             <button>{this.props.listingFormType}</button>
           </div>
         </form>
+        {/* <div><ReservationForm/></div> */}
       </div>
     );
   }

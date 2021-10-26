@@ -1,0 +1,21 @@
+.show-page{
+    background-color: pink;
+    height: 1000px;
+}
+
+.show-page-middle{
+  color:blueviolet;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-show{
+    width: 500px;
+    height: 500px;
+}
+
+.reservation-show{
+    position: relative;
+    top: 0px;
+    left: 600px;
+}
