@@ -25,7 +25,7 @@ class ListingShow extends React.Component {
     e.preventDefault();
     this.props
       .deleteListing(this.props.listing.id)
-      .then(() => this.props.history.push(`/listings`));
+      .then(() => this.props.history.push(`/sanfrancisco`));
   }
 
   editDelete() {
