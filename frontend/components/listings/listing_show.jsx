@@ -71,7 +71,7 @@ class ListingShow extends React.Component {
               : ""
             : ""}
         </div>
-        <CreateReservationForm />
+        <CreateReservationForm listingId={this.props.listing.id}/>
       </div>
     );
   }

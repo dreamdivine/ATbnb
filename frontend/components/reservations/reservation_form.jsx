@@ -10,6 +10,7 @@ class ReservationForm extends React.Component {
     this.reservation = this.reservation.bind(this);
     this.newState = Object.assign({}, this.props.reservation)
   }
+
   componentDidMount() {
     this.props.fetchListing(this.props.match.params.listingId);
   }
@@ -20,7 +21,6 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // this.props.action(this.state);
     if (this.props.currentUser) {
       if (this.state.check_out_date < this.state.check_in_date) return null;
       const reservations = Object.assign({}, this.state, {

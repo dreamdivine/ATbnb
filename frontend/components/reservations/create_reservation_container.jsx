@@ -15,14 +15,13 @@ import{login} from "../../actions/session_actions";
 
 
 const mSTP = (state, ownProps) => {
-  console.log("i am here", state.entities.listings[ownProps.listingId]);
   return {
     reservation: {
       check_in_date: "",
       check_out_date: "",
       number_of_guest: "",
       guest_id: state.session.id,
-      listing_id: state.session.id
+      listing_id: ownProps.listingId
     },
     reservationFormType: "Create Reservation",
     currentUser: state.session.id,
