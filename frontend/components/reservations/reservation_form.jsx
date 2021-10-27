@@ -33,7 +33,6 @@ class ReservationForm extends React.Component {
     } else {
       this.props.openModal("login");
     }
-    this.props.createReservation(this.state);
   }
 
   render() {
