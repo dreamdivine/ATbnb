@@ -1,5 +1,4 @@
 json.extract! user, :id, :username
-# json.favorite_listings user.favorite_listings.pluck(:id)
 
 json.reservations do 
     user.reservations.each do |reservation| 
@@ -13,7 +12,7 @@ json.reservations do
             :listing_id
             json.extract! reservation.listing,
             :title,
-            :price    
+            :price  
         end
     end
 end

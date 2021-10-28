@@ -34,4 +34,8 @@ class Listing < ApplicationRecord
     #         .where("lng < ?", bounds[:northEast][:longitude])
     # end
 
+    # def average_rating
+    #     reviews.average(:rating)
+    # end
+
 end

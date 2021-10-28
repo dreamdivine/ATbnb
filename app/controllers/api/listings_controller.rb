@@ -8,7 +8,7 @@ class Api::ListingsController < ApplicationController
     #    listings = listings.where(guest: guest_range)
     #  end
 
-    # @listings = listings.includes(:reviews, :favorite_users)
+    # @listings = listings.includes(:reviews)
     @listings = Listing.all
      render :index
   end

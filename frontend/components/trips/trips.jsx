@@ -10,7 +10,7 @@ const Trips = () => {
         <NavBarCity />
       </div>
       <div className="reservation-trips">
-        <ReservationShowContainer/>
+        <ReservationShowContainer />
       </div>
     </div>
   );
