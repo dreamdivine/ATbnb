@@ -12,7 +12,7 @@ class ReservationForm extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchListing(this.props.match.params.listingId);
+    this.props.fetchReservation(this.props.match.params.reservationId);
   }
 
   reservation(e, field) {

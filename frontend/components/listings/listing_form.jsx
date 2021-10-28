@@ -187,7 +187,6 @@ class ListingForm extends React.Component {
             <button>{this.props.listingFormType}</button>
           </div>
         </form>
-        {/* <div><ReservationForm/></div> */}
       </div>
     );
   }

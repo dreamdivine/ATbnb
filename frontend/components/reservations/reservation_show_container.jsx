@@ -1,18 +1,23 @@
 import { connect } from "react-redux";
-import ReservationShow from "./reservation_show";
+import ReservationShow from "./reservation_show"
 import {
   deleteReservation,
   fetchReservation,
   fetchReservations,
 } from "../../actions/reservation_actions";
-import {fetchListings} from "../../actions/listing_actions";
+import {fetchListings, fetchListing} from "../../actions/listing_actions";
 
 
-const mSTP = (state, ownProps) => ({
-  currentUser: state.entities.users[state.session.id],
-  reservation: Object.values(state.entities.reservations),
-  listings: state.entities.listings
-});
+const mSTP = (state, ownProps) => {
+  
+  return {
+    currentUser: state.entities.users[state.session.id],
+    currentUserReservation: Object.values(
+      state.entities.users[state.session.id].reservations
+    ),
+    reservations: Object.values(state.entities.reservations),
+    listings: state.entities.listings,
+  };};
 
 const mDTP = (dispatch) => ({
   deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId)),

@@ -3,13 +3,6 @@ import ListingShow from "./listing_show";
 import {updateListing, fetchListings, deleteListing, fetchListing } from "../../actions/listing_actions";
 
 
-/*
-Export a container component for the `PostShow` that maps in the appropriate
-post from the store as a `post` prop. Additionally, it should map in
-a function that will dispatch `fetchPost` to the store as a prop of the same
-name.
-*/
-
 const mSTP = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],

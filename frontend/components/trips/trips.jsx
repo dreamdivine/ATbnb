@@ -1,6 +1,6 @@
 import React from "react";
 import NavBarCity from "../navbar_city/navbar_city";
-import Reservation from "../reservations/create_reservation_container";
+import ReservationShowContainer from "../reservations/reservation_show_container";
 
 
 const Trips = () => {
@@ -10,7 +10,7 @@ const Trips = () => {
         <NavBarCity />
       </div>
       <div className="reservation-trips">
-        <Reservation/>
+        <ReservationShowContainer/>
       </div>
     </div>
   );
