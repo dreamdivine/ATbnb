@@ -2,18 +2,17 @@ class Listing < ApplicationRecord
     validates :description, :bedroom, :bathroom, :location, :owner_Id, :price, :guests, :title, :latitude, :longitude, :city, presence: true
     validate :ensure_photo
 
-    has_many :reviews,
-    foreign_key: :listing_id,
-    class_name: :Listing
+    has_many :reviews
+    
 
      has_many :reserve,
      foreign_key: :listing_id,
      class_name: :Reservation  
   
-    # has_many :favorites
-    # has_many :favorite_users,
-    # through: :favorites,
-    # source: :user
+    #has_many :favorites
+    #has_many :favorite_users,
+    #through: :favorites,
+    #source: :user
     
     belongs_to :user,
     foreign_key: :owner_Id,
@@ -34,8 +33,8 @@ class Listing < ApplicationRecord
     #         .where("lng < ?", bounds[:northEast][:longitude])
     # end
 
-    # def average_rating
-    #     reviews.average(:rating)
-    # end
+    def average_rating
+         reviews.average(:rating)
+     end
 
 end

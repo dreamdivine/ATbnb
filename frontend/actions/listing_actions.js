@@ -2,9 +2,10 @@ import * as APIUtil from "../util/listing_api_util";
 
 export const RECEIVE_LISTINGS = "RECEIVE_LISTINGS";
 export const RECEIVE_LISTING = "RECEIVE_LISTING";
-// export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_LISTING_ERRORS = "RECEIVE_LISTING_ERRORS"
 export const REMOVE_LISTING = "REMOVE_LISTING";
+export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
+export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
 export const receiveListings = (listings) => ({
   type: RECEIVE_LISTINGS,
@@ -27,17 +28,15 @@ export const receiveListingErrors = (errors) => {
   errors,
 }};
 
-// export const receiveReview = ({ review, average_rating, author }) => ({
-//   type: RECEIVE_REVIEW,
-//   review,
-//   average_rating,
-//   author,
-// });
 
-// export const createReview = (review) => (dispatch) =>
-//   APIUtil.createReview(review).then((review) =>
-//     dispatch(receiveReview(review))
-//   );
+
+export const receiveReview = ({ review, average_rating, author }) => ({
+  type: RECEIVE_REVIEW,
+  review,
+  average_rating,
+  author,
+});
+
 
 export const fetchListings = () => (dispatch) =>(
   APIUtil.fetchListings().then((listings) =>
@@ -63,5 +62,19 @@ export const updateListing = (listingFormData, listing) => (dispatch) =>
 export const deleteListing = (listingId) => (dispatch) =>
   (APIUtil.deleteListing(listingId)
   .then(() => dispatch(removeListing(listingId))));
+
+
+  export const createReview = (review) => (dispatch) =>
+    APIUtil.createReview(review).then((review) =>
+      dispatch(receiveReview(review))
+    );
+
+  export const updateReview = (reviewFormData, review) => (dispatch) =>
+    APIUtil.updateReview(reviewFormData, review).then((review) =>
+      dispatch(receiveReview(review))
+    );
+
+  export const deleteReview = (reviewId) => (dispatch) =>
+    APIUtil.deleteReview(reviewId).then(() => dispatch(removeReview(reviewId)));
 
   

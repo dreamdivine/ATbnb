@@ -10,12 +10,12 @@ export const fetchListing = (listingId) =>(
     url: `api/listings/${listingId}`,
   }));
 
-// export const createReview = (review) =>
-//   $.ajax({
-//     method: "POST",
-//     url: "api/reviews",
-//     data: { review },
-//   });
+export const createReview = (reviewForm) =>
+  $.ajax({
+    method: "POST",
+    url: "api/reviews",
+    data: { reviewForm },
+  });
 
 export const createListing = (listingForm) =>{
   
@@ -37,8 +37,22 @@ export const updateListing = (listingForm, listing) =>(
     processData: false
   }));
 
+  export const updateReview = (reviewForm, review) =>
+    $.ajax({
+      method: "PATCH",
+      url: `api/reviews/${review.id}`,
+      data: { reviewForm },
+    });
+
 export const deleteListing = (listingId) =>(
   $.ajax({
     method: "DELETE",
     url: `api/listings/${listingId}`,
   }));
+
+  export const deleteReview = (reviewId) =>
+    $.ajax({
+      method: "DELETE",
+      url: `api/reviews/${reviewId}`,
+    });
+  

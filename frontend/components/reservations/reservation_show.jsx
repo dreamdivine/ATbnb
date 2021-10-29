@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 class ReservationShow extends React.Component {
 
   componentDidMount() {
-    this.props.fetchReservations();
+    this.props.fetchListings();
   }
 
   refreshPage(){

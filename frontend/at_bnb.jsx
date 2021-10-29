@@ -25,11 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
 
-  window.fetchReservations = ReservationAPIUtil.fetchReservations;
-  window.fetchReservation = ReservationAPIUtil.fetchReservation;
-  window.updateReservation = ReservationAPIUtil.updateReservation;
-  window.createReservation = ReservationAPIUtil.createReservation;
-  window.deleteReservation = ReservationAPIUtil.deleteReservation;
+  window.updateReview = APIUtil.updateReview;
+  window.createReview = APIUtil.createReview;
+  window.deleteReview = APIUtil.deleteReview;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
