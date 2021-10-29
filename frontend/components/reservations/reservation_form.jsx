@@ -16,6 +16,10 @@ class ReservationForm extends React.Component {
     this.props.fetchReservation(this.props.match.params.reservationId);
   }
 
+  refreshPage() {
+    window.location.reload(false);
+  }
+
   reservation(e, field) {
     this.setState({ [field]: e.target.value });
   }
@@ -29,7 +33,8 @@ class ReservationForm extends React.Component {
       });
       this.props
         .createReservation(reservations)
-        .then(this.props.history.push("/trips"))
+        .then(this.refreshPage)
+        .then(this.props.history.push("/trips"));
 
       this.setState(this.newState);
     } else {
@@ -54,12 +59,12 @@ class ReservationForm extends React.Component {
   render() {
     return (
       <div>
-        <div className="session-errors">{this.renderErrors()}</div>
+        {/* <div className="session-errors">{this.renderErrors()}</div> */}
         <form onSubmit={this.handleSubmit}>
           <label>
             CHECK-IN
             <input
-              required
+            required
               type="date"
               value={this.state.check_in_date}
               onChange={(e) => this.reservation(e, "check_in_date")}
@@ -68,7 +73,7 @@ class ReservationForm extends React.Component {
           <label>
             CHECK-OUT
             <input
-              required
+            required
               type="date"
               value={this.state.check_out_date}
               onChange={(e) => this.reservation(e, "check_out_date")}
@@ -77,7 +82,7 @@ class ReservationForm extends React.Component {
           <label>
             Guests
             <input
-              required
+            required
               type="number"
               value={this.state.number_of_guest}
               onChange={(e) => this.reservation(e, "number_of_guest")}
