@@ -15,6 +15,7 @@ import{login} from "../../actions/session_actions";
 
 
 const mSTP = (state, ownProps) => {
+  console.log("i am errors", state.errors.reservation)
   return {
     reservation: {
       check_in_date: "",

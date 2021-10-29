@@ -8,7 +8,8 @@ class ReservationForm extends React.Component {
     this.state = this.props.reservation;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.reservation = this.reservation.bind(this);
-    this.newState = Object.assign({}, this.props.reservation)
+    this.newState = Object.assign({}, this.props.reservation);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount() {
@@ -28,20 +29,37 @@ class ReservationForm extends React.Component {
       });
       this.props
         .createReservation(reservations)
-        .then(this.props.history.push("/trips"));
+        .then(this.props.history.push("/trips"))
+
       this.setState(this.newState);
     } else {
       this.props.openModal("login");
     }
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error ${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
     return (
       <div>
+        <div className="session-errors">{this.renderErrors()}</div>
         <form onSubmit={this.handleSubmit}>
           <label>
             CHECK-IN
             <input
+              required
               type="date"
               value={this.state.check_in_date}
               onChange={(e) => this.reservation(e, "check_in_date")}
@@ -50,6 +68,7 @@ class ReservationForm extends React.Component {
           <label>
             CHECK-OUT
             <input
+              required
               type="date"
               value={this.state.check_out_date}
               onChange={(e) => this.reservation(e, "check_out_date")}
@@ -58,6 +77,7 @@ class ReservationForm extends React.Component {
           <label>
             Guests
             <input
+              required
               type="number"
               value={this.state.number_of_guest}
               onChange={(e) => this.reservation(e, "number_of_guest")}

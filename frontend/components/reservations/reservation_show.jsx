@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+// import ReservationIndexItem from "./reservation_show_item"
 
 class ReservationShow extends React.Component {
  
@@ -11,6 +12,7 @@ class ReservationShow extends React.Component {
       <div>
         {this.props.currentUserReservation.map((reservation, i) => (
           <div key={i}>
+            <img src={this.props.listings[reservation.listing_id].photoUrl} />
             <h2>{reservation.title}</h2>
             <h1>CHECK IN: {reservation.check_in_date.split("T")[0]}</h1>
             <h1>CHECK OUT: {reservation.check_out_date.split("T")[0]}</h1>
@@ -33,6 +35,12 @@ class ReservationShow extends React.Component {
               Go to the listing page
             </button>
           </div>
+          // <ReservationIndexItem
+          //   reservation={reservation}
+          //   listings={this.props.listings}
+          //   deleteReservation={this.props.deleteReservation}
+          //   key={i}
+          // />
         ))}
       </div>
     );
