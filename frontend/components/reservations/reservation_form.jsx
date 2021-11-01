@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 
 
 class ReservationForm extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = this.props.reservation;

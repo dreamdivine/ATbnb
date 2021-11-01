@@ -4,15 +4,12 @@ import { createReview, deleteReview, updateReview } from "../actions/listing_act
 import ReviewForm from "./review_form";
 
 const mSTP = (state, ownProps) => {
-    console.log("i am here", state)
-    console.log("user", state.session.id)
-    console.log("listing", ownProps.listingId);
     return {
       reviews: {
         author_id: state.session.id,
         listing_id: ownProps.listingId,
         body: "",
-        rating: ""
+        rating: 5
       },
       reviewFormType: "Create Review",
       currentUser: state.session.id
