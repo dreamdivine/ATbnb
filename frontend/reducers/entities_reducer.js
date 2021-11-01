@@ -8,7 +8,7 @@ const entitiesReducer = combineReducers({
   users: usersReducer,
   listings: listingsReducer,
   reservations: reservationsReducer,
-  // reviews: reviewsReducer,
+  reviews: reviewsReducer,
 
 });
 

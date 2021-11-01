@@ -428,8 +428,6 @@ l58.photo.attach(io: l58photo, filename: "list58")
 l58.save
 
 
-
-
  r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
  r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
  r3 = Review.create(author_id: u4.id, listing_id:  l9.id, body: "decent house", rating: 4)

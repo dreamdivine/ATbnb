@@ -7,7 +7,7 @@ const mSTP = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
     listing: state.entities.listings[ownProps.match.params.listingId],
-    listingId: ownProps.match.params.listingId
+    listingId: ownProps.match.params.listingId,
   };
 };
 

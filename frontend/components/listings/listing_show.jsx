@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import NavBarCity from "../navbar_city/navbar_city";
 import CreateReservationForm from "../reservations/create_reservation_container";
+import ReviewFormContainer from "../../reviews/review_form_container";
 
 
 class ListingShow extends React.Component {
@@ -71,7 +72,8 @@ class ListingShow extends React.Component {
               : ""
             : ""}
         </div>
-        <CreateReservationForm listingId={this.props.listing.id}/>
+        <CreateReservationForm listingId={this.props.listing.id} />
+        <ReviewFormContainer listingId={this.props.listing.id} />
       </div>
     );
   }
