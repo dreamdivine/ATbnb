@@ -8,7 +8,6 @@ import ReviewFormContainer from "../../reviews/review_form_container";
 class ListingShow extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.editDelete = this.editDelete.bind(this);
   }
@@ -47,6 +46,43 @@ class ListingShow extends React.Component {
     );
   }
 
+  refreshPage() {
+    window.location.reload(false);
+  }
+
+  renderReviews() {
+    return (
+      <div>
+        {this.props.listing.reviews === undefined
+          ? ""
+          : Object.values(this.props.listing.reviews).map((review, i) => (
+              <div key={i}>
+                <div>
+                  <h2>{review.body}</h2>
+                </div>
+                <div>
+                  <h2>{review.rating}</h2>
+                </div>
+                <div className="deleteReviews">
+                  {this.props.currentUser !== review.author_id ? (
+                    ""
+                  ) : (
+                    <button
+                      className="delete-review"
+                      onClick={this.props
+                        .deleteReview(this.props.review.id)
+                        .then(this.refreshPage)}
+                    >
+                      Delete Review
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+      </div>
+    );
+  }
+
   render() {
     if (!this.props.listing) return null;
     const { listing, currentUser, listingId } = this.props;
@@ -74,6 +110,7 @@ class ListingShow extends React.Component {
         </div>
         <CreateReservationForm listingId={this.props.listing.id} />
         <ReviewFormContainer listingId={this.props.listing.id} />
+        {this.renderReviews()}
       </div>
     );
   }

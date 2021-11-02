@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import { createReview, deleteReview, updateReview } from "../actions/listing_actions";
+import { createReview, deleteReview, updateReview} from "../actions/listing_actions";
 import ReviewForm from "./review_form";
 
 const mSTP = (state, ownProps) => {

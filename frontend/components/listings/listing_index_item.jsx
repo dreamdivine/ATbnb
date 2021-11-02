@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 
 const ListingIndexItem = ({ listing, deleteListing }) => {
   return (
@@ -34,4 +35,4 @@ const ListingIndexItem = ({ listing, deleteListing }) => {
   );
 }
 
-export default ListingIndexItem;
+export default withRouter(ListingIndexItem);

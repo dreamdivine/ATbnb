@@ -12,11 +12,12 @@ export const receiveListings = (listings) => ({
   listings,
 });
 
-export const receiveListing = (listing) => ({
+export const receiveListing = (listing, reviews, authors) => ({
   type: RECEIVE_LISTING,
-  listing
+  listing,
+  reviews,
+  authors
 });
-
 
 export const removeListing = (listingId) => ({
   type: REMOVE_LISTING,
@@ -27,7 +28,6 @@ export const receiveListingErrors = (errors) => {
   return{ type: RECEIVE_LISTING_ERRORS,
   errors,
 }};
-
 
 
 export const receiveReview = ({ review, average_rating, author }) => ({
@@ -62,7 +62,6 @@ export const updateListing = (listingFormData, listing) => (dispatch) =>
 export const deleteListing = (listingId) => (dispatch) =>
   (APIUtil.deleteListing(listingId)
   .then(() => dispatch(removeListing(listingId))));
-
 
   export const createReview = (review) => (dispatch) =>
     APIUtil.createReview(review).then((review) =>

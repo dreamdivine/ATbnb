@@ -4,7 +4,7 @@ import {
   RECEIVE_LISTING,
   REMOVE_LISTING,
   RECEIVE_REVIEW,
-  REMOVE_REVIEW
+  REMOVE_REVIEW,
 } from "../actions/listing_actions";
 
 const listingsReducer = (oldState = {}, action) => {
@@ -24,7 +24,6 @@ const listingsReducer = (oldState = {}, action) => {
     case RECEIVE_REVIEW:
       const { review, average_rating } = action;
       const newState = Object.assign({}, oldState);
-      console.log("i am here as newState", newState[review.listing_id]);
       // newState[review.listing_id].reviewIds.push(review.id);
       newState[review.listing_id].average_rating = average_rating;
       return newState;

@@ -16,9 +16,6 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
   return {
     fetchListings: () => dispatch(fetchListings()),
-    // fetchListing: () => dispatch(fetchListing(filter)),
-    // deleteListing: (listingId) => dispatch(deleteListing(listingId)),
-    // clearFilters: () => dispatch(clearFilters()),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   };
 };

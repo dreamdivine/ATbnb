@@ -4,16 +4,19 @@ import { withRouter } from "react-router-dom";
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log("i am state in the review", this.state);
     this.state = this.props.reviews;
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.navigateToListingShow = this.navigateToListingShow.bind(this);
+    // this.navigateToListingShow = this.navigateToListingShow.bind(this);
   }
 
-  navigateToListingShow() {
-    console.log("listing inside the review", this.props.match.params.listingId);
-    const url = `/listings/${this.props.match.params.listingId}`;
-    this.props.history.push(url);
+  // navigateToListingShow() {
+  //   // const url = `/listings/${this.props.match.params.listingId}`;
+  //   const url = `/sanfrancisco`;
+  //   this.props.history.push(url);
+  // }
+
+  refreshPage() {
+    window.location.reload(false);
   }
 
   handleSubmit(e) {
@@ -22,8 +25,7 @@ class ReviewForm extends React.Component {
     const review = Object.assign({}, this.state, {
       listing_id: listingId,
     });
-    this.props.createReview(review);
-    this.navigateToListingShow();
+    this.props.createReview(review).then(this.refreshPage)
   }
 
   update(property) {

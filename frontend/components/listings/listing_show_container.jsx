@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import ListingShow from "./listing_show";
-import {updateListing, fetchListings, deleteListing, fetchListing } from "../../actions/listing_actions";
+import {updateListing, fetchListings, deleteListing, fetchListing, deleteReview} from "../../actions/listing_actions";
+
 
 
 const mSTP = (state, ownProps) => {
@@ -16,7 +17,8 @@ const mDTP = (dispatch) => {
     fetchListings: () => dispatch(fetchListings()),
     fetchListing: (listingId) => dispatch(fetchListing(listingId)),
     deleteListing: (listingId) => dispatch(deleteListing(listingId)),
-    updateListing: (listing) => dispatch(updateListing(listing))
+    updateListing: (listing) => dispatch(updateListing(listing)),
+    deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
   };
 };
 

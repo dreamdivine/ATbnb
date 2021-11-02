@@ -2,7 +2,7 @@ class Api::ListingsController < ApplicationController
      before_action :require_logged_in, only: [:create, :destroy, :update]
 
   def index
-    #  listings = bounds ? Listing.in_bounds(bounds) : Listing.all
+    #  listings = Listing.all
 
     #  if params[:minGuest] && params[:maxGuest]
     #    listings = listings.where(guest: guest_range)
@@ -14,7 +14,7 @@ class Api::ListingsController < ApplicationController
   end
 
   def show
-    @listing = Listing.find_by(id: params[:id])
+    @listing = Listing.find(params[:id])
   end
 
   def create
