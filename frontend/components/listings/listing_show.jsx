@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import NavBarCity from "../navbar_city/navbar_city";
 import CreateReservationForm from "../reservations/create_reservation_container";
 import ReviewFormContainer from "../../reviews/review_form_container";
+import { deleteReview } from "../../actions/listing_actions";
 
 
 class ListingShow extends React.Component {
@@ -64,13 +65,13 @@ class ListingShow extends React.Component {
                   <h2>{review.rating}</h2>
                 </div>
                 <div className="deleteReviews">
-                  {this.props.currentUser !== review.author_id ? (
+                  {this.props.currentUserId !== review.author_id ? 
                     ""
-                  ) : (
+                   : (
                     <button
                       className="delete-review"
-                      onClick={this.props
-                        .deleteReview(this.props.review.id)
+                      onClick={() =>this.props
+                        .deleteReview(review.id)
                         .then(this.refreshPage)}
                     >
                       Delete Review

@@ -37,6 +37,11 @@ export const receiveReview = ({ review, average_rating, author }) => ({
   author,
 });
 
+export const removeReview = (reviewId) => ({
+  type: REMOVE_REVIEW,
+  reviewId,
+});
+
 
 export const fetchListings = () => (dispatch) =>(
   APIUtil.fetchListings().then((listings) =>

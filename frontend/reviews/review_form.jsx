@@ -6,14 +6,7 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = this.props.reviews;
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.navigateToListingShow = this.navigateToListingShow.bind(this);
   }
-
-  // navigateToListingShow() {
-  //   // const url = `/listings/${this.props.match.params.listingId}`;
-  //   const url = `/sanfrancisco`;
-  //   this.props.history.push(url);
-  // }
 
   refreshPage() {
     window.location.reload(false);
@@ -39,7 +32,10 @@ class ReviewForm extends React.Component {
           <label>Rating</label>
           <br />
           <input
+          required
             type="number"
+            min="1"
+            max="5"
             value={this.state.rating}
             onChange={this.update("rating")}
           />
@@ -47,6 +43,7 @@ class ReviewForm extends React.Component {
           <label>Comment</label>
           <br />
           <textarea
+          required
             cols="30"
             rows="10"
             value={this.state.body}
