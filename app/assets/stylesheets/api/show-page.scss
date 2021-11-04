@@ -1,18 +1,24 @@
 .show-page{
-    background-color: pink;
+    background-color: white;
     height: 1000px;
     position: relative;
 }
 
 .show-page-middle{
-  color:blueviolet;
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: 40px;
+  left: 500px;
+  
 }
 
 .image-show{
-    width: 500px;
-    height: 500px;
+    width: 900px;
+    height: 600px;
+    position: relative;
+    top: 40px;
+    border-radius: 10px;
 }
 
 .reservation-show{
@@ -20,3 +26,272 @@
     top: 0px;
     left: 600px;
 }
+
+.show-title{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color: 222222;
+    font-size: 26px;
+}
+
+.star-review-length{
+    display: flex;
+    width: 125px;
+    justify-content: space-evenly;
+}
+
+.review-length{
+    position: relative;
+    left: 4px;
+    color: #717171;
+    font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    text-decoration: underline;
+}
+
+.average-rating{
+    font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color: #222222;
+}
+
+#star{
+    color: #FF385C;
+    font-size: 14px;
+}
+
+.second-line-start-review-superhost{
+    display: flex;
+    height: 17px;
+    width: 520px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+}
+
+#medal{
+    color: #FF385C;
+    font-size: 14px;
+}
+
+.superhost{
+    color: #717171;
+    font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    position: relative;
+    top: 1px;
+    left: 7px;
+}
+
+.medal-superhost{
+    display: flex;
+    position: relative;
+   
+}
+
+.city-california{
+    color: #717171;
+    font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+    text-decoration: underline;
+}
+
+.dot{
+    position: relative;
+    bottom: 5px;
+}
+
+.images-show-listing{
+    position: relative;
+    top: 350px;
+}
+
+.userinfo-listing-info{
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    top: 80px;
+    left: 500px;
+    width: 550px;
+    padding: 48px 0px 28px;
+}
+
+.userinfo-house{
+    font-size: 22px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+    color: #222222;
+
+}
+
+.listing-city-guests-bed{
+    font-size: 16px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+    color: #222222;
+    position: relative;
+    top: 10px;
+}
+
+.top{
+    font-size: 16px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+    color: #222222;
+}
+
+.bottom{
+    font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+    color: #717171;
+}
+
+.listing-show-information{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    top: 100px;
+    left: 500px;
+    width: 550px;
+    height: 220px;
+}
+
+.entire-home-icon, .enhanced-clean-icon, .location-map-icon, .checkIn-key-icon{
+    display: flex;
+    height: 50px;
+}
+
+.top-bottom{
+    position: relative;
+    left: 20px;
+}
+
+.location-map-icon{
+    position: relative;
+    left: 5px;
+}
+
+.enhanced-clean-icon{
+    position: relative;
+    right: 7px;
+}
+
+.listing-show-essay{
+    border-bottom: 1px solid lightgray;
+    width: 550px;
+    height: 240px;
+    position: relative;
+    top: 140px;
+    left: 500px;
+    font-size: 16px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+    color: #222222;
+    line-height: 25px;
+}
+
+.icon-img{
+    width: 25px;
+    height: 25px;
+    color: gray;
+}
+
+.listing-offer{
+    position: relative;
+    top: 180px;
+    width: 550px;
+    height: 255px;
+    left: 500px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.icon-offer{
+    display: flex;
+    width: 250px;
+    height: 35px;
+
+}
+
+.icon-detail{
+    position: relative;
+    left: 15px;
+}
+#car, #luggage {
+   font-size: 25px;
+}
+
+#luggage{
+    position: relative;
+    left: 2px;
+}
+
+ #pet{
+   font-size: 20px;
+}
+
+.listing-icon-description{
+    position: relative;
+    top: 30px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.luggage-detail{
+    position: relative;
+    left: 20px;
+}
+
+.wifi-detail{
+    position: relative;
+    left: 20px;
+}
+
+.bottom-listing-show{
+    display: flex;
+    position: relative;
+    height: 1050px;
+
+}
+
+.create-reservation-show-page{
+    position: relative;
+    left: 600px;
+    top: 130px;
+}
+
+.line-show{
+    width: 1150px;
+    height: 0px;
+    position: relative;
+    left: 500px;
+    border: 1px solid lightgray;
+}
+
+.reviews-show{
+    position: relative;
+    top: 30px;
+    left: 500px;
+}
+
+.star-review-reviews-sec{
+    display: flex;
+    width: 160px;
+    justify-content: space-evenly;
+    position: relative;
+    left: 500px;
+    top: 30px;
+}
+
+.average-rating-reviews{
+    font-size: 22px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color: #222222;
+}
+
+.review-length-reviews{
+    position: relative;
+    left: 4px;
+    color: #222222;
+    font-size: 22px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+

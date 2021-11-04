@@ -9,10 +9,11 @@ const mSTP = (state, ownProps) => {
         author_id: state.session.id,
         listing_id: ownProps.listingId,
         body: "",
-        rating: 5
+        rating: 5,
       },
       reviewFormType: "Create Review",
-      currentUser: state.session.id
+      currentUser: state.session.id,
+      authorname: state.entities.users[state.session.id].username
     };
 }
 

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavBarCity from "../navbar_city/navbar_city";
+import NavListingShow from "../navbar_city/navlisting_show";
 import CreateReservationForm from "../reservations/create_reservation_container";
 import ReviewFormContainer from "../../reviews/review_form_container";
-import { deleteReview } from "../../actions/listing_actions";
+
 
 
 class ListingShow extends React.Component {
@@ -58,21 +58,22 @@ class ListingShow extends React.Component {
           ? ""
           : Object.values(this.props.listing.reviews).map((review, i) => (
               <div key={i}>
+                {/* <div>{this.props.users[review.author_id].username}</div> */}
+                <div>Anonymous</div>
                 <div>
                   <h2>{review.body}</h2>
                 </div>
-                <div>
-                  <h2>{review.rating}</h2>
-                </div>
                 <div className="deleteReviews">
-                  {this.props.currentUserId !== review.author_id ? 
+                  {this.props.currentUserId !== review.author_id ? (
                     ""
-                   : (
+                  ) : (
                     <button
                       className="delete-review"
-                      onClick={() =>this.props
-                        .deleteReview(review.id)
-                        .then(this.refreshPage)}
+                      onClick={() =>
+                        this.props
+                          .deleteReview(review.id)
+                          .then(this.refreshPage)
+                      }
                     >
                       Delete Review
                     </button>
@@ -90,28 +91,187 @@ class ListingShow extends React.Component {
 
     return (
       <div className="show-page">
-        <NavBarCity />
+        <NavListingShow />
         <div className="show-page-middle">
-          <h1>{this.props.listing.title}</h1>
-          <p>{this.props.listing.bedroom}</p>
-          <p>{this.props.listing.bathroom}</p>
-          <p>{this.props.listing.guests}</p>
-          <p>{this.props.listing.price}</p>
-          <p>{this.props.listing.location}</p>
-          <p>{this.props.listing.city}</p>
-          <p>{this.props.listing.description}</p>
-          <p>{this.props.listing.latitude}</p>
-          <p>{this.props.listing.longitude}</p>
-          <img src={this.props.listing.photoUrl} className="image-show" />
-          {this.props.currentUser
-            ? currentUser.id === listing.owner_Id
-              ? this.editDelete()
-              : ""
-            : ""}
+          <div className="show-title">{listing.title}</div>
+          <div className="second-line-start-review-superhost">
+            <div className="star-review-length">
+              <i className="fas fa-star" id="star"></i>
+              <div className="average-rating">
+                {listing.average_rating}
+              </div>
+              <div className="review-length">
+                {listing.reviews === undefined
+                  ? "0 reviews"
+                  : "(" +
+                    Object.values(listing.reviews).length +
+                    " reviews)"}
+              </div>
+            </div>
+            <div className="dot">.</div>
+            <div className="medal-superhost">
+              <div>
+                <i className="fas fa-medal" id="medal"></i>
+              </div>
+              <div className="superhost">Superhost</div>
+            </div>
+            <div className="dot">.</div>
+            <div className="city-california">
+              {listing.city + ", California, United States"}
+            </div>
+          </div>
+          <div className="image-show-listing">
+            <img src={listing.photoUrl} className="image-show" />
+          </div>
         </div>
-        <CreateReservationForm listingId={this.props.listing.id} />
-        <ReviewFormContainer listingId={this.props.listing.id} />
-        {this.renderReviews()}
+
+        <div className="bottom-listing-show">
+          <div className="listing-info">
+            <div className="userinfo-listing-info">
+              <div className="userinfo-house">
+                Entire house hosted by {this.props.currentUserName}
+              </div>
+              <div className="listing-city-guests-bed">
+                {listing.guests} guests .{" "}
+                {listing.bedroom} bedroom .{" "}
+                {listing.bedroom * 2} beds .{" "}
+                {listing.bathroom} bath
+              </div>
+            </div>
+            <div className="listing-show-information">
+              <div className="entire-home-icon">
+                <div>
+                  <i className="fas fa-home" id="house-icon"></i>
+                </div>
+                <div className="top-bottom">
+                  <p className="top">Entire home</p>
+                  <p className="bottom">You'll have the house to yourself.</p>
+                </div>
+              </div>
+              <div className="enhanced-clean-icon">
+                <div>
+                  <img src="/images/stars.png" className="icon-img"></img>
+                </div>
+                <div className="top-bottom">
+                  <p className="top">Enhanced Clean</p>
+                  <p className="bottom">
+                    This Host committed to Airbnb's 5-step enhanced cleaning
+                    process.
+                  </p>
+                </div>
+              </div>
+              <div className="location-map-icon">
+                <div>
+                  <i className="fas fa-map-marker-alt" id="mapIcon"></i>
+                </div>
+                <div className="top-bottom">
+                  <p className="top">Great location</p>
+                  <p className="bottom">
+                    100% of recent guests gave the location a 5-star rating.
+                  </p>
+                </div>
+              </div>
+              <div className="checkIn-key-icon">
+                <div>
+                  <i className="fas fa-key" id="keyIcon"></i>
+                </div>
+                <div className="top-bottom">
+                  <p className="top">Great check-in experience</p>
+                  <p className="bottom">You'll have the house to yourself.</p>
+                </div>
+              </div>
+            </div>
+            <div className="listing-show-essay">
+              <p>
+                The beautiful cozy house is just a few minutes away from the
+                mall and grocery stores. The house is prefectly situated near
+                the downtown so there is plenty to explore around for the
+                visitors. It is equipped with modern furnishing, TV, and
+                wireless internet. Washer and dryer for guest use, iron with
+                ironing board, first aide kit, and fully stocked kitchen. The
+                kitchen is equipped with microwave, coffee machine, fridge. oven
+                and toaster. The house is pet friendly but we would really
+                appreciate if the guest would clean up after the pet/pets.
+                Perfect retreat for whole family!
+              </p>
+            </div>
+            <div className="listing-offer">
+              <div>What this place offers</div>
+              <div className="listing-icon-description">
+                <div className="icon-offer">
+                  <img src="/images/utensils.png" className="icon-img"></img>
+                  <div className="icon-detail">Kitchen</div>
+                </div>
+                <div className="icon-offer">
+                  <i className="fas fa-car" id="car"></i>
+                  <div className="icon-detail">Free parking on premises</div>
+                </div>
+                <div className="icon-offer">
+                  <img src="/images/washer.png" className="icon-img"></img>
+                  <div className="icon-detail">Washer</div>
+                </div>
+                <div className="icon-offer">
+                  <img src="/images/balcony.png" className="icon-img"></img>
+                  <div className="icon-detail">Patio or balcony</div>
+                </div>
+                <div className="icon-offer">
+                  <i className="fas fa-suitcase-rolling" id="luggage"></i>
+                  <div className="luggage-detail">Luggage dropoff allowed</div>
+                </div>
+                <div className="icon-offer">
+                  <i className="fas fa-wifi"></i>
+                  <div className="wifi-detail">Wifi</div>
+                </div>
+                <div className="icon-offer">
+                  <i className="fas fa-tv"></i>
+                  <div className="icon-detail">TV</div>
+                </div>
+                <div className="icon-offer">
+                  <img
+                    src="/images/tumble-dryer.png"
+                    className="icon-img"
+                  ></img>
+                  <div className="icon-detail">Dryer</div>
+                </div>
+                <div className="icon-offer">
+                  <i className="fas fa-paw" id="pet"></i>
+                  <div className="icon-detail">Pet allowed</div>
+                </div>
+                <div className="icon-offer">
+                  <img src="/images/cctv-camera.png" className="icon-img"></img>
+                  <div className="icon-detail">
+                    Security cameras on property
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="create-reservation-show-page">
+            <CreateReservationForm listingId={listing.id} />
+          </div>
+        </div>
+        {this.props.currentUser
+          ? currentUser.id === listing.owner_Id
+            ? this.editDelete()
+            : ""
+          : ""}
+          {currentUser.id === listing.owner_Id ? "" : 
+        <ReviewFormContainer listingId={listing.id} />}
+        <div className="line-show"></div>
+        <div className="star-review-reviews-sec">
+          <i className="fas fa-star" id="star"></i>
+          <div className="average-rating-reviews">
+            {this.props.listing.average_rating}
+          </div>
+          <div className="dot-reviews">.</div>
+          <div className="review-length-reviews">
+            {listing.reviews === undefined
+              ? "0 reviews"
+              : Object.values(listing.reviews).length +
+                " reviews"}
+          </div>
+        </div>
+        <div className="reviews-show">{this.renderReviews()}</div>
       </div>
     );
   }

@@ -59,37 +59,73 @@ class ReservationForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="reservation-create">
         {/* <div className="session-errors">{this.renderErrors()}</div> */}
+        <div className="reservation-price-review">
+          <div>${this.props.listing.price}/night</div>
+          <div className="star-review-length">
+            <i className="fas fa-star" id="star"></i>
+            <div className="average-rating">
+              {this.props.listing.average_rating}
+            </div>
+            <div className="review-length">
+              {this.props.listing.reviews === undefined
+                ? "0 reviews"
+                : "(" +
+                  Object.values(this.props.listing.reviews).length +
+                  " reviews)"}
+            </div>
+          </div>
+        </div>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            CHECK-IN
-            <input
-            required
-              type="date"
-              value={this.state.check_in_date}
-              onChange={(e) => this.reservation(e, "check_in_date")}
-            />
-          </label>
-          <label>
-            CHECK-OUT
-            <input
-            required
-              type="date"
-              value={this.state.check_out_date}
-              onChange={(e) => this.reservation(e, "check_out_date")}
-            />
-          </label>
-          <label>
-            Guests
-            <input
-            required
-              type="number"
-              value={this.state.number_of_guest}
-              onChange={(e) => this.reservation(e, "number_of_guest")}
-            />
-          </label>
-          <button>Create Reservation</button>
+          <div className="reservation-form">
+            <div className="check-guest">
+            <div className="check-in-out">
+              <div className="check-in-add">
+                <label>
+                  <p className="checkin">CHECK-IN</p>
+                  <p className="add-date">Add date</p>
+                  <input
+                    required
+                    type="date"
+                    value={this.state.check_in_date}
+                    onChange={(e) => this.reservation(e, "check_in_date")}
+                  />
+                </label>
+              </div>
+              <div className="check-out-add">
+                <label>
+                  <p className="checkout">CHECK-OUT</p>
+                  <p className="add-date">Add date</p>
+                  <input
+                    required
+                    type="date"
+                    value={this.state.check_out_date}
+                    onChange={(e) => this.reservation(e, "check_out_date")}
+                  />
+                </label>
+              </div>
+            </div>
+            <div>
+              <div className="guest-show">
+              <label>
+                <div className="guest-input">
+                Guests
+                <input
+                  required
+                  type="number"
+                  value={this.state.number_of_guest}
+                  onChange={(e) => this.reservation(e, "number_of_guest")}
+                />
+                </div>
+              </label>
+              </div>
+            </div>
+            </div>
+            <div className="reservation-btn">
+            <button className="create-btn">Create Reservation</button>
+            </div>
+          </div>
         </form>
       </div>
     );

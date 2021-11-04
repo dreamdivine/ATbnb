@@ -26,6 +26,7 @@ const mSTP = (state, ownProps) => {
     reservationFormType: "Create Reservation",
     currentUser: state.session.id,
     errors: state.errors.reservation,
+    listing: state.entities.listings[ownProps.listingId]
   };
 };
 

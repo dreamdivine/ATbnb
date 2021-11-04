@@ -32,7 +32,7 @@ class ReviewForm extends React.Component {
           <label>Rating</label>
           <br />
           <input
-          required
+            required
             type="number"
             min="1"
             max="5"
@@ -43,7 +43,7 @@ class ReviewForm extends React.Component {
           <label>Comment</label>
           <br />
           <textarea
-          required
+            required
             cols="30"
             rows="10"
             value={this.state.body}

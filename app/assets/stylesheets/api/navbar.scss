@@ -349,3 +349,33 @@ li {
 }
 
 
+.start-search-icon{
+  background-color: white;
+  border: 1px solid lightgray;
+  display: flex;
+  width: 300px;
+  height: 45px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+}
+
+.start-search{
+  position: relative;
+  left: 20px;
+}
+
+.search-icon{
+  background-color: #ff385c;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  right: 4px;
+  top: 0px;
+}
+
+.listing-show-page{
+  border-bottom: 1px solid lightgray ;
+  height: 90px;
+}

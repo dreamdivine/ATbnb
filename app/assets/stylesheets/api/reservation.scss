@@ -1,0 +1,90 @@
+
+.reservation-create{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 240px;
+    box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.check-in-out{
+    display: flex;
+    height: 48px;
+    position: relative;
+    top: 10px;
+}
+
+.reservation-price-review{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.add-date{
+    font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; 
+    color: #717171;
+}
+
+.checkin, .checkout{
+    font-size: 10px;
+    color: black;
+}
+
+.check-guest{
+    border: 1px solid gray;
+    height: 120px;
+    position: relative;
+    top: 15px;
+    border-radius: 10px;
+}
+
+.guest-show{
+    position: relative;
+    border-top: 1px solid gray ;
+    top: 14px;
+
+}
+
+.reservation-btn{
+    position: relative;
+    top: 35px;
+}
+
+.guest-input{
+    position: relative;
+    top: 25px;
+    left: 10px;
+}
+
+.checkin, .add-date, .checkout{
+    position: relative;
+    left: 10px;
+
+
+}
+
+.check-out-add, .check-in-add{
+    height: 50px;
+    position: relative;
+    bottom: 10px;
+    padding: 5px;
+}
+
+.check-out-add{
+    border-left: 1px solid gray;
+    position: relative;
+    left: 40px;
+}
+
+.create-btn{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    background-color: #FF385C;
+    border: 1px solid #FF385C;
+    font-size: 16px;
+}
