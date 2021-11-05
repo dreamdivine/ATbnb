@@ -428,12 +428,45 @@ l58.photo.attach(io: l58photo, filename: "list58")
 l58.save
 
 
- r1 = Review.create(author_id: u2.id, listing_id:  l1.id, body: "very good house", rating: 5)
- r2 = Review.create(author_id: u3.id, listing_id:  l2.id, body: "its okay house", rating: 3)
- r3 = Review.create(author_id: u4.id, listing_id:  l9.id, body: "decent house", rating: 4)
- r4 = Review.create(author_id: u5.id, listing_id:  l10.id, body: "had awesome experience", rating: 2)
+ r1 = Review.create(author_id: u1.id, listing_id:  l1.id, body: "The host is incredibly accomodating. The location is great and close to the center of the town. The rooms were clean, comfortable and has everything you need to stay a night or longer. Beautiful and private outdoor space to enjoy anytime of the day. Parking is easy and available right in front of the place. Really enjoyed our time here and absolutely plan to return. Thank you again for greate AT bnb experience", rating: 5)
+ r2 = Review.create(author_id: u2.id, listing_id:  l2.id, body: "It was short visit for us but very convenient to have a clean comfortable quiet and nice place to stay in. The only issue we had was that the parking was under a huge tree that had a lot of sap dripping. My car got very dirty after just a week. There is also not much privacy since the windows faces the street. We had to close our windows the entire time we were there. Laundry is shared and is in their garage, so you'll need to message the host to arrange time to gain access.", rating: 3)
+ r3 = Review.create(author_id: u3.id, listing_id:  l9.id, body: "The place is sparkling clean. It had full facilities and is only 10 minutes away from downtown. There were a lot of restaurants close by so we got to try a lot of yummy food. The neighborhood is safe. We highly recommend this place.", rating: 4)
+ r4 = Review.create(author_id: u4.id, listing_id:  l10.id, body: "Highly recommended place to stay for your vacation! Quiet and safe neighborhood, a friendly host, and a super relaxing room. The bathroom is so much bigger than what is shown in the picture too. I would stay again !", rating: 4)
+ r5 = Review.create(author_id: u5.id, listing_id:  l17.id, body: "The host is incredibly accomodating. The location is great and close to the center of the town. The rooms were clean, comfortable and has everything you need to stay a night or longer. Beautiful and private outdoor space to enjoy anytime of the day. Parking is easy and available right in front of the place. Really enjoyed our time here and absolutely plan to return. Thank you again for greate AT bnb experience", rating: 5)
+ r6 = Review.create(author_id: u6.id, listing_id:  l18.id, body: "It was short visit for us but very convenient to have a clean comfortable quiet and nice place to stay in. The only issue we had was that the parking was under a huge tree that had a lot of sap dripping. My car got very dirty after just a week. There is also not much privacy since the windows faces the street. We had to close our windows the entire time we were there. Laundry is shared and is in their garage, so you'll need to message the host to arrange time to gain access.", rating: 3)
+ r7 = Review.create(author_id: u7.id, listing_id:  l25.id, body: "The place is sparkling clean. It had full facilities and is only 10 minutes away from downtown. There were a lot of restaurants close by so we got to try a lot of yummy food. The neighborhood is safe. We highly recommend this place.", rating: 4)
+ r8 = Review.create(author_id: u8.id, listing_id:  l26.id, body: "Highly recommended place to stay for your vacation! Quiet and safe neighborhood, a friendly host, and a super relaxing room. The bathroom is so much bigger than what is shown in the picture too. I would stay again !", rating: 4)
+ r9 = Review.create(author_id: u9.id, listing_id:  l33.id, body: "The host is incredibly accomodating. The location is great and close to the center of the town. The rooms were clean, comfortable and has everything you need to stay a night or longer. Beautiful and private outdoor space to enjoy anytime of the day. Parking is easy and available right in front of the place. Really enjoyed our time here and absolutely plan to return. Thank you again for greate AT bnb experience", rating: 5)
+ r10 = Review.create(author_id: u10.id, listing_id:  l34.id, body: "It was short visit for us but very convenient to have a clean comfortable quiet and nice place to stay in. The only issue we had was that the parking was under a huge tree that had a lot of sap dripping. My car got very dirty after just a week. There is also not much privacy since the windows faces the street. We had to close our windows the entire time we were there. Laundry is shared and is in their garage, so you'll need to message the host to arrange time to gain access.", rating: 3)
+ r11 = Review.create(author_id: u11.id, listing_id:  l41.id, body: "The place is sparkling clean. It had full facilities and is only 10 minutes away from downtown. There were a lot of restaurants close by so we got to try a lot of yummy food. The neighborhood is safe. We highly recommend this place.", rating: 4)
+ r12 = Review.create(author_id: u12.id, listing_id:  l42.id, body: "Highly recommended place to stay for your vacation! Quiet and safe neighborhood, a friendly host, and a super relaxing room. The bathroom is so much bigger than what is shown in the picture too. I would stay again !", rating: 4)
+ r13 = Review.create(author_id: u1.id, listing_id:  l49.id, body: "The host is incredibly accomodating. The location is great and close to the center of the town. The rooms were clean, comfortable and has everything you need to stay a night or longer. Beautiful and private outdoor space to enjoy anytime of the day. Parking is easy and available right in front of the place. Really enjoyed our time here and absolutely plan to return. Thank you again for greate AT bnb experience", rating: 5)
+ r14 = Review.create(author_id: u2.id, listing_id:  l50.id, body: "It was short visit for us but very convenient to have a clean comfortable quiet and nice place to stay in. The only issue we had was that the parking was under a huge tree that had a lot of sap dripping. My car got very dirty after just a week. There is also not much privacy since the windows faces the street. We had to close our windows the entire time we were there. Laundry is shared and is in their garage, so you'll need to message the host to arrange time to gain access.", rating: 3)
+ r15 = Review.create(author_id: u3.id, listing_id:  l57.id, body: "The place is sparkling clean. It had full facilities and is only 10 minutes away from downtown. There were a lot of restaurants close by so we got to try a lot of yummy food. The neighborhood is safe. We highly recommend this place.", rating: 4)
+ r16 = Review.create(author_id: u4.id, listing_id:  l58.id, body: "Highly recommended place to stay for your vacation! Quiet and safe neighborhood, a friendly host, and a super relaxing room. The bathroom is so much bigger than what is shown in the picture too. I would stay again !", rating: 4)
+ 
 
- rs1 = Reservation.create(guest_id: u2.id, listing_id: l1.id, check_in_date: "30-10-2021", check_out_date: "12-01-2022", number_of_guest: 1)
+ rs1 = Reservation.create(guest_id: u1.id, listing_id: l1.id, check_in_date: "30-10-2021", check_out_date: "12-01-2022", number_of_guest: 1)
 
- rs2 = Reservation.create(guest_id: u3.id, listing_id: l2.id, check_in_date: "11-12-2021", check_out_date: "13-01-2022", number_of_guest: 2)
- rs3 = Reservation.create(guest_id: u2.id, listing_id: l34.id, check_in_date: "27-10-2021", check_out_date: "30-12-2022", number_of_guest: 3)
+ rs2 = Reservation.create(guest_id: u2.id, listing_id: l2.id, check_in_date: "11-12-2021", check_out_date: "13-01-2022", number_of_guest: 2)
+ rs3 = Reservation.create(guest_id: u3.id, listing_id: l9.id, check_in_date: "27-10-2021", check_out_date: "30-12-2022", number_of_guest: 3)
+
+ rs4 = Reservation.create(guest_id: u4.id, listing_id: l10.id, check_in_date: "30-10-2021", check_out_date: "12-01-2022", number_of_guest: 1)
+
+ rs5 = Reservation.create(guest_id: u5.id, listing_id: l17.id, check_in_date: "11-12-2021", check_out_date: "13-01-2022", number_of_guest: 2)
+ rs6 = Reservation.create(guest_id: u6.id, listing_id: l18.id, check_in_date: "27-10-2021", check_out_date: "30-12-2022", number_of_guest: 3)
+
+ rs7 = Reservation.create(guest_id: u7.id, listing_id: l25.id, check_in_date: "30-10-2021", check_out_date: "12-01-2022", number_of_guest: 1)
+
+ rs8 = Reservation.create(guest_id: u8.id, listing_id: l26.id, check_in_date: "11-12-2021", check_out_date: "13-01-2022", number_of_guest: 2)
+ rs9 = Reservation.create(guest_id: u9.id, listing_id: l33.id, check_in_date: "27-10-2021", check_out_date: "30-12-2022", number_of_guest: 3)
+
+ rs10 = Reservation.create(guest_id: u10.id, listing_id: l34.id, check_in_date: "30-10-2021", check_out_date: "12-01-2022", number_of_guest: 1)
+
+ rs11 = Reservation.create(guest_id: u11.id, listing_id: l41.id, check_in_date: "11-12-2021", check_out_date: "13-01-2022", number_of_guest: 2)
+ rs12 = Reservation.create(guest_id: u12.id, listing_id: l42.id, check_in_date: "27-10-2021", check_out_date: "30-12-2022", number_of_guest: 3)
+
+ rs13 = Reservation.create(guest_id: u9.id, listing_id: l49.id, check_in_date: "30-02-2022", check_out_date: "12-03-2022", number_of_guest: 1)
+
+ rs14 = Reservation.create(guest_id: u1.id, listing_id: l50.id, check_in_date: "11-01-2022", check_out_date: "13-01-2022", number_of_guest: 2)
+ rs15 = Reservation.create(guest_id: u2.id, listing_id: l57.id, check_in_date: "27-01-2022", check_out_date: "30-01-2022", number_of_guest: 3)

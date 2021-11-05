@@ -18,7 +18,11 @@ class ReviewForm extends React.Component {
     const review = Object.assign({}, this.state, {
       listing_id: listingId,
     });
-    this.props.createReview(review).then(this.refreshPage)
+    if (this.props.currentUser){
+      this.props.createReview(review).then(this.refreshPage);
+    }else{
+      this.props.openModal("login");
+    }
   }
 
   update(property) {

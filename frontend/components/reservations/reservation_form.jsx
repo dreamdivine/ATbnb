@@ -12,7 +12,7 @@ class ReservationForm extends React.Component {
     this.newState = Object.assign({}, this.props.reservation);
     this.renderErrors = this.renderErrors.bind(this);
   }
-
+  
   componentDidMount() {
     this.props.fetchReservation(this.props.match.params.reservationId);
   }

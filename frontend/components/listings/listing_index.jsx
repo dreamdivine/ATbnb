@@ -23,7 +23,7 @@ class ListingIndex extends React.Component {
               {listings.map((listing, i) => (
                 <ListingIndexItem
                   listing={listing}
-                  // deleteListing={deleteListing}
+                  deleteListing={deleteListing}
                   key={i}
                 />
               ))}

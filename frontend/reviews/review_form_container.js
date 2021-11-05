@@ -2,6 +2,8 @@ import { connect } from "react-redux";
 
 import { createReview, deleteReview, updateReview} from "../actions/listing_actions";
 import ReviewForm from "./review_form";
+import{openModal} from "../actions/modal_actions";
+import{login} from "../actions/session_actions";
 
 const mSTP = (state, ownProps) => {
     return {
@@ -13,7 +15,6 @@ const mSTP = (state, ownProps) => {
       },
       reviewFormType: "Create Review",
       currentUser: state.session.id,
-      authorname: state.entities.users[state.session.id].username
     };
 }
 
@@ -21,7 +22,7 @@ const mDTP = (dispatch) => ({
   createReview: (review) => dispatch(createReview(review)),
   updateReview: (review) => dispatch(updateReview(review)),
   openModal: (e) => dispatch(openModal(e)),
-  login: (user) => dispatch(login(user)),
+  login: (user) => dispatch(login(user))
 });
 
 export default connect(mSTP, mDTP)(ReviewForm);

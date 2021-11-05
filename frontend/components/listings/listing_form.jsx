@@ -1,7 +1,7 @@
 import React from "react";
 import {withRouter} from "react-router";
 import ReservationForm from "../reservations/reservation_form";
-
+import NavBarCity from "../navbar_city/navbar_city";
 
 class ListingForm extends React.Component {
   constructor(props) {
@@ -46,29 +46,36 @@ class ListingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("listing[title]", this.state.title);
-    formData.append("listing[guests]", this.state.guests);
-    formData.append("listing[bedroom]", this.state.bedroom);
-    formData.append("listing[bathroom]", this.state.bathroom);
-    formData.append("listing[latitude]", this.state.latitude);
-    formData.append("listing[longitude]", this.state.longitude);
-    formData.append("listing[price]", this.state.price);
-    formData.append("listing[owner_Id]", this.state.owner_Id);
-    formData.append("listing[location]", this.state.location);
-    formData.append("listing[description]", this.state.description);
-    formData.append("listing[city]", this.state.city);
-    if (this.state.photoFile) {
-      formData.append("listing[photo]", this.state.photoFile);
-    }
-    this.props
-      .action(formData, this.props.listing)
-      .then((list) => this.props.history.push(`/listings/${list.listing.id}`));
+           const formData = new FormData();
+           formData.append("listing[title]", this.state.title);
+           formData.append("listing[guests]", this.state.guests);
+           formData.append("listing[bedroom]", this.state.bedroom);
+           formData.append("listing[bathroom]", this.state.bathroom);
+           formData.append("listing[latitude]", this.state.latitude);
+           formData.append("listing[longitude]", this.state.longitude);
+           formData.append("listing[price]", this.state.price);
+           formData.append("listing[owner_Id]", this.state.owner_Id);
+           formData.append("listing[location]", this.state.location);
+           formData.append("listing[description]", this.state.description);
+           formData.append("listing[city]", this.state.city);
+           if (this.state.photoFile) {
+             formData.append("listing[photo]", this.state.photoFile);
+           }
+           if (this.props.currentUser) {
+             this.props
+               .action(formData, this.props.listing)
+               .then((list) =>
+                 this.props.history.push(`/listings/${list.listing.id}`)
+               );
+           } else {
+             this.props.openModal("login");
+           }
   }
-
+  
   render() {
     return (
       <div className="listingForm">
+        <NavBarCity />
         <form onSubmit={this.handleSubmit}>
           <div>
             {this.renderListingErrors()}

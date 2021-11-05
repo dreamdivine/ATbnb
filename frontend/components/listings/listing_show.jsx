@@ -5,7 +5,6 @@ import CreateReservationForm from "../reservations/create_reservation_container"
 import ReviewFormContainer from "../../reviews/review_form_container";
 
 
-
 class ListingShow extends React.Component {
   constructor(props) {
     super(props);
@@ -58,8 +57,7 @@ class ListingShow extends React.Component {
           ? ""
           : Object.values(this.props.listing.reviews).map((review, i) => (
               <div key={i}>
-                {/* <div>{this.props.users[review.author_id].username}</div> */}
-                <div>Anonymous</div>
+                <div className="username_show">Anonymous</div>
                 <div>
                   <h2>{review.body}</h2>
                 </div>
@@ -129,7 +127,6 @@ class ListingShow extends React.Component {
           <div className="listing-info">
             <div className="userinfo-listing-info">
               <div className="userinfo-house">
-                Entire house hosted by {this.props.currentUserName}
               </div>
               <div className="listing-city-guests-bed">
                 {listing.guests} guests .{" "}
@@ -255,8 +252,7 @@ class ListingShow extends React.Component {
             ? this.editDelete()
             : ""
           : ""}
-          {currentUser.id === listing.owner_Id ? "" : 
-        <ReviewFormContainer listingId={listing.id} />}
+        <ReviewFormContainer listingId={listing.id} />
         <div className="line-show"></div>
         <div className="star-review-reviews-sec">
           <i className="fas fa-star" id="star"></i>

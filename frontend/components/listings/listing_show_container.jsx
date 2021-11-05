@@ -5,13 +5,13 @@ import {updateListing, fetchListings, deleteListing, fetchListing, deleteReview}
 
 
 const mSTP = (state, ownProps) => {
+ 
   return {
     currentUserId: state.session.id,
     currentUser: state.entities.users[state.session.id],
     listing: state.entities.listings[ownProps.match.params.listingId],
     listingId: ownProps.match.params.listingId,
-    currentUserName: state.entities.users[state.session.id].username,
-    users: state.entities.users
+    // users: state.entities.users
   };
 };
 
