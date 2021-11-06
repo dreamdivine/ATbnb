@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
 const ListingIndexItem = ({ listing, deleteListing }) => {
+
   return (
     <div className="show-city-listing">
       <div>

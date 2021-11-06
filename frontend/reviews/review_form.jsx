@@ -12,15 +12,16 @@ class ReviewForm extends React.Component {
     window.location.reload(false);
   }
 
+
   handleSubmit(e) {
     e.preventDefault();
     const listingId = parseInt(this.props.match.params.listingId);
     const review = Object.assign({}, this.state, {
       listing_id: listingId,
     });
-    if (this.props.currentUser){
+    if (this.props.currentUser) {
       this.props.createReview(review).then(this.refreshPage);
-    }else{
+    } else {
       this.props.openModal("login");
     }
   }
@@ -56,7 +57,6 @@ class ReviewForm extends React.Component {
           <br />
           <input type="submit" />
         </form>
-        <button onClick={this.navigateToListingShow}>Cancel</button>
       </div>
     );
   }
