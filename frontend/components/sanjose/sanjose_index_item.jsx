@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
-const ListingIndexItem = ({ listing, deleteListing }) => {
-
+const ListingIndexSJ = ({ listing, deleteListing }) => {
   return (
     <div className="show-city-listing">
       <div>
@@ -12,7 +11,7 @@ const ListingIndexItem = ({ listing, deleteListing }) => {
         </Link>
       </div>
       <Link className="listing-city-detail" to={`/listings/${listing.id}`}>
-        <p className="rental-sf">Entire rental in {listing.city}</p>
+        <p className="rental-sf">Entire rental in San Jose</p>
         <div className="listing-city-title">{listing.title}</div>
         <div className="line-after-title"></div>
         <div className="listing-city-guests">
@@ -34,6 +33,6 @@ const ListingIndexItem = ({ listing, deleteListing }) => {
       </div>
     </div>
   );
-}
+};
 
-export default withRouter(ListingIndexItem);
+export default withRouter(ListingIndexSJ);

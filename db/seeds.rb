@@ -13,7 +13,7 @@ Listing.delete_all
 User.delete_all
 
 
-User.create!({username:"demoUser", email: "demo@user.com", password:"demoUser", first_name: 'demo', last_name: 'user'})
+u0 = User.create!({username:"demoUser", email: "demo@user.com", password:"demoUser", first_name: 'demo', last_name: 'user'})
 
 u1 = User.create!(
   username: 'guest',
@@ -468,5 +468,5 @@ l58.save
 
  rs13 = Reservation.create(guest_id: u9.id, listing_id: l49.id, check_in_date: "30-02-2022", check_out_date: "12-03-2022", number_of_guest: 1)
 
- rs14 = Reservation.create(guest_id: u1.id, listing_id: l50.id, check_in_date: "11-01-2022", check_out_date: "13-01-2022", number_of_guest: 2)
+ rs14 = Reservation.create(guest_id: u0.id, listing_id: l50.id, check_in_date: "11-01-2022", check_out_date: "13-01-2022", number_of_guest: 2)
  rs15 = Reservation.create(guest_id: u2.id, listing_id: l57.id, check_in_date: "27-01-2022", check_out_date: "30-01-2022", number_of_guest: 3)

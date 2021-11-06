@@ -1,5 +1,10 @@
 import { connect } from "react-redux";
 import ListingIndex from "./listing_index";
+import SanJoseIndex from "../sanjose/sanjose_index";
+import OaklandIndex from "../oakland/oakland_index";
+import SantaBarbaraIndex from "../santabarbara/santabarbara_index";
+import SacramentoIndex from "../sacramento/sacramento_index";
+import MammothLakesIndex from "../mammothLakes/mammothlakes_index";
 import {
   fetchListing,
   fetchListings,
@@ -20,4 +25,15 @@ const mDTP = (dispatch) => {
   };
 };
 
-export default connect(mSTP, mDTP)(ListingIndex);
+// export default connect(mSTP, mDTP)(ListingIndex);
+export default {
+  ListingIndexContainer: connect(mSTP, mDTP)(ListingIndex),
+  SanJoseIndexContainer: connect(mSTP, mDTP)(SanJoseIndex),
+  OaklandIndexContainer: connect(mSTP, mDTP)(OaklandIndex),
+  SantaBarbaraIndexContainer: connect(mSTP, mDTP)(SantaBarbaraIndex),
+  SacramentoIndexContainer: connect(mSTP, mDTP)(SacramentoIndex),
+  MammothLakesIndexContainer: connect(mSTP, mDTP)(MammothLakesIndex),
+  // SouthLakeTahoeIndexContainer: connect(mSTP, mDTP)(SouthLakeTahoeIndex),
+  // BerkeleyIndexContainer: connect(mSTP, mDTP)(BerkeleyIndex)
+
+};

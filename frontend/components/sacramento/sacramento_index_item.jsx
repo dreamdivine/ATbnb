@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
-const ListingIndexItem = ({ listing, deleteListing }) => {
-
+const ListingIndexSacramento = ({ listing, deleteListing }) => {
   return (
     <div className="show-city-listing">
       <div>
@@ -34,6 +33,6 @@ const ListingIndexItem = ({ listing, deleteListing }) => {
       </div>
     </div>
   );
-}
+};
 
-export default withRouter(ListingIndexItem);
+export default withRouter(ListingIndexSacramento);

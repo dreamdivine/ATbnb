@@ -3,11 +3,17 @@ import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-ro
 import Homepage from "./home_page/homepage";
 import SanFrancisco from "../components/sanfrancisco/sanfrancisco";
 import Host from "../components/host/host";
+import SanJose from "./sanjose/sanjose";
+import Oakland from "./oakland/oakland";
+import SantaBarbara from "./santabarbara/santabarbara";
+import Sacramento from "./sacramento/sacramento";
 
-import ListingIndexContainer from "./listings/listing_index_container";
+
+import Component from "./listings/listing_index_container";
 import ListingShowContainer from "./listings/listing_show_container";
 import EditListingFormContainer from "./listings/edit_listing_form_container";
 import Trips from "./trips/trips";
+import MammothLakes from "./mammothLakes/mammothlakes";
 // import RoutingError from "./errors/routing_errors";
 
 const App = () => (
@@ -20,6 +26,11 @@ const App = () => (
       {/* <Route exact path="/" component={ListingIndexContainer} /> */}
       <Route path="/trips" component={Trips} />
       <Route path="/sanfrancisco" component={SanFrancisco} />
+      <Route path="/sanjose" component={SanJose} />
+      <Route path="/oakland" component={Oakland} />
+      <Route path="/santa-barbara" component={SantaBarbara} />
+      <Route path="/sacramento" component={Sacramento} />
+      <Route path="/mammoth-lake" component={MammothLakes} />
       <Route
         path="/listings/:listingId/edit"
         component={EditListingFormContainer}
@@ -30,7 +41,11 @@ const App = () => (
         component={ListingShowContainer}
       />
       <Route exact path="/host" component={Host} />
-      <Route exact path="/listings" component={ListingIndexContainer} />
+      <Route
+        exact
+        path="/listings"
+        component={Component.ListingIndexContainer}
+      />
       <Route render={() => <Redirect to={{ pathname: "/" }} />} />
     </Switch>
   </div>

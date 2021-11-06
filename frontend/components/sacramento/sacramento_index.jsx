@@ -1,9 +1,9 @@
 import React from "react";
 import ListingMap from "../listing_map/listing_map";
 import LeftDetails from "../listings/left_details_cities";
-import ListingIndexItem from "./listing_index_item";
+import ListingIndexSacramento from "../sacramento/sacramento_index_item";
 
-class ListingIndex extends React.Component {
+class SacramentoIndex extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,15 +18,17 @@ class ListingIndex extends React.Component {
       <div className="listing-plus-map">
         <div className="map-listings-middle">
           <div className="left-details">
-            <LeftDetails  />
+            <LeftDetails />
             <ul>
-              {listings.map((listing, i) => (
-                <ListingIndexItem
-                  listing={listing}
-                  deleteListing={deleteListing}
-                  key={i}
-                />
-              ))}
+              {listings
+                .filter((listing) => listing.city === "Sacramento")
+                .map((listing, i) => (
+                  <ListingIndexSacramento
+                    listing={listing}
+                    deleteListing={deleteListing}
+                    key={i}
+                  />
+                ))}
             </ul>
           </div>
           <div className="map-listing">
@@ -38,4 +40,4 @@ class ListingIndex extends React.Component {
   }
 }
 
-export default ListingIndex;
+export default SacramentoIndex;
