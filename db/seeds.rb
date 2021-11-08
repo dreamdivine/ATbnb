@@ -236,12 +236,12 @@ l25 = Listing.new(
   title: "Secluded Panoramic Coastal View",
   owner_Id: u4.id,
   guests: 3,
-  latitude: 37.775416,
+  latitude: 34.452120,
   bedroom: 2,
   bathroom: 1,
   city: "Santa Barbara",
   price: 72,
-  longitude: -122.178652,
+  longitude: -119.745390,
   location: "6307 Laird Ave, Oakland, CA 94605"
 )
 

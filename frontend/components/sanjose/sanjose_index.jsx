@@ -1,5 +1,5 @@
 import React from "react";
-import ListingMap from "../listing_map/listing_map"
+import SanjoseListingMap from "./sanjose_map";
 import LeftDetails from "../listings/left_details_cities";
 import ListingIndexSJ from "./sanjose_index_item";
 
@@ -20,17 +20,19 @@ class SanJoseIndex extends React.Component {
           <div className="left-details">
             <LeftDetails />
             <ul>
-              {listings.filter(listing => listing.city === "San Jose").map ((listing,i) => 
-                <ListingIndexSJ
-                  listing={listing}
-                  deleteListing={deleteListing}
-                  key={i}
-                />
-              )}
+              {listings
+                .filter((listing) => listing.city === "San Jose")
+                .map((listing, i) => (
+                  <ListingIndexSJ
+                    listing={listing}
+                    deleteListing={deleteListing}
+                    key={i}
+                  />
+                ))}
             </ul>
           </div>
           <div className="map-listing">
-            <ListingMap listings={this.props.listings} />
+            <SanjoseListingMap listings={this.props.listings} />
           </div>
         </div>
       </div>

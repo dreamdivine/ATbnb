@@ -10,7 +10,7 @@ const LakeTahoe = () => {
         <NavBarCity />
       </div>
       <div className="left-city-page">
-        <Component.OaklandIndexContainer />
+        <Component.SouthLakeTahoeIndexContainer />
       </div>
     </div>
   );

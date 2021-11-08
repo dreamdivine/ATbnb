@@ -1,5 +1,5 @@
 import React from "react";
-import ListingMap from "../listing_map/listing_map";
+import OaklandListingMap from "./oakland_map";
 import LeftDetails from "../listings/left_details_cities";
 import ListingIndexOakland from "./oakland_index_item";
 
@@ -32,7 +32,7 @@ class OaklandIndex extends React.Component {
             </ul>
           </div>
           <div className="map-listing">
-            <ListingMap listings={this.props.listings} />
+            <OaklandListingMap listings={this.props.listings} />
           </div>
         </div>
       </div>

@@ -7,13 +7,15 @@ import SacramentoIndex from "../sacramento/sacramento_index";
 import MammothLakesIndex from "../mammothLakes/mammothlakes_index";
 import LakeTahoeIndex from "../southlaketahoe/laketahoe_index";
 import BerkeleyIndex from "../berkeley/berkeley_index";
+import SanFranciscoIndex from "../sanfrancisco/sanfrancisco_index";
+
 import {
   fetchListing,
   fetchListings,
   deleteListing,
 } from "../../actions/listing_actions";
 import { clearFilters, updateFilter } from "../../actions/filter_actions";
-import SanFranciscoIndex from "../sanfrancisco/sanfrancisco_index";
+
 
 const mSTP = (state) => {
   return {

@@ -1,5 +1,5 @@
 import React from "react";
-import ListingMap from "../listing_map/listing_map";
+import MammothLakesListingMap from "./mammothlakes_map";
 import LeftDetails from "../listings/left_details_cities";
 import ListingIndexMammothLakes from "./mammothlakes_index_item";
 
@@ -32,7 +32,7 @@ class MammothLakesIndex extends React.Component {
             </ul>
           </div>
           <div className="map-listing">
-            <ListingMap listings={this.props.listings} />
+            <MammothLakesListingMap listings={this.props.listings} />
           </div>
         </div>
       </div>
