@@ -113,7 +113,7 @@ u12 = User.create!(
 
 l1 = Listing.new(
   description: 'Wifi . Kitchen . Washer . Dryer',
-  title: "Civic Center Views from a Contemporary City Pad and Parking",
+  title: "Civic Center Views from a charming unit",
   guests: 3,
   owner_Id: u1.id,
   latitude: 37.778685,

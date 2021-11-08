@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router";
 import MarkerManager from "../../util/marker_manager";
+import { Link } from "react-router-dom";
 
 class ListingMap extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class ListingMap extends React.Component {
     this.props.listings.forEach((listing) => {
       const contentString = `<div id="inside-info">
       <div>
-        <img src=${listing.photoUrl} id="map-images">
+       <img src=${listing.photoUrl} id="map-images">
       </div>
       <div id="marker-title">${listing.title}</div>
       <div id="marker-price">$${listing.price}/night</div>
@@ -41,7 +42,6 @@ class ListingMap extends React.Component {
           url: "./images/oval.svg",
           scaledSize: new google.maps.Size(60, 60),
         },
-        // title: `${listing.title}`,
         label: { text: "$" + `${listing.price}`, className: "mapMarker" },
       });
       const infowindow = new google.maps.InfoWindow({

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Modal from '../modal/modal';
 import NavBar from '../navbar/navbar';
-import Explore from '../explore_nearby/explore'
+import Explore from '../explore_nearby/explore';
+import AllCity from '../listings/allcity';
 
 
 class Homepage extends React.Component{
@@ -13,11 +14,11 @@ class Homepage extends React.Component{
           <div className="homepage">
             <Modal />
             <NavBar />
+            <AllCity />
             <p className="nearby-explore">Explore nearby</p>
             <Explore />
           </div>
         );
 }
-
 }
 export default Homepage;

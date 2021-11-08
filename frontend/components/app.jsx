@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
 import Homepage from "./home_page/homepage";
 import SanFrancisco from "../components/sanfrancisco/sanfrancisco";
+import AllCity from "../components/listings/listing";
 import Host from "../components/host/host";
 import SanJose from "./sanjose/sanjose";
 import Oakland from "./oakland/oakland";
@@ -26,6 +27,7 @@ const App = () => (
       <Route exact path="/" component={Homepage} />
       {/* <Route exact path="/" component={ListingIndexContainer} /> */}
       <Route path="/trips" component={Trips} />
+      <Route path="/all-city" component={AllCity} />
       <Route path="/sanfrancisco" component={SanFrancisco} />
       <Route path="/sanjose" component={SanJose} />
       <Route path="/oakland" component={Oakland} />

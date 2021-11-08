@@ -29,7 +29,7 @@ const NavBarCity = () => {
         </div>
         <div className="guest-city-booking">
           <div className="location-city">
-              <p className="city">San Francisco</p>
+              <p className="city">Start your search</p>
           </div>
           <div className="city-line-one">
             <span className="divider"></span>
