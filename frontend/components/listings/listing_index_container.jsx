@@ -5,12 +5,15 @@ import OaklandIndex from "../oakland/oakland_index";
 import SantaBarbaraIndex from "../santabarbara/santabarbara_index";
 import SacramentoIndex from "../sacramento/sacramento_index";
 import MammothLakesIndex from "../mammothLakes/mammothlakes_index";
+import LakeTahoeIndex from "../southlaketahoe/laketahoe_index";
+import BerkeleyIndex from "../berkeley/berkeley_index";
 import {
   fetchListing,
   fetchListings,
   deleteListing,
 } from "../../actions/listing_actions";
 import { clearFilters, updateFilter } from "../../actions/filter_actions";
+import SanFranciscoIndex from "../sanfrancisco/sanfrancisco_index";
 
 const mSTP = (state) => {
   return {
@@ -28,12 +31,13 @@ const mDTP = (dispatch) => {
 // export default connect(mSTP, mDTP)(ListingIndex);
 export default {
   ListingIndexContainer: connect(mSTP, mDTP)(ListingIndex),
+  SanFranciscoIndexContainer: connect(mSTP, mDTP)(SanFranciscoIndex),
   SanJoseIndexContainer: connect(mSTP, mDTP)(SanJoseIndex),
   OaklandIndexContainer: connect(mSTP, mDTP)(OaklandIndex),
   SantaBarbaraIndexContainer: connect(mSTP, mDTP)(SantaBarbaraIndex),
   SacramentoIndexContainer: connect(mSTP, mDTP)(SacramentoIndex),
   MammothLakesIndexContainer: connect(mSTP, mDTP)(MammothLakesIndex),
-  // SouthLakeTahoeIndexContainer: connect(mSTP, mDTP)(SouthLakeTahoeIndex),
-  // BerkeleyIndexContainer: connect(mSTP, mDTP)(BerkeleyIndex)
+  SouthLakeTahoeIndexContainer: connect(mSTP, mDTP)(LakeTahoeIndex),
+  BerkeleyIndexContainer: connect(mSTP, mDTP)(BerkeleyIndex)
 
 };

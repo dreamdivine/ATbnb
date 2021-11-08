@@ -7,13 +7,14 @@ import SanJose from "./sanjose/sanjose";
 import Oakland from "./oakland/oakland";
 import SantaBarbara from "./santabarbara/santabarbara";
 import Sacramento from "./sacramento/sacramento";
-
-
+import MammothLakes from "./mammothLakes/mammothlakes";
+import LakeTahoe from "./southlaketahoe/laketahoe";
+import Berkeley from "./berkeley/berkeley";
 import Component from "./listings/listing_index_container";
 import ListingShowContainer from "./listings/listing_show_container";
 import EditListingFormContainer from "./listings/edit_listing_form_container";
 import Trips from "./trips/trips";
-import MammothLakes from "./mammothLakes/mammothlakes";
+
 // import RoutingError from "./errors/routing_errors";
 
 const App = () => (
@@ -31,6 +32,8 @@ const App = () => (
       <Route path="/santa-barbara" component={SantaBarbara} />
       <Route path="/sacramento" component={Sacramento} />
       <Route path="/mammoth-lake" component={MammothLakes} />
+      <Route path="/lake-tahoe" component={LakeTahoe} />
+      <Route path="/berkeley" component={Berkeley} />
       <Route
         path="/listings/:listingId/edit"
         component={EditListingFormContainer}
