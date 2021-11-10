@@ -15,11 +15,8 @@ class ListingIndex extends React.Component {
     const { listings, deleteListing } = this.props;
     if (!listings) return null;
     return (
-      <div className="listing-plus-map">
-        <div className="map-listings-middle">
-          <div className="left-details">
-            <LeftDetails  />
-            <ul>
+          <div className="listing-all">
+            <ul className="inside-ul">
               {listings.map((listing, i) => (
                 <ListingIndexItem
                   listing={listing}
@@ -29,11 +26,6 @@ class ListingIndex extends React.Component {
               ))}
             </ul>
           </div>
-          <div className="map-listing">
-            <ListingMap listings={this.props.listings} />
-          </div>
-        </div>
-      </div>
     );
   }
 }

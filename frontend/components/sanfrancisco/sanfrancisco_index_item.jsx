@@ -24,7 +24,10 @@ const ListingIndexSanFrancisco = ({ listing, deleteListing }) => {
       </Link>
       <div className="review-price">
         <div className="listing-city-review">
-          <Link to={`/listings/${listing.id}`}>Reviews</Link>
+          <Link to={`/listings/${listing.id}`}>
+            <i className="fas fa-star" id="star-show"></i>
+           {" "}{listing.average_rating}
+          </Link>
         </div>
         <div className="listing-price-night">
           <div className="listing-price">${listing.price}</div>

@@ -50,7 +50,6 @@
   top: 10px;
   width: 500px;
   height: 25px;
-
 }
 
 .line-after-title {
@@ -64,24 +63,25 @@
   position: relative;
   top: 30px;
   color: #717171;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
   font-size: 14px;
 }
 
-.listing-city-description{
+.listing-city-description {
   position: relative;
   top: 40px;
   color: #717171;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
   font-size: 14px;
-
 }
 
-.listing-price{
+.listing-price {
   font-weight: bold;
 }
 
-.review-price{
+.review-price {
   position: relative;
   display: flex;
   top: 180px;
@@ -90,40 +90,37 @@
   justify-content: space-between;
 }
 
-.listing-price-night{
+.listing-price-night {
   display: flex;
   width: 290px;
   justify-content: flex-end;
 }
 
-.map-listing{
+.map-listing {
   position: sticky !important;
   left: 900px !important;
   width: 1000px !important;
   height: 1000px !important;
   bottom: 90px !important;
-
 }
 
-.random-text{
+.random-text {
   position: relative;
   top: 2500px;
 }
 
-.map-listings-middle{
+.map-listings-middle {
   position: relative;
   width: 2000px;
   height: 4500px;
   top: 20px;
-  
-
 }
 
-.listing-city-review{
+.listing-city-review {
   width: 200px;
 }
 
-.allCity{
+.allCity {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -133,16 +130,17 @@
   left: 850px;
 }
 
-.not-sure{
+.not-sure {
   position: relative;
-  left:10px;
+  left: 10px;
   font-size: 18px;
   color: #222222;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
 }
 
-.flexible{
+.flexible {
   border: 1px solid #ffffff;
   position: relative;
   left: 25px;
@@ -153,15 +151,52 @@
   color: purple;
   padding: 22px 56px;
   font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100px;
   border-radius: 30px;
-
 }
 
-.flexible-text{
+.flexible-text {
   position: relative;
   left: 10px;
   font-weight: 600;
 }
 
+.listing-images-index {
+  width: 15vw;
+  height: 34vh;
+  border-radius: 20px;
+}
+
+
+.inside-ul{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    left: 60px;
+    top: 220px;
+    width: 95vw;
+    height: 122vh;
+    flex-wrap: wrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.listing-all-price{
+  color: #717171
+}
+
+.listing-index{
+  display: flex;
+}
+
+.listing-all-price{
+  position: relative;
+  left: 215px;
+  bottom: 15px;
+}
+
+.listing-all-city{
+  position: relative;
+  left:5px;
+}

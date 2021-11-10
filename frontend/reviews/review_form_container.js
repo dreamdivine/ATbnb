@@ -12,6 +12,7 @@ const mSTP = (state, ownProps) => {
         listing_id: ownProps.listingId,
         body: "",
         rating: 5,
+        reviewer_name: ""
       },
       reviewFormType: "Create Review",
       currentUser: state.session.id,

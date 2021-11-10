@@ -6,8 +6,6 @@ import configureStore from './store/store';
 import * as ReservationAPIUtil from "./util/reservation_api_util";
 import * as APIUtil from "./util/listing_api_util";
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let store;
@@ -24,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
   
-
   window.updateReview = APIUtil.updateReview;
   window.createReview = APIUtil.createReview;
   window.deleteReview = APIUtil.deleteReview;
@@ -43,4 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 }
 );
+
+
+
 

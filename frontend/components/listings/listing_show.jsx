@@ -57,7 +57,7 @@ class ListingShow extends React.Component {
           ? ""
           : Object.values(this.props.listing.reviews).map((review, i) => (
               <div key={i}>
-                <div className="username_show">Anonymous</div>
+                <div className="username_show">{review.reviewer_name}</div>
                 <div>
                   <h2>{review.body}</h2>
                 </div>
