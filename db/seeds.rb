@@ -358,10 +358,10 @@ l49 = Listing.new(
   latitude: 38.947305,
   bedroom: 2,
   bathroom: 1,
-  city: "South Lake Tahoe",
+  city: "Lake Tahoe",
   price: 72,
   longitude: -119.941100,
-  location: "3525 Rocky Point Rd, South Lake Tahoe, CA 96150"
+  location: "3525 Rocky Point Rd, Lake Tahoe, CA 96150"
 )
 
 l49photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")
@@ -378,10 +378,10 @@ l50 = Listing.new(
   latitude: 38.922494,
   bedroom: 2,
   bathroom: 1,
-  city: "South Lake Tahoe",
+  city: "Lake Tahoe",
   price: 72,
   longitude: -119.984509,
-  location: "2525 Armstrong Ave, South Lake Tahoe, CA 96150"
+  location: "2525 Armstrong Ave, Lake Tahoe, CA 96150"
 )
 
 l50photo = open("https://atbnb-seed.s3.us-west-1.amazonaws.com/atbnbpics/sj2.jpeg")

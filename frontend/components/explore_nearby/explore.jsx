@@ -76,7 +76,7 @@ const Explore = () => {
             <img src="/images/lakeTahoe.webp" className="city-images"></img>
           </div>
           <div className="city-detail">
-            <h3>South Lake Tahoe</h3>
+            <h3>Lake Tahoe</h3>
             <p className="detail-text">4 hour drive</p>
           </div>
         </div>

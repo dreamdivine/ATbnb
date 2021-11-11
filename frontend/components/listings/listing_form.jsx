@@ -159,7 +159,7 @@ class ListingForm extends React.Component {
                 <option value="Santa Barbara">Santa Barbara</option>
                 <option value="Sacramento">Sacramento</option>
                 <option value="Mammoth Lakes">Mammoth Lakes</option>
-                <option value="South Lake Tahoe">South Lake Tahoe</option>
+                <option value="Lake Tahoe">Lake Tahoe</option>
                 <option value="Berkeley">Berkeley</option>
               </select>
             </label>

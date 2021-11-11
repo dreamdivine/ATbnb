@@ -18,7 +18,7 @@ class LakeTahoeListingMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(
       this.props.listings.filter(
-        (listing) => listing.city === "South Lake Tahoe"
+        (listing) => listing.city === "Lake Tahoe"
       )
     );
     this.initMap = this.initMap.bind(this);
@@ -27,7 +27,7 @@ class LakeTahoeListingMap extends React.Component {
   componentDidUpdate() {
     this.MarkerManager.updateMarkers(
       this.props.listings.filter(
-        (listing) => listing.city === "South Lake Tahoe"
+        (listing) => listing.city === "Lake Tahoe"
       )
     );
     this.initMap(this.map);
@@ -35,7 +35,7 @@ class LakeTahoeListingMap extends React.Component {
 
   initMap(map) {
     this.props.listings
-      .filter((listing) => listing.city === "South Lake Tahoe")
+      .filter((listing) => listing.city === "Lake Tahoe")
       .forEach((listing) => {
         const contentString = `<div id="inside-info">
       <div>

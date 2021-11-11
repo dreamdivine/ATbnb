@@ -21,7 +21,7 @@ class LakeTahoeIndex extends React.Component {
             <LeftDetails />
             <ul>
               {listings
-                .filter((listing) => listing.city === "South Lake Tahoe")
+                .filter((listing) => listing.city === "Lake Tahoe")
                 .map((listing, i) => (
                   <ListingIndexLakeTahoe
                     listing={listing}

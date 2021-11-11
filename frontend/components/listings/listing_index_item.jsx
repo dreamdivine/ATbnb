@@ -8,7 +8,7 @@ const ListingIndexItem = ({ listing, deleteListing }) => {
     <div className="listing-index">
         <Link className="images-link" to={`/listings/${listing.id}`}>
           <img src={listing.photoUrl} className="listing-images-index" />
-          <div className="listing-all-city">{listing.city}, California</div>
+          <div className="listing-all-city">{listing.city}, CA</div>
           <div className="listing-all-price">{listing.price}/night</div>
         </Link>
     </div>
