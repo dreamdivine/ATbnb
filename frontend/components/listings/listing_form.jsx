@@ -146,12 +146,22 @@ class ListingForm extends React.Component {
           <div>
             <label>
               City
-              <input
+              <select
                 required
                 type="text"
                 value={this.state.city}
                 onChange={(e) => this.update(e, "city")}
-              />
+              >
+                <option selected disabled></option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Oakland">Oakland</option>
+                <option value="Santa Barbara">Santa Barbara</option>
+                <option value="Sacramento">Sacramento</option>
+                <option value="Mammoth Lakes">Mammoth Lakes</option>
+                <option value="South Lake Tahoe">South Lake Tahoe</option>
+                <option value="Berkeley">Berkeley</option>
+              </select>
             </label>
           </div>
           <div>

@@ -14,7 +14,7 @@ import {
   fetchListings,
   deleteListing,
 } from "../../actions/listing_actions";
-import { clearFilters, updateFilter } from "../../actions/filter_actions";
+
 
 
 const mSTP = (state) => {
@@ -25,8 +25,7 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => {
   return {
-    fetchListings: () => dispatch(fetchListings()),
-    updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
+    fetchListings: () => dispatch(fetchListings())
   };
 };
 
