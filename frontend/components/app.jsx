@@ -16,6 +16,8 @@ import ListingShowContainer from "./listings/listing_show_container";
 import EditListingFormContainer from "./listings/edit_listing_form_container";
 import Trips from "./trips/trips";
 
+
+
 // import RoutingError from "./errors/routing_errors";
 
 const App = () => (
@@ -28,13 +30,13 @@ const App = () => (
       {/* <Route exact path="/" component={ListingIndexContainer} /> */}
       <Route path="/trips" component={Trips} />
       <Route path="/all-city" component={AllCity} />
-      <Route path="/sanfrancisco" component={SanFrancisco} />
-      <Route path="/sanjose" component={SanJose} />
+      <Route path="/san francisco" component={SanFrancisco} />
+      <Route path="/san jose" component={SanJose} />
       <Route path="/oakland" component={Oakland} />
-      <Route path="/santa-barbara" component={SantaBarbara} />
+      <Route path="/santa barbara" component={SantaBarbara} />
       <Route path="/sacramento" component={Sacramento} />
-      <Route path="/mammoth-lake" component={MammothLakes} />
-      <Route path="/lake-tahoe" component={LakeTahoe} />
+      <Route path="/mammoth lakes" component={MammothLakes} />
+      <Route path="/lake tahoe" component={LakeTahoe} />
       <Route path="/berkeley" component={Berkeley} />
       <Route
         path="/listings/:listingId/edit"

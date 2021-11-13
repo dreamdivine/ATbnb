@@ -19,7 +19,7 @@ class ListingForm extends React.Component {
   //   this.props.clearErrors()
   // }
 
-  renderListingErrors(){
+  renderListingErrors() {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
@@ -31,7 +31,7 @@ class ListingForm extends React.Component {
 
   handleFile(e) {
     // this.setState({photoFile: e.currentTarget.files[0]});
-    
+
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
@@ -46,32 +46,32 @@ class ListingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-           const formData = new FormData();
-           formData.append("listing[title]", this.state.title);
-           formData.append("listing[guests]", this.state.guests);
-           formData.append("listing[bedroom]", this.state.bedroom);
-           formData.append("listing[bathroom]", this.state.bathroom);
-           formData.append("listing[latitude]", this.state.latitude);
-           formData.append("listing[longitude]", this.state.longitude);
-           formData.append("listing[price]", this.state.price);
-           formData.append("listing[owner_Id]", this.state.owner_Id);
-           formData.append("listing[location]", this.state.location);
-           formData.append("listing[description]", this.state.description);
-           formData.append("listing[city]", this.state.city);
-           if (this.state.photoFile) {
-             formData.append("listing[photo]", this.state.photoFile);
-           }
-           if (this.props.currentUser) {
-             this.props
-               .action(formData, this.props.listing)
-               .then((list) =>
-                 this.props.history.push(`/listings/${list.listing.id}`)
-               );
-           } else {
-             this.props.openModal("login");
-           }
+    const formData = new FormData();
+    formData.append("listing[title]", this.state.title);
+    formData.append("listing[guests]", this.state.guests);
+    formData.append("listing[bedroom]", this.state.bedroom);
+    formData.append("listing[bathroom]", this.state.bathroom);
+    formData.append("listing[latitude]", this.state.latitude);
+    formData.append("listing[longitude]", this.state.longitude);
+    formData.append("listing[price]", this.state.price);
+    formData.append("listing[owner_Id]", this.state.owner_Id);
+    formData.append("listing[location]", this.state.location);
+    formData.append("listing[description]", this.state.description);
+    formData.append("listing[city]", this.state.city);
+    if (this.state.photoFile) {
+      formData.append("listing[photo]", this.state.photoFile);
+    }
+    if (this.props.currentUser) {
+      this.props
+        .action(formData, this.props.listing)
+        .then((list) =>
+          this.props.history.push(`/listings/${list.listing.id}`)
+        );
+    } else {
+      this.props.openModal("login");
+    }
   }
-  
+
   render() {
     return (
       <div className="listingForm">
@@ -104,6 +104,8 @@ class ListingForm extends React.Component {
               Guests
               <input
                 required
+                min="1"
+                max="10"
                 type="number"
                 value={this.state.guests}
                 onChange={(e) => this.update(e, "guests")}
@@ -115,6 +117,7 @@ class ListingForm extends React.Component {
               Bedroom
               <input
                 required
+                min="1"
                 type="number"
                 value={this.state.bedroom}
                 onChange={(e) => this.update(e, "bedroom")}
@@ -127,6 +130,7 @@ class ListingForm extends React.Component {
               <input
                 required
                 type="number"
+                min="1"
                 value={this.state.bathroom}
                 onChange={(e) => this.update(e, "bathroom")}
               />
@@ -137,6 +141,7 @@ class ListingForm extends React.Component {
               Price
               <input
                 required
+                min="1"
                 type="number"
                 value={this.state.price}
                 onChange={(e) => this.update(e, "price")}

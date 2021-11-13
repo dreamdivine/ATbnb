@@ -3,12 +3,11 @@ import Modal from '../modal/modal';
 import NavBar from '../navbar/navbar';
 import Explore from '../explore_nearby/explore';
 import AllCity from '../listings/allcity';
+import SearchContainer from '../search/search_container';
 
 
 class Homepage extends React.Component{
-    constructor(props){
-        super(props)
-    }
+ 
     render(){
         return (
           <div className="homepage">
@@ -17,6 +16,7 @@ class Homepage extends React.Component{
             <AllCity />
             <p className="nearby-explore">Explore nearby</p>
             <Explore />
+            <SearchContainer placeholder="Enter a city name..."/>
           </div>
         );
 }

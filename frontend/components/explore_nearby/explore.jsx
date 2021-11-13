@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Explore = () => {
     return (
       <div className="explore">
-        <Link to="/sanfrancisco">
+        <Link to="/san francisco">
           <div className="image-detail">
             <div>
               <img src="/images/sf.webp" className="city-images"></img>
@@ -15,7 +15,7 @@ const Explore = () => {
             </div>
           </div>
         </Link>
-         <Link to="/sanjose">
+         <Link to="/san jose">
         <div className="image-detail">
           <div>
             <img src="/images/sanjose.webp" className="city-images"></img>
@@ -37,7 +37,7 @@ const Explore = () => {
           </div>
         </div>
         </Link>
-        <Link to="/santa-barbara">
+        <Link to="/santa barbara">
         <div className="image-detail">
           <div>
             <img src="/images/santaBarbara.webp" className="city-images"></img>
@@ -59,7 +59,7 @@ const Explore = () => {
           </div>
         </div>
         </Link>
-        <Link to="/mammoth-lake">
+        <Link to="/mammoth lakes">
         <div className="image-detail">
           <div>
             <img src="/images/mammothLake.webp" className="city-images"></img>
@@ -70,7 +70,7 @@ const Explore = () => {
           </div>
         </div>
         </Link>
-        <Link to="/lake-tahoe">
+        <Link to="/lake tahoe">
         <div className="image-detail">
           <div>
             <img src="/images/lakeTahoe.webp" className="city-images"></img>
