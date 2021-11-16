@@ -16,6 +16,7 @@ const NavBar = () => {
     setDropdown(false);
   };
 
+
   return (
     <div className="top">
       <div className="Nav-Bar">

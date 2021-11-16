@@ -96,14 +96,14 @@ class ListingShow extends React.Component {
             <div className="star-review-length">
               <i className="fas fa-star" id="star"></i>
               <div className="average-rating">
-                {listing.average_rating}
+                {listing.average_rating === "5.0"
+                  ? Number(listing.average_rating).toFixed(1)
+                  : Number(listing.average_rating).toFixed(2)}
               </div>
               <div className="review-length">
                 {listing.reviews === undefined
                   ? "0 reviews"
-                  : "(" +
-                    Object.values(listing.reviews).length +
-                    " reviews)"}
+                  : "(" + Object.values(listing.reviews).length + " reviews)"}
               </div>
             </div>
             <div className="dot">.</div>
@@ -126,13 +126,10 @@ class ListingShow extends React.Component {
         <div className="bottom-listing-show">
           <div className="listing-info">
             <div className="userinfo-listing-info">
-              <div className="userinfo-house">
-              </div>
+              <div className="userinfo-house"></div>
               <div className="listing-city-guests-bed">
-                {listing.guests} guests .{" "}
-                {listing.bedroom} bedroom .{" "}
-                {listing.bedroom * 2} beds .{" "}
-                {listing.bathroom} bath
+                {listing.guests} guests . {listing.bedroom} bedroom .{" "}
+                {listing.bedroom * 2} beds . {listing.bathroom} bath
               </div>
             </div>
             <div className="listing-show-information">
@@ -257,14 +254,15 @@ class ListingShow extends React.Component {
         <div className="star-review-reviews-sec">
           <i className="fas fa-star" id="star"></i>
           <div className="average-rating-reviews">
-            {this.props.listing.average_rating}
+            {this.props.listing.average_rating === "5.0"
+              ? Number(listing.average_rating).toFixed(1)
+              : Number(listing.average_rating).toFixed(2)}
           </div>
           <div className="dot-reviews">.</div>
           <div className="review-length-reviews">
             {listing.reviews === undefined
               ? "0 reviews"
-              : Object.values(listing.reviews).length +
-                " reviews"}
+              : Object.values(listing.reviews).length + " reviews"}
           </div>
         </div>
         <div className="reviews-show">{this.renderReviews()}</div>
