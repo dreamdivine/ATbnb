@@ -2,7 +2,8 @@
     // width: 200px;
     position: absolute;
     top: 2.5vw;
-    left: 2.6vw;
+    // left: 3vh;
+    right: 0.8vw;
     list-style: none;
     text-align: start;
     // height: 45px;
@@ -13,6 +14,7 @@
     background-color: white;
     cursor: pointer;
     position: relative;
+    border: 1px solid yellow;
     // right: 125px;
     // top: 10px;
 }
@@ -38,7 +40,7 @@
 }
 
 .session-btn{
-    width: 220px;
+    width: 222px;
     height: 100px;
     display: flex;
     flex-direction: column;
