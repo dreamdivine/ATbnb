@@ -24,7 +24,7 @@ const NavBar = () => {
           <Link to="/" onClick={goToPages}>
             <i className="fab fa-airbnb" id="airbnb"></i>
           </Link>
-          <p>AT bnb</p>
+          <p className="atbnbNav">AT bnb</p>
         </div>
         <div className="middle-items">
           <li className="places_to_stay">
@@ -61,7 +61,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div className="guest-booking">
+      {/* <div className="guest-booking">
         <div className="location">
           <ul className="describe">
             <li className="header">Location</li>
@@ -98,7 +98,7 @@ const NavBar = () => {
             <i className="fas fa-search" id="search-icon"></i>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

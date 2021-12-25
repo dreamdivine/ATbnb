@@ -57,7 +57,6 @@ export const createListing = (listing) => (dispatch) =>
     (errors) => dispatch(receiveListingErrors(errors.responseJSON))
   );
 
-
 export const updateListing = (listingFormData, listing) => (dispatch) =>
   APIUtil.updateListing(listingFormData, listing).then(
     (listing) => dispatch(receiveListing(listing)),

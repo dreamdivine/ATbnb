@@ -3,7 +3,6 @@ import Search from "./search";
 import { fetchListings } from "../../actions/listing_actions";
 
 const mSTP = (state) => {
-    console.log("hi there", Object.values(state.entities.listings));
     return {
         listings: Object.values(state.entities.listings)
     }
