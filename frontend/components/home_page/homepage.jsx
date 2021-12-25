@@ -16,11 +16,13 @@ class Homepage extends React.Component{
               <NavBar />
             </div>
             {/* <SearchContainer /> */}
-            <div className='allcity-home'>
+            <div className="allcity-home">
               <AllCity />
             </div>
-            {/* <p className="nearby-explore">Explore nearby</p> */}
-            {/* <Explore /> */}
+            <p className="nearby-explore">Explore nearby</p>
+            <div className='explore-home'>
+              <Explore />
+            </div>
           </div>
         );
 }
