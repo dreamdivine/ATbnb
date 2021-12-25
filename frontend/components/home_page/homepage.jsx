@@ -12,12 +12,13 @@ class Homepage extends React.Component{
         return (
           <div className="homepage">
             <Modal />
-            <div className='navbar-home'>
+            <div className="navbar-home">
               <NavBar />
             </div>
             {/* <SearchContainer /> */}
-
-            {/* <AllCity /> */}
+            <div className='allcity-home'>
+              <AllCity />
+            </div>
             {/* <p className="nearby-explore">Explore nearby</p> */}
             {/* <Explore /> */}
           </div>

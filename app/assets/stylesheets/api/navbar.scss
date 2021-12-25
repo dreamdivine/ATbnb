@@ -37,7 +37,7 @@ li {
 .right-icon {
   display: flex;
   color: grey;
-  font-size: 20px;
+  // font-size: 0.5vw;
   background-color: white;
   border: solid white 1px;
   border-radius: 20px;
@@ -132,11 +132,11 @@ li {
 }
 
 #circle-person {
-  font-size: 30px;
+  font-size: 1.4vw;
 }
 
 #bars {
-  font-size: 15px;
+  font-size: 0.8vw;
 }
 
 .guest-booking {
