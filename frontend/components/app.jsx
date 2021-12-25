@@ -38,6 +38,7 @@ const App = () => (
       <Route path="/mammoth lakes" component={MammothLakes} />
       <Route path="/lake tahoe" component={LakeTahoe} />
       <Route path="/berkeley" component={Berkeley} />
+      <Route path="/places_to_stay" component={AllCity}/>
       <Route
         path="/listings/:listingId/edit"
         component={EditListingFormContainer}
