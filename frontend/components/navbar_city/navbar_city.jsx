@@ -28,7 +28,7 @@ const NavBarCity = () => {
           <p className="atbnb-city">AT bnb</p>
         </div>
         <div className="guest-city-booking">
-          <div className="location-city">
+          {/* <div className="location-city">
               <p className="city">Start your search</p>
           </div>
           <div className="city-line-one">
@@ -47,7 +47,8 @@ const NavBarCity = () => {
             <div className="search-city">
               <i className="fas fa-search" id="search-icon-city"></i>
             </div>
-          </div>
+          </div> */}
+          <div>Search Placeholder</div>
         </div>
         <div className="right-side">
           <li className="host">
