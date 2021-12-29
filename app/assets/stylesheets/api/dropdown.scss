@@ -33,7 +33,6 @@
     color: black;
     padding: 9px;
     position: relative;
-
 }
 
 .session-btn{
@@ -64,7 +63,6 @@
     position: relative;
     right: 125px;
     width: 220px;
-
 }
 
 .header-group li{
@@ -89,23 +87,79 @@
     width: 220px;
     left: -11px;
     top: 10px;
-
 }
 
 @media (max-width: 900px){
   
 .dropdown-menu {
     position: absolute;
-    top: 2.5vw;
+    top: 20vw;
+    right: 10vw;
     list-style: none;
     text-align: start;
     border: 1px solid green;
+    width: 20vw;
 }
 
+.session-btn{
+    width: 14.8vw;
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 
+}
 
+.dropdown-link{
+    display: block;
+    width: 5.4vw;
+    height: 2vw;
+    text-decoration: none;
+    color: black;
+    padding: 9px;
+    position: relative;
+    border: 1px solid black;
+}
 
+.session-loginBtn, .session-signupBtn{
+    border: 1px solid red;
+    width: 15vw;
+    height: 3vw;
+    position: relative;
+    bottom: 15vw;
+    left: 14vw;
+}
 
+.logsigninColumn{
+    position: relative;
+    height: 3vw;
+    color: black;
+}
+
+.lineDropdown{
+  width: 10vw;
+//   border-bottom: 1px solid lightgray;
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+
+.lineLogout{
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    width: 10vw;
+    left: -11px;
+    top: 10px;
+}
+
+.session-text{
+    position: relative;
+    font-size: 2vw;
+    left: 4vw;
+    bottom: 105%;
+
+}
 
 
 
